@@ -1,12 +1,21 @@
+	def conv_into_secs(amount,candle_type):
+		conv = {
+			"min":60,
+			"hour":3600,
+			"day":86400,
+			"week":604800
+			}
+		return amount*conv[candle_type]
+	
 	# Used to page data in kucoin API
-	def page_data(self,start_time,end_time,candle_type):
+	def page_data(start_time,end_time,candle_type):
 		#find location of last digit and split string on that digit
 		dig = re.compile('\d+')
 		location = dig.match(candle_type)
 		amount = int(candle_type[:location.end()])
 		time_type = candle_type[location.end():]
 		# Kucoin only allows for 1500 pieces of data to be returned max.
-		max_page_secs = 1500 * self.conv_into_secs(amount,time_type)
+		max_page_secs = 1500 * conv_into_secs(amount,time_type)
 		time_diff = end_time - start_time
 
 		if time_diff <= max_page_secs:
