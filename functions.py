@@ -33,3 +33,14 @@
 				time_list.append(current_time)
 			#returns a list of times broken down by page. ex: [1000, 2500,4000] assuming these are posix timestamps
 			return time_list
+def DateToEpoc( time_frame ):
+	
+	try:
+		#pattern = '( ((([0][1|3|7|8])|[10|12])[\/\-]([0][1-9]|[1][1-9]|[2][1-9]|[3][0-1])) )'
+		#A leap year occurs every 4 years.  If so then check and account for the extra day in february
+		timeframe = time_frame.split('/')
+		SECS_PER_DAY = 86400
+		init_epoch = datetime.datetime(timeframe[2], timeframe[1], timeframe[0], tzinfo=datetime.timezone.utc)
+		epoch = math.floor((init_epoch - datetime.datetime(1970, 1, 1, tzinfo=datetime.timezone.utc)).total_seconds())
+		return epoch
+		
