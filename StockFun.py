@@ -7,7 +7,6 @@ import csv
 import matplotlib
 
 
-
 def percentageChange(old,new):
 	old = float(old)
 	new = float(new)
@@ -128,8 +127,18 @@ def isNeg(num):
 	elif num > 0: return 1
 	else: return 0
 
-def isNegTruthTable(x,y):
 
+def isNegTruthTable(x,y):
+	'''
+	Truth table 
+	|1 |0| -1| value|
+	-----------------
+	|T | T| F| True |
+	|T | F| T| False|
+	|F | T| T| True |
+	|F | T| F| True |
+	-----------------
+	'''
 
 #Assuming comp_dic is not empty
 #This is checking for when the days are matching up from 2008 & 2022. i.e same performance in terms of growth or de-growth
