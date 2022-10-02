@@ -7,6 +7,8 @@ import csv
 import matplotlib
 
 
+FibTruthTable = [[True,True,True],[True,True,False],[True,False,True]]
+
 def percentageChange(old,new):
 	old = float(old)
 	new = float(new)
@@ -123,11 +125,12 @@ def Compare( file1,file2 ):
 			json.dump(comp_dic,outfile,indent=4)
 
 def isNeg(num):
-	if num < 0: return -1
+	if num < 0: return 2
 	elif num > 0: return 1
 	else: return 0
 
-
+#values will be 0,1,2 where 2 will represent negative -1
+#maybe should make this a constant for future use.
 def isNegTruthTable(x,y):
 	'''
 	Truth table 
@@ -139,6 +142,7 @@ def isNegTruthTable(x,y):
 	|F | T| F| True |
 	-----------------
 	'''
+
 
 #Assuming comp_dic is not empty
 #This is checking for when the days are matching up from 2008 & 2022. i.e same performance in terms of growth or de-growth
