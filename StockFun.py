@@ -77,19 +77,21 @@ def calPercAvg(dic):
 
 def Compare( file1,file2 ):
 	
-	data_2008 = {}
-	data_2022 = {}
-
+	data_one = {}
+	data_two = {}
 	with open(file1) as fd_1:
 		reader = csv.DictReader(fd_1)
 		for row in reader:
-			data_2008[row['Date'][:5]] = {
+			if 'name' not in data_one:
+				data_one['name'] = row['Date'][-2:]
+
+			data_one[row['Date'][:5]] = {
 					'Open':row[' Open'],
 					'High': row[' High'],
 					'Low':row[' Low'],
 					'Close':row[' Close']}
 
-	#pbs_2008 = pbs(data_2008)
+	#pbs_2008 = pbs(data_one)
 	#with open('2008pbs','w') as outfile:
 	#		json.dump(pbs_2008,outfile,indent=4)
 	
@@ -97,32 +99,33 @@ def Compare( file1,file2 ):
 	with open(file2) as fd_2:
 		reader = csv.DictReader(fd_2)
 		for row in reader:
+			if 'name' not in data_two:
+				data_two['name'] = row['Date'][-2:]
 		
-			data_2022[row['Date'][:5]] = {
+			data_two[row['Date'][:5]] = {
 				'Open':row[' Open'],
 				'High': row[' High'],
 				'Low':row[' Low'],
 				'Close':row[' Close']}
-	comp_dic = {}
 	
-	for x in data_2022:
-		if x in data_2008.keys():
+	comp_dic = {}
+	for x in data_two:
+		if x in data_one.keys():
 			comp_dic[x] = {
-			'2011_open':data_2008[x]['Open'],
-			'2011_high': data_2008[x]['High'],
-			'2011_low': data_2008[x]['Low'],
-			'2011_close': data_2008[x]['Close'],
-			'2022_open': data_2022[x]['Open'],
-			'2022_high': data_2022[x]['High'],
-			'2022_low': data_2022[x]['Low'],
-			'2022_close': data_2022[x]['Close'],
-			'2011HighLowDiff': float(data_2008[x]['High']) - float(data_2008[x]['Low']), 
-			'2022HighLowDiff': float(data_2022[x]['High']) - float(data_2022[x]['Low']),
-			'2011DailyPerformance': float(data_2008[x]['Close']) - float(data_2008[x]['Open']),
-			'2022DailyPerformance': float(data_2022[x]['Close']) - float(data_2022[x]['Open'])
+			data_one['name']+'_open':data_one[x]['Open'],
+			data_one['name']+'_high': data_one[x]['High'],
+			data_one['name']+'_low': data_one[x]['Low'],
+			data_one['name']+'_close': data_one[x]['Close'],
+			data_two['name']+'_open': data_two[x]['Open'],
+			data_two['name']+'_high': data_two[x]['High'],
+			data_two['name']+'_low': data_two[x]['Low'],
+			data_two['name']+'_close': data_two[x]['Close'],
+			data_one['name']+'HighLowDiff': float(data_one[x]['High']) - float(data_one[x]['Low']), 
+			data_two['name']+'HighLowDiff': float(data_two[x]['High']) - float(data_two[x]['Low']),
+			data_one['name']+'DailyPerformance': float(data_one[x]['Close']) - float(data_one[x]['Open']),
+			data_two['name']+'DailyPerformance': float(data_two[x]['Close']) - float(data_two[x]['Open'])
 			}
-	val_2008 = data_2008.keys()
-	with open('2011vs2022ComparativeData','w') as outfile:
+	with open(data_one['name']+'vs'+ data_two['name']+'ComparativeData','w') as outfile:
 			json.dump(comp_dic,outfile,indent=4)
 
 def isNeg(num):
@@ -178,9 +181,13 @@ def isFib(num):
 	if isinstance(sqrt(perf_sq_pos,int)) or isinstance(sqrt(perf_sq_neg),int): return True 
 	else: return False
 
-def create
-#analysis('2008vs2022ComparativeData')
 
 
+data_dic = {}
 
-
+da = '09/23/22'
+data_dic['name'] = da[-2:]
+data_dic[da[:5]] = {
+	data_dic['name']+'_open':'Test'
+	}
+print(data_dic)
