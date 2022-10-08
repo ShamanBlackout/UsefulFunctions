@@ -133,29 +133,52 @@ def isNeg(num):
 #Assuming comp_dic is not empty
 #This is checking for when the days are matching up from 2008 & 2022. i.e same performance in terms of growth or de-growth
 #Still needs work to dynamically call the dictionary keys. Might change the Keys to filename. Is that good coding practice??
-def CompAnalysis(filename):
+def Analysis(filename):
 	rep_cnt = []
 	comp_dic = {}
 	with open(filename,'r') as fd:
 		comp_dic = json.load(fd)
 	count = 0
+	date_arr = []
 	for x in comp_dic:
 		if FibTruthTable[isNeg(comp_dic[x]['2008DailyPerformance'])][isNeg(comp_dic[x]['2020DailyPerformance'])]:
+			date_arr.append(x)
 			count+=1
-			print(count)
 		else:
 			if count >= 1:
 				rep_cnt.append(count) #account for all the previous counts up until False
 				rep_cnt.append(1) # must account for the false variable
+				mapSeq(date_arr,count)
+				mapSeq(x,1)
+				date_arr.clear()
 				count = 0
 			else:
 				rep_cnt.append(1)
+				mapSeq(date_arr,count)
 	if count >=1:
 		rep_cnt.append(count)
 	print(rep_cnt)
 
 def PbsAnalysis(filename):
 		print('nothing')
+
+def fibCubeGraph():
+	print('nothing')
+
+#Will map date to fib sequence and non fib-seq
+#Not sure how i want the map to look but its a mapping none the less
+#Not sure if I want this to be an array or account for two different types
+def mapSeq(test_arr,fib_num):
+	print('nothing')
+
+def isFib(num):
+	perf_sq_pos = 5*pow(num,2)+4
+	perf_sq_neg = 5*pow(num,2)-4
+
+	if isinstance(sqrt(perf_sq_pos,int)) or isinstance(sqrt(perf_sq_neg),int): return True 
+	else: return False
+
+def create
 #analysis('2008vs2022ComparativeData')
 
 
