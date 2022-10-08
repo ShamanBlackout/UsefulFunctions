@@ -7,6 +7,7 @@ import csv
 import matplotlib
 
 
+
 FibTruthTable = [[True,True,True],[True,True,False],[True,False,True]]
 
 def percentageChange(old,new):
@@ -129,42 +130,34 @@ def isNeg(num):
 	elif num > 0: return 1
 	else: return 0
 
-#values will be 0,1,2 where 2 will represent negative -1
-#maybe should make this a constant for future use.
-def isNegTruthTable(x,y):
-	'''
-	Truth table 
-	|1 |0| -1| value|
-	-----------------
-	|T | T| F| True |
-	|T | F| T| False|
-	|F | T| T| True |
-	|F | T| F| True |
-	-----------------
-	'''
-
-
 #Assuming comp_dic is not empty
 #This is checking for when the days are matching up from 2008 & 2022. i.e same performance in terms of growth or de-growth
-def analysis():
-	arr = []
+#Still needs work to dynamically call the dictionary keys. Might change the Keys to filename. Is that good coding practice??
+def CompAnalysis(filename):
+	rep_cnt = []
 	comp_dic = {}
-	with open('2008vs2022ComparativeData','r') as fd:
+	with open(filename,'r') as fd:
 		comp_dic = json.load(fd)
+	count = 0
 	for x in comp_dic:
-		#print('\n2008: {0} 2008Neg:{1}  \n2022:{2} 2022Neg:{3}\nBoth neg:{4}'.format(comp_dic[x]['2008DailyPerformance'],is_neg(comp_dic[x]['2008DailyPerformance']),comp_dic[x]['2020DailyPerformance'], is_neg(comp_dic[x]['2020DailyPerformance']),is_neg(comp_dic[x]['2008DailyPerformance']) == is_neg(comp_dic[x]['2020DailyPerformance'])))
-		if isNeg(comp_dic[x]['2008DailyPerformance']) == isNeg(comp_dic[x]['2020DailyPerformance']):
-			print('2008: {0}\n 2020:{1}\n'.format(comp_dic[x]['2008DailyPerformance'],comp_dic[x]['2020DailyPerformance']))
-		#	count += 1
-		#else:
-		#	print('Count:{0}\n 2008:{1}\n2022:{2}'.format(count,comp_dic[x]['2008DailyPerformance'],comp_dic[x]['2020DailyPerformance']))
-		#	if count == 0:
-		#		arr.append(1)
-		#	else:
-		#		arr.append(count)
-		#		count = 0
-	#print(arr)
-		
-#analysis()
+		if FibTruthTable[isNeg(comp_dic[x]['2008DailyPerformance'])][isNeg(comp_dic[x]['2020DailyPerformance'])]:
+			count+=1
+			print(count)
+		else:
+			if count >= 1:
+				rep_cnt.append(count) #account for all the previous counts up until False
+				rep_cnt.append(1) # must account for the false variable
+				count = 0
+			else:
+				rep_cnt.append(1)
+	if count >=1:
+		rep_cnt.append(count)
+	print(rep_cnt)
+
+def PbsAnalysis(filename):
+		print('nothing')
+#analysis('2008vs2022ComparativeData')
+
+
 
 
