@@ -2,6 +2,7 @@ import json
 import datetime
 import time
 import math
+import os
 import re
 import csv
 import matplotlib
@@ -41,6 +42,7 @@ def pbs(dic):
 #assuming the dictionary is based off pbs( Percentage based system)
 def calPercAvg(filename):
 	with open(filename,'r') as fd:
+
 		dic = json.load(fd)
 		openLowAvg = 0.0
 		openHighAvg = 0.0
@@ -50,13 +52,16 @@ def calPercAvg(filename):
 		percentageDic = {}
 		day_count = 0
 		cur_month = 0
+		percentageDic['monthly'] = {}
+
+
 
 		for x in dic:
 			day_count +=1
 			cur_month = x[:2]
 			try:
 				if cur_month != prev_month:
-					percentageChange['monthly'][prev_month] = {
+					percentageDic['monthly'][prev_month] = {
 						prev_month +'_openLowAvg':openLowAvg/day_count,
 						prev_month +'_openHighAvg':openHighAvg/day_count,
 						prev_month +'_openCloseAvg':openCloseAvg/day_count,
@@ -80,7 +85,7 @@ def calPercAvg(filename):
 			lowCloseAvg  +=dic [x]['DailyPercentageChange']['low-close']
 			highCloseAvg  +=dic [x]['DailyPercentageChange']['high-close']
 
-		percentageChange['monthly'][cur_month] = {
+		percentageDic['monthly'][cur_month] = {
 						cur_month +'_openLowAvg':openLowAvg/day_count,
 						cur_month +'_openHighAvg':openHighAvg/day_count,
 						cur_month +'_openCloseAvg':openCloseAvg/day_count,
@@ -88,8 +93,10 @@ def calPercAvg(filename):
 						cur_month +'_highCloseAvg':highCloseAvg/day_count
 						}
 
-		with open(filename[0:2]+'MonthlyPercAvgs','w') as outfile:
-			json.dump(percentageChange,outfile,indent=4)
+		patt = re.compile('\d{2}')
+		patt_obj = re.search(patt,filename)
+		with open(getPath('\\analysisData\\','dir')+filename[patt_obj.start():patt_obj.end()]+'MonthlyPercAvgs','w') as outfile:
+			json.dump(percentageDic,outfile,indent=4)
 
 		#num_keys = len(dic.keys())
 		#percentageDic['yearly'] = {
@@ -207,22 +214,35 @@ def isFib(num):
 	perf_sq_neg = 5*pow(num,2)-4
 
 	if math.sqrt(perf_sq_pos).is_integer() or math.sqrt(perf_sq_neg).is_integer(): 
-		print(num)
 		return True 
 	else:
 		return False
 
+#need to include whether to check for file or directory
+#Remember depending on the system to account for escape characters 
+def getPath(filename,file_type):
+	#I should match up to useful functions and then append filename 
+	pattern = re.compile('UsefulFunctions')
+	road = os.getcwd()
+	search_obj = pattern.search(road)
+	if search_obj is None: 
+		raise Exception('No such path exist')
+	elif file_type == 'file':
+		base = road[0:search_obj.endpos]
+		filename = base + filename
+		if os.path.isfile(filename):
+			return filename 
+		else: 
+			raise Exception('AJHHHHH No File')
+	elif file_type == 'dir':
+		base = road[0:search_obj.endpos]
+		filename = base + filename
+		if os.path.isdir(filename):
+			return filename 
+		else: 
+			raise Exception('AJHHHHH No Directory')
 
-def test():
+	
 
-	for i in range(0,100):
-		cur = i 
-		try:
-			if cur != prev:
-				print(prev)
-		except NameError as serr:
-			print(serr)
-		finally:
-				prev = cur 
 
-test()
+#calPercAvg(getPath('\\analysisData\\08pbs','file'))
