@@ -17,6 +17,7 @@ def percentageChange(old,new):
 
 #percentage Based System
 def pbs(dic):
+	year = dic.pop('name')
 	for x in dic:
 		#key represents percentage change: ex open-low, where open=old and low = new
 		dic[x]['DailyPercentageChange'] = {
@@ -33,50 +34,76 @@ def pbs(dic):
 		finally:
 			prev_close = dic[x]['Close']
 
-	return dic
-#assuming the dictionary is based off pbs( Percentage based system)
-def calPercAvg(dic):
-
-	openLowAvg = 0.0
-	openHighAvg = 0.0
-	openCloseAvg = 0.0
-	lowCloseAvg = 0.0
-	highCloseAvg = 0.0
-	percentageDic = {}
-
-	for x in dic:
-		cur_month = x[:2]
-
-		
-		percentageDic['WeeklyAvg']
-		openLowAvg  +=dic [x]['DailyPercentageChange']['open-low']
-		openHighAvg  +=dic [x]['DailyPercentageChange']['open-high']
-		openCloseAvg   +=dic [x]['DailyPercentageChange']['open-close']
-		lowCloseAvg  +=dic [x]['DailyPercentageChange']['low-close']
-		highCloseAvg  +=dic [x]['DailyPercentageChange']['high'-'close']
+	with open('pbs_'+year,'w') as outfile:
+			json.dump(dic,outfile,indent=4)
 	
-		#if current month != previous month
-		percentageChange['monthly'][cur_month]
-		#reset monthly avg
-		openLowMonthAvg = 0.0
-		openHighMonthAvg = 0.0
-		openCloseMonthAvg = 0.0
-		lowCloseMonthAvg = 0.0
-		highCloseMonthAvg = 0.0
+	
+#assuming the dictionary is based off pbs( Percentage based system)
+def calPercAvg(filename):
+	with open(filename,'r') as fd:
+		dic = json.load(fd)
+		openLowAvg = 0.0
+		openHighAvg = 0.0
+		openCloseAvg = 0.0
+		lowCloseAvg = 0.0
+		highCloseAvg = 0.0
+		percentageDic = {}
+		day_count = 0
+		cur_month = 0
 
-	num_keys = len(dic.keys())
-	percentageDic['yearly'] = {
-		'open-low':openLowAvg/num_keys,
-		'open-high':openHighAvg/num_keys,
-		'open-close':openCloseAvg/num_keys,
-		'low-close':lowCloseAvg/num_keys,
-		'high-close':highCloseAvg/num_keys
-		}
+		for x in dic:
+			day_count +=1
+			cur_month = x[:2]
+			try:
+				if cur_month != prev_month:
+					percentageChange['monthly'][prev_month] = {
+						prev_month +'_openLowAvg':openLowAvg/day_count,
+						prev_month +'_openHighAvg':openHighAvg/day_count,
+						prev_month +'_openCloseAvg':openCloseAvg/day_count,
+						prev_month +'_lowCloseAvg':lowCloseAvg/day_count,
+						prev_month +'_highCloseAvg':highCloseAvg/day_count
+						}
+					openLowAvg = 0.0
+					openHighAvg = 0.0
+					openCloseAvg = 0.0
+					lowCloseAvg = 0.0
+					highCloseAvg = 0.0
+					day_count = 1
+			except NameError as err:
+				print(err)
+			finally:
+				prev_month = cur_month
+
+			openLowAvg  +=dic [x]['DailyPercentageChange']['open-low']
+			openHighAvg  +=dic [x]['DailyPercentageChange']['open-high']
+			openCloseAvg   +=dic [x]['DailyPercentageChange']['open-close']
+			lowCloseAvg  +=dic [x]['DailyPercentageChange']['low-close']
+			highCloseAvg  +=dic [x]['DailyPercentageChange']['high-close']
+
+		percentageChange['monthly'][cur_month] = {
+						cur_month +'_openLowAvg':openLowAvg/day_count,
+						cur_month +'_openHighAvg':openHighAvg/day_count,
+						cur_month +'_openCloseAvg':openCloseAvg/day_count,
+						cur_month +'_lowCloseAvg':lowCloseAvg/day_count,
+						cur_month +'_highCloseAvg':highCloseAvg/day_count
+						}
+
+		with open(filename[0:2]+'MonthlyPercAvgs','w') as outfile:
+			json.dump(percentageChange,outfile,indent=4)
+
+		#num_keys = len(dic.keys())
+		#percentageDic['yearly'] = {
+		#	'open-low':openLowAvg/num_keys,
+		#	'open-high':openHighAvg/num_keys,
+		#	'open-close':openCloseAvg/num_keys,
+		#	'low-close':lowCloseAvg/num_keys,
+		#	'high-close':highCloseAvg/num_keys
+		#	}
 
 
 
 def Compare( file1,file2 ):
-	
+	#note assigning 'name' could be changed to better direct my intentions but im too annoyed to change it atm 
 	data_one = {}
 	data_two = {}
 	with open(file1) as fd_1:
@@ -91,9 +118,7 @@ def Compare( file1,file2 ):
 					'Low':row[' Low'],
 					'Close':row[' Close']}
 
-	#pbs_2008 = pbs(data_one)
-	#with open('2008pbs','w') as outfile:
-	#		json.dump(pbs_2008,outfile,indent=4)
+	#pbs(data_one)
 	
 
 	with open(file2) as fd_2:
@@ -107,25 +132,28 @@ def Compare( file1,file2 ):
 				'High': row[' High'],
 				'Low':row[' Low'],
 				'Close':row[' Close']}
+
+	year1 = data_one.pop('name')
+	year2 = data_two.pop('name')
 	
 	comp_dic = {}
 	for x in data_two:
 		if x in data_one.keys():
 			comp_dic[x] = {
-			data_one['name']+'_open':data_one[x]['Open'],
-			data_one['name']+'_high': data_one[x]['High'],
-			data_one['name']+'_low': data_one[x]['Low'],
-			data_one['name']+'_close': data_one[x]['Close'],
-			data_two['name']+'_open': data_two[x]['Open'],
-			data_two['name']+'_high': data_two[x]['High'],
-			data_two['name']+'_low': data_two[x]['Low'],
-			data_two['name']+'_close': data_two[x]['Close'],
-			data_one['name']+'HighLowDiff': float(data_one[x]['High']) - float(data_one[x]['Low']), 
-			data_two['name']+'HighLowDiff': float(data_two[x]['High']) - float(data_two[x]['Low']),
-			data_one['name']+'DailyPerformance': float(data_one[x]['Close']) - float(data_one[x]['Open']),
-			data_two['name']+'DailyPerformance': float(data_two[x]['Close']) - float(data_two[x]['Open'])
+			year1 +'_open':data_one[x]['Open'],
+			year1 +'_high': data_one[x]['High'],
+			year1 +'_low': data_one[x]['Low'],
+			year1 +'_close': data_one[x]['Close'],
+			year2+'_open': data_two[x]['Open'],
+			year2+'_high': data_two[x]['High'],
+			year2+'_low': data_two[x]['Low'],
+			year2+'_close': data_two[x]['Close'],
+			year1+'HighLowDiff': float(data_one[x]['High']) - float(data_one[x]['Low']), 
+			year2+'HighLowDiff': float(data_two[x]['High']) - float(data_two[x]['Low']),
+			year1+'DailyPerformance': float(data_one[x]['Close']) - float(data_one[x]['Open']),
+			year2+'DailyPerformance': float(data_two[x]['Close']) - float(data_two[x]['Open'])
 			}
-	with open(data_one['name']+'vs'+ data_two['name']+'ComparativeData','w') as outfile:
+	with open(year1+'vs'+ year2+'ComparativeData','w') as outfile:
 			json.dump(comp_dic,outfile,indent=4)
 
 def isNeg(num):
@@ -178,16 +206,23 @@ def isFib(num):
 	perf_sq_pos = 5*pow(num,2)+4
 	perf_sq_neg = 5*pow(num,2)-4
 
-	if isinstance(sqrt(perf_sq_pos,int)) or isinstance(sqrt(perf_sq_neg),int): return True 
-	else: return False
+	if math.sqrt(perf_sq_pos).is_integer() or math.sqrt(perf_sq_neg).is_integer(): 
+		print(num)
+		return True 
+	else:
+		return False
 
 
+def test():
 
-data_dic = {}
+	for i in range(0,100):
+		cur = i 
+		try:
+			if cur != prev:
+				print(prev)
+		except NameError as serr:
+			print(serr)
+		finally:
+				prev = cur 
 
-da = '09/23/22'
-data_dic['name'] = da[-2:]
-data_dic[da[:5]] = {
-	data_dic['name']+'_open':'Test'
-	}
-print(data_dic)
+test()
