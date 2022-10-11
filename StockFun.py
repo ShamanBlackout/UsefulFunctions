@@ -98,70 +98,66 @@ def calPercAvg(filename):
 		with open(getPath('\\analysisData\\','dir')+filename[patt_obj.start():patt_obj.end()]+'MonthlyPercAvgs','w') as outfile:
 			json.dump(percentageDic,outfile,indent=4)
 
-		#num_keys = len(dic.keys())
-		#percentageDic['yearly'] = {
-		#	'open-low':openLowAvg/num_keys,
-		#	'open-high':openHighAvg/num_keys,
-		#	'open-close':openCloseAvg/num_keys,
-		#	'low-close':lowCloseAvg/num_keys,
-		#	'high-close':highCloseAvg/num_keys
-		#	}
 
-
-
-def Compare( file1,file2 ):
-	#note assigning 'name' could be changed to better direct my intentions but im too annoyed to change it atm 
-	data_one = {}
-	data_two = {}
-	with open(file1) as fd_1:
+def getCsv(filename):
+	with open(filename) as fd_1:
+		data_dic = {}
 		reader = csv.DictReader(fd_1)
 		for row in reader:
-			if 'name' not in data_one:
-				data_one['name'] = row['Date'][-2:]
-
-			data_one[row['Date'][:5]] = {
+			data_dic[row['Date']] = {
 					'Open':row[' Open'],
 					'High': row[' High'],
 					'Low':row[' Low'],
 					'Close':row[' Close']}
+		return data_dic
 
-	#pbs(data_one)
-	
 
-	with open(file2) as fd_2:
-		reader = csv.DictReader(fd_2)
-		for row in reader:
-			if 'name' not in data_two:
-				data_two['name'] = row['Date'][-2:]
-		
-			data_two[row['Date'][:5]] = {
-				'Open':row[' Open'],
-				'High': row[' High'],
-				'Low':row[' Low'],
-				'Close':row[' Close']}
+def Compare( file1,file2 ):
+	#note assigning 'name' could be changed to better direct my intentions but im too annoyed to change it atm 
+	print('Inside compare')
+	data_one = getCsv(file1)
+	data_two = getCsv(file2)
+	short_keys = [x[:5] for x in data_one.keys()]
 
-	year1 = data_one.pop('name')
-	year2 = data_two.pop('name')
+	#Saves time instead of doing splice computations in the for loop (year1,year2)
+	year1 = ''
+	year2 = ''
+
+	for x in data_one:
+		year1 = x[-2:]
+		if year1 != '':
+			break
+	for x in data_two:
+		year2 = x[-2:]
+		if year2 != '':
+			break
+
+	print(year1)
+	print(year2)
+
 	
 	comp_dic = {}
+
 	for x in data_two:
-		if x in data_one.keys():
+		if x[:5] in short_keys:
+			y = x[:6]+year1
+			print(y)
 			comp_dic[x] = {
-			year1 +'_open':data_one[x]['Open'],
-			year1 +'_high': data_one[x]['High'],
-			year1 +'_low': data_one[x]['Low'],
-			year1 +'_close': data_one[x]['Close'],
+			year1 +'_open':data_one[y]['Open'],
+			year1 +'_high': data_one[y]['High'],
+			year1 +'_low': data_one[y]['Low'],
+			year1 +'_close': data_one[y]['Close'],
 			year2+'_open': data_two[x]['Open'],
 			year2+'_high': data_two[x]['High'],
 			year2+'_low': data_two[x]['Low'],
 			year2+'_close': data_two[x]['Close'],
-			year1+'HighLowDiff': float(data_one[x]['High']) - float(data_one[x]['Low']), 
+			year1+'HighLowDiff': float(data_one[y]['High']) - float(data_one[y]['Low']), 
 			year2+'HighLowDiff': float(data_two[x]['High']) - float(data_two[x]['Low']),
-			year1+'DailyPerformance': float(data_one[x]['Close']) - float(data_one[x]['Open']),
+			year1+'DailyPerformance': float(data_one[y]['Close']) - float(data_one[y]['Open']),
 			year2+'DailyPerformance': float(data_two[x]['Close']) - float(data_two[x]['Open'])
 			}
-	with open(year1+'vs'+ year2+'ComparativeData','w') as outfile:
-			json.dump(comp_dic,outfile,indent=4)
+	#with open(year1+'vs'+ year2+'ComparativeData','w') as outfile:
+	#		json.dump(comp_dic,outfile,indent=4)
 
 def isNeg(num):
 	if num < 0: return 2
@@ -179,7 +175,7 @@ def Analysis(filename):
 	count = 0
 	date_arr = []
 	for x in comp_dic:
-		if FibTruthTable[isNeg(comp_dic[x]['2008DailyPerformance'])][isNeg(comp_dic[x]['2020DailyPerformance'])]:
+		if FibTruthTable[isNeg(comp_dic[x]['2008DailyPerformance'])][isNeg(comp_dic[x]['2020DailyPerformance'])]: #will have to change this before it can be ran
 			date_arr.append(x)
 			count+=1
 		else:
@@ -207,6 +203,7 @@ def fibCubeGraph():
 #Not sure how i want the map to look but its a mapping none the less
 #Not sure if I want this to be an array or account for two different types
 def mapSeq(test_arr,fib_num):
+	#Could possibly just use a dictionary for this
 	print('nothing')
 
 def isFib(num):
@@ -246,3 +243,4 @@ def getPath(filename,file_type):
 
 
 #calPercAvg(getPath('\\analysisData\\08pbs','file'))
+Compare(getPath('\\historicalData\\HistoricalPrices2011.csv','file'),getPath('\\historicalData\\HistoricalPrices2008.csv','file'))
