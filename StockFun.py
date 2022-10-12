@@ -17,7 +17,7 @@ def percentageChange(old,new):
 	return ((new-old)/new)*100
 
 #percentage Based System
-def pbs(dic):
+def Pbs(dic):
 
 	year = ''
 	for x in dic:
@@ -59,8 +59,6 @@ def calPercAvg(filename):
 		day_count = 0
 		cur_month = 0
 		percentageDic['monthly'] = {}
-
-
 
 		for x in dic:
 			day_count +=1
@@ -104,7 +102,6 @@ def calPercAvg(filename):
 		with open(getPath('\\analysisData\\','dir')+filename[patt_obj.start():patt_obj.end()]+'MonthlyPercAvgs','w') as outfile:
 			json.dump(percentageDic,outfile,indent=4)
 
-
 def getCsv(filename):
 	with open(filename) as fd_1:
 		data_dic = {}
@@ -116,6 +113,13 @@ def getCsv(filename):
 					'Low':row[' Low'],
 					'Close':row[' Close']}
 		return data_dic
+
+def Single(file):
+	
+	dic = getCsv(file)
+	Pbs(dic)
+	#calPercAvg(filename)
+
 
 
 def Compare( file1,file2 ):
