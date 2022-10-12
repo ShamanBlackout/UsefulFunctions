@@ -18,7 +18,13 @@ def percentageChange(old,new):
 
 #percentage Based System
 def pbs(dic):
-	year = dic.pop('name')
+
+	year = ''
+	for x in dic:
+		year = x[-2:]
+		if year != '':
+			break	
+
 	for x in dic:
 		#key represents percentage change: ex open-low, where open=old and low = new
 		dic[x]['DailyPercentageChange'] = {
@@ -114,7 +120,6 @@ def getCsv(filename):
 
 def Compare( file1,file2 ):
 	#note assigning 'name' could be changed to better direct my intentions but im too annoyed to change it atm 
-	print('Inside compare')
 	data_one = getCsv(file1)
 	data_two = getCsv(file2)
 	short_keys = [x[:5] for x in data_one.keys()]
@@ -156,8 +161,8 @@ def Compare( file1,file2 ):
 			year1+'DailyPerformance': float(data_one[y]['Close']) - float(data_one[y]['Open']),
 			year2+'DailyPerformance': float(data_two[x]['Close']) - float(data_two[x]['Open'])
 			}
-	#with open(year1+'vs'+ year2+'ComparativeData','w') as outfile:
-	#		json.dump(comp_dic,outfile,indent=4)
+	with open(year1+'vs'+ year2+'ComparativeData','w') as outfile:
+			json.dump(comp_dic,outfile,indent=4)
 
 def isNeg(num):
 	if num < 0: return 2
@@ -167,15 +172,21 @@ def isNeg(num):
 #Assuming comp_dic is not empty
 #This is checking for when the days are matching up from 2008 & 2022. i.e same performance in terms of growth or de-growth
 #Still needs work to dynamically call the dictionary keys. Might change the Keys to filename. Is that good coding practice??
-def Analysis(filename):
+def CompAnalysis(filename):
 	rep_cnt = []
 	comp_dic = {}
 	with open(filename,'r') as fd:
 		comp_dic = json.load(fd)
 	count = 0
 	date_arr = []
+
+	#Filenames must be correctly formated for this to work 
+	yr_arr = re.findall('\d{2}', filename.split('\\')[-1])
+	if len(yr_arr) != 2:
+		raise Exception('File is not properly formatted') 
+
 	for x in comp_dic:
-		if FibTruthTable[isNeg(comp_dic[x]['2008DailyPerformance'])][isNeg(comp_dic[x]['2020DailyPerformance'])]: #will have to change this before it can be ran
+		if FibTruthTable[isNeg(comp_dic[x][yr_arr[0]+'DailyPerformance'])][isNeg(comp_dic[x][yr_arr[1]+'DailyPerformance'])]: 
 			date_arr.append(x)
 			count+=1
 		else:
@@ -204,7 +215,11 @@ def fibCubeGraph():
 #Not sure if I want this to be an array or account for two different types
 def mapSeq(test_arr,fib_num):
 	#Could possibly just use a dictionary for this
-	print('nothing')
+	with open(filename,'r+') as fd:
+		map_dic =json.load(fd)
+		new_mapping = (test_arr,fib_num)
+		map_dic |= new_mapping 
+		json.dump(map_dic,fd,indent =4)
 
 def isFib(num):
 	perf_sq_pos = 5*pow(num,2)+4
@@ -243,4 +258,6 @@ def getPath(filename,file_type):
 
 
 #calPercAvg(getPath('\\analysisData\\08pbs','file'))
-Compare(getPath('\\historicalData\\HistoricalPrices2011.csv','file'),getPath('\\historicalData\\HistoricalPrices2008.csv','file'))
+#Compare(getPath('\\historicalData\\HistoricalPrices2011.csv','file'),getPath('\\historicalData\\HistoricalPrices2008.csv','files'))
+
+
