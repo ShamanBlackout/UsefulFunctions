@@ -17,8 +17,14 @@ def percentageChange(old,new):
 	return ((new-old)/new)*100
 
 #percentage Based System
-def pbs(dic):
-	year = dic.pop('name')
+def Pbs(dic):
+
+	year = ''
+	for x in dic:
+		year = x[-2:]
+		if year != '':
+			break	
+
 	for x in dic:
 		#key represents percentage change: ex open-low, where open=old and low = new
 		dic[x]['DailyPercentageChange'] = {
@@ -53,8 +59,6 @@ def calPercAvg(filename):
 		day_count = 0
 		cur_month = 0
 		percentageDic['monthly'] = {}
-
-
 
 		for x in dic:
 			day_count +=1
@@ -98,66 +102,67 @@ def calPercAvg(filename):
 		with open(getPath('\\analysisData\\','dir')+filename[patt_obj.start():patt_obj.end()]+'MonthlyPercAvgs','w') as outfile:
 			json.dump(percentageDic,outfile,indent=4)
 
-		#num_keys = len(dic.keys())
-		#percentageDic['yearly'] = {
-		#	'open-low':openLowAvg/num_keys,
-		#	'open-high':openHighAvg/num_keys,
-		#	'open-close':openCloseAvg/num_keys,
-		#	'low-close':lowCloseAvg/num_keys,
-		#	'high-close':highCloseAvg/num_keys
-		#	}
+def getCsv(filename):
+	with open(filename) as fd_1:
+		data_dic = {}
+		reader = csv.DictReader(fd_1)
+		for row in reader:
+			data_dic[row['Date']] = {
+					'Open':row[' Open'],
+					'High': row[' High'],
+					'Low':row[' Low'],
+					'Close':row[' Close']}
+		return data_dic
+
+def Single(file):
+	
+	dic = getCsv(file)
+	Pbs(dic)
+	#calPercAvg(filename)
 
 
 
 def Compare( file1,file2 ):
 	#note assigning 'name' could be changed to better direct my intentions but im too annoyed to change it atm 
-	data_one = {}
-	data_two = {}
-	with open(file1) as fd_1:
-		reader = csv.DictReader(fd_1)
-		for row in reader:
-			if 'name' not in data_one:
-				data_one['name'] = row['Date'][-2:]
+	data_one = getCsv(file1)
+	data_two = getCsv(file2)
+	short_keys = [x[:5] for x in data_one.keys()]
 
-			data_one[row['Date'][:5]] = {
-					'Open':row[' Open'],
-					'High': row[' High'],
-					'Low':row[' Low'],
-					'Close':row[' Close']}
+	#Saves time instead of doing splice computations in the for loop (year1,year2)
+	year1 = ''
+	year2 = ''
 
-	#pbs(data_one)
-	
+	for x in data_one:
+		year1 = x[-2:]
+		if year1 != '':
+			break
+	for x in data_two:
+		year2 = x[-2:]
+		if year2 != '':
+			break
 
-	with open(file2) as fd_2:
-		reader = csv.DictReader(fd_2)
-		for row in reader:
-			if 'name' not in data_two:
-				data_two['name'] = row['Date'][-2:]
-		
-			data_two[row['Date'][:5]] = {
-				'Open':row[' Open'],
-				'High': row[' High'],
-				'Low':row[' Low'],
-				'Close':row[' Close']}
+	print(year1)
+	print(year2)
 
-	year1 = data_one.pop('name')
-	year2 = data_two.pop('name')
 	
 	comp_dic = {}
+
 	for x in data_two:
-		if x in data_one.keys():
+		if x[:5] in short_keys:
+			y = x[:6]+year1
+			print(y)
 			comp_dic[x] = {
-			year1 +'_open':data_one[x]['Open'],
-			year1 +'_high': data_one[x]['High'],
-			year1 +'_low': data_one[x]['Low'],
-			year1 +'_close': data_one[x]['Close'],
+			year1 +'_open':data_one[y]['Open'],
+			year1 +'_high': data_one[y]['High'],
+			year1 +'_low': data_one[y]['Low'],
+			year1 +'_close': data_one[y]['Close'],
 			year2+'_open': data_two[x]['Open'],
 			year2+'_high': data_two[x]['High'],
 			year2+'_low': data_two[x]['Low'],
 			year2+'_close': data_two[x]['Close'],
-			year1+'HighLowDiff': float(data_one[x]['High']) - float(data_one[x]['Low']), 
+			year1+'HighLowDiff': float(data_one[y]['High']) - float(data_one[y]['Low']), 
 			year2+'HighLowDiff': float(data_two[x]['High']) - float(data_two[x]['Low']),
-			year1+'DailyPerformance': float(data_one[x]['Close']) - float(data_one[x]['Open']),
+			year1+'DailyPerformance': float(data_one[y]['Close']) - float(data_one[y]['Open']),
 			year2+'DailyPerformance': float(data_two[x]['Close']) - float(data_two[x]['Open'])
 			}
 	with open(year1+'vs'+ year2+'ComparativeData','w') as outfile:
@@ -171,15 +176,21 @@ def isNeg(num):
 #Assuming comp_dic is not empty
 #This is checking for when the days are matching up from 2008 & 2022. i.e same performance in terms of growth or de-growth
 #Still needs work to dynamically call the dictionary keys. Might change the Keys to filename. Is that good coding practice??
-def Analysis(filename):
+def CompAnalysis(filename):
 	rep_cnt = []
 	comp_dic = {}
 	with open(filename,'r') as fd:
 		comp_dic = json.load(fd)
 	count = 0
 	date_arr = []
+
+	#Filenames must be correctly formated for this to work 
+	yr_arr = re.findall('\d{2}', filename.split('\\')[-1])
+	if len(yr_arr) != 2:
+		raise Exception('File is not properly formatted') 
+
 	for x in comp_dic:
-		if FibTruthTable[isNeg(comp_dic[x]['2008DailyPerformance'])][isNeg(comp_dic[x]['2020DailyPerformance'])]:
+		if FibTruthTable[isNeg(comp_dic[x][yr_arr[0]+'DailyPerformance'])][isNeg(comp_dic[x][yr_arr[1]+'DailyPerformance'])]: 
 			date_arr.append(x)
 			count+=1
 		else:
@@ -207,7 +218,12 @@ def fibCubeGraph():
 #Not sure how i want the map to look but its a mapping none the less
 #Not sure if I want this to be an array or account for two different types
 def mapSeq(test_arr,fib_num):
-	print('nothing')
+	#Could possibly just use a dictionary for this
+	with open(filename,'r+') as fd:
+		map_dic =json.load(fd)
+		new_mapping = (test_arr,fib_num)
+		map_dic |= new_mapping 
+		json.dump(map_dic,fd,indent =4)
 
 def isFib(num):
 	perf_sq_pos = 5*pow(num,2)+4
@@ -246,3 +262,6 @@ def getPath(filename,file_type):
 
 
 #calPercAvg(getPath('\\analysisData\\08pbs','file'))
+#Compare(getPath('\\historicalData\\HistoricalPrices2011.csv','file'),getPath('\\historicalData\\HistoricalPrices2008.csv','files'))
+
+
