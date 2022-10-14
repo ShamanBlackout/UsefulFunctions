@@ -8,7 +8,16 @@ import csv
 import matplotlib
 
 
-
+'''
+	Truth table 
+	|1 |0| -1| value|
+	-----------------
+	|T | T| F| True |
+	|T | F| T| False|
+	|F | T| T| True |
+	|F | T| F| True |
+	-----------------
+'''
 FibTruthTable = [[True,True,True],[True,True,False],[True,False,True]]
 
 def percentageChange(old,new):
@@ -43,6 +52,7 @@ def Pbs(dic):
 
 	with open('pbs_'+year,'w') as outfile:
 			json.dump(dic,outfile,indent=4)
+			return dic
 	
 	
 #assuming the dictionary is based off pbs( Percentage based system)
@@ -114,14 +124,69 @@ def getCsv(filename):
 					'Close':row[' Close']}
 		return data_dic
 
-def Single(file):
-	
+def SinglePattern(file):
+	#will need to keep 
+	date_arr = []
+	map_arr = []
+	neg_cnt = 0
+	pos_cnt = 0
+
 	dic = getCsv(file)
-	Pbs(dic)
-	#calPercAvg(filename)
+	dic = Pbs(dic)
+
+	for x in dic:
+		if isNeg(dic[x]['open-close']) == 2:
+			if pos_cnt == 1 and neg_cnt == 1:
+				date_arr.append(x)
+				pos_cnt = 0
+				neg_cnt +=1 
+			elif pos_cnt!=0:
+				map_arr.append((tuple(date_arr),pos_cnt))
+				pos_cnt = 0
+				date_arr.clear()
+				date_arr.append(x)
+				neg_cnt +=1
+			else:
+				date_arr.append(x)
+				neg_cnt +=1
+		elif isNeg(dic[x]['open-close']) == 1:
+			if pos_cnt == 1 and neg_cnt == 1:
+				date_arr.append(x)
+				neg_cnt = 0
+				pos_cnt +=1 
+			elif neg_cnt!=0:
+				map_arr.append((tuple(date_arr),neg_cnt))
+				neg_cnt = 0
+				date_arr.clear()
+				date_arr.append(x)
+				pos_cnt +=1
+			else:
+				date_arr.append(x)
+				pos_cnt +=1
+		elif isNeg(dic[x]['open-close']) == 0:
+			date_arr.append(x)
+			if pos_cnt == 0 and neg_cnt == 0:
+				pos_cnt,neg_cnt = 1,1
+			elif pos_cnt != 0:
+				pos_cnt +=1
+			else:
+				neg_cnt +=1
+
+	if len(date_arr) > 0:
+		if pos_cnt !=0:
+			map_arr.append((tuple(date_arr),pos_cnt))
+		elif neg_cnt != 0:
+			map_arr.append((tuple(date_arr),neg_cnt))
 
 
 
+			
+
+
+	
+	
+
+#calPercAvg(filename)
 def Compare( file1,file2 ):
 	#note assigning 'name' could be changed to better direct my intentions but im too annoyed to change it atm 
 	data_one = getCsv(file1)
@@ -141,10 +206,6 @@ def Compare( file1,file2 ):
 		if year2 != '':
 			break
 
-	print(year1)
-	print(year2)
-
-	
 	comp_dic = {}
 
 	for x in data_two:
@@ -173,10 +234,8 @@ def isNeg(num):
 	elif num > 0: return 1
 	else: return 0
 
-#Assuming comp_dic is not empty
-#This is checking for when the days are matching up from 2008 & 2022. i.e same performance in terms of growth or de-growth
-#Still needs work to dynamically call the dictionary keys. Might change the Keys to filename. Is that good coding practice??
-def CompAnalysis(filename):
+
+def CompPattern(filename):
 	rep_cnt = []
 	comp_dic = {}
 	with open(filename,'r') as fd:
@@ -197,8 +256,8 @@ def CompAnalysis(filename):
 			if count >= 1:
 				rep_cnt.append(count) #account for all the previous counts up until False
 				rep_cnt.append(1) # must account for the false variable
-				mapSeq(date_arr,count)
-				mapSeq(x,1)
+				mapSeq((tuple(date_arr),count))
+				mapSeq((tuple(x),1))
 				date_arr.clear()
 				count = 0
 			else:
@@ -214,16 +273,16 @@ def PbsAnalysis(filename):
 def fibCubeGraph():
 	print('nothing')
 
-#Will map date to fib sequence and non fib-seq
-#Not sure how i want the map to look but its a mapping none the less
-#Not sure if I want this to be an array or account for two different types
-def mapSeq(test_arr,fib_num):
+
+#Might need to change functionality to something else 
+def mapSeq(tup):
 	#Could possibly just use a dictionary for this
-	with open(filename,'r+') as fd:
-		map_dic =json.load(fd)
-		new_mapping = (test_arr,fib_num)
-		map_dic |= new_mapping 
-		json.dump(map_dic,fd,indent =4)
+	#with open(filename,'r+') as fd:
+	#	map_dic =json.load(fd)
+	#	new_mapping = (test_arr,fib_num)
+	#	map_dic |= new_mapping 
+	#	json.dump(map_dic,fd,indent =4)
+	print('hold')
 
 def isFib(num):
 	perf_sq_pos = 5*pow(num,2)+4
@@ -264,4 +323,16 @@ def getPath(filename,file_type):
 #calPercAvg(getPath('\\analysisData\\08pbs','file'))
 #Compare(getPath('\\historicalData\\HistoricalPrices2011.csv','file'),getPath('\\historicalData\\HistoricalPrices2008.csv','files'))
 
-
+#arr = [21,33,3,5,6,73]
+#tup = tuple(arr)
+#print(type ((arr)))
+#print('tuple:{0}  Type:{1}'.format(tup, type(tup)))
+#jenkins = (tup,5)
+#print(jenkins)
+#arr.clear()
+#arr.append(jenkins)
+#print(arr[0][0])
+a = True
+b = False 
+if (a and b) == False: 
+	print('HELLO')
