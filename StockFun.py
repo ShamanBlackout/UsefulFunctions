@@ -323,4 +323,4 @@ def getPath(filename,file_type):
 #calPercAvg(getPath('\\analysisData\\08pbs','file'))
 #Compare(getPath('\\historicalData\\HistoricalPrices2011.csv','file'),getPath('\\historicalData\\HistoricalPrices2008.csv','file'))
 #CompPattern(getPath('\\analysisData\\11vs08ComparativeData','file'))
-SinglePattern(getPath('\\historicalData\\HistoricalPrices2008.csv','file'))
+#SinglePattern(getPath('\\historicalData\\HistoricalPrices2008.csv','file'))
