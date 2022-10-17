@@ -113,7 +113,7 @@ def calPercAvg(filename):
 			json.dump(percentageDic,outfile,indent=4)
 
 def getCsv(filename):
-	with open(filename) as fd_1:
+	with open(filename,'r') as fd_1:
 		data_dic = {}
 		reader = csv.DictReader(fd_1)
 		for row in reader:
@@ -178,17 +178,8 @@ def SinglePattern(file):
 		elif neg_cnt != 0:
 			map_arr.append((tuple(date_arr),neg_cnt))
 
-
-
-			
-
-
-	
-	
-
 #calPercAvg(filename)
-def Compare( file1,file2 ):
-	#note assigning 'name' could be changed to better direct my intentions but im too annoyed to change it atm 
+def Compare( file1,file2):
 	data_one = getCsv(file1)
 	data_two = getCsv(file2)
 	short_keys = [x[:5] for x in data_one.keys()]
@@ -211,8 +202,7 @@ def Compare( file1,file2 ):
 	for x in data_two:
 		if x[:5] in short_keys:
 			y = x[:6]+year1
-			print(y)
-			comp_dic[x] = {
+			comp_dic[x[:5]] = {
 			year1 +'_open':data_one[y]['Open'],
 			year1 +'_high': data_one[y]['High'],
 			year1 +'_low': data_one[y]['Low'],
@@ -226,7 +216,8 @@ def Compare( file1,file2 ):
 			year1+'DailyPerformance': float(data_one[y]['Close']) - float(data_one[y]['Open']),
 			year2+'DailyPerformance': float(data_two[x]['Close']) - float(data_two[x]['Open'])
 			}
-	with open(year1+'vs'+ year2+'ComparativeData','w') as outfile:
+	base = getPath('\\analysisData\\','dir')
+	with open(base+year1+'vs'+ year2+'ComparativeData','w') as outfile:
 			json.dump(comp_dic,outfile,indent=4)
 
 def isNeg(num):
@@ -236,36 +227,45 @@ def isNeg(num):
 
 
 def CompPattern(filename):
-	rep_cnt = []
+	
 	comp_dic = {}
 	with open(filename,'r') as fd:
 		comp_dic = json.load(fd)
-	count = 0
-	date_arr = []
 
 	#Filenames must be correctly formated for this to work 
 	yr_arr = re.findall('\d{2}', filename.split('\\')[-1])
 	if len(yr_arr) != 2:
 		raise Exception('File is not properly formatted') 
+	
+	count = 0
+	map_arr = []
+	date_arr = []
+	index = 0 
+	
 
 	for x in comp_dic:
 		if FibTruthTable[isNeg(comp_dic[x][yr_arr[0]+'DailyPerformance'])][isNeg(comp_dic[x][yr_arr[1]+'DailyPerformance'])]: 
 			date_arr.append(x)
 			count+=1
 		else:
-			if count >= 1:
-				rep_cnt.append(count) #account for all the previous counts up until False
-				rep_cnt.append(1) # must account for the false variable
-				mapSeq((tuple(date_arr),count))
-				mapSeq((tuple(x),1))
+			if count > 0:
+				map_arr.append((date_arr.copy(),count))
+				map_arr.append(([x],1)) # must account for the false variable
+				#keeping an index at the moment
 				date_arr.clear()
+				#index+=1
 				count = 0
 			else:
-				rep_cnt.append(1)
-				mapSeq(date_arr,count)
-	if count >=1:
-		rep_cnt.append(count)
-	print(rep_cnt)
+				map_arr.append(([x],1)) # must account for the false variable
+
+	
+	if count > 1:
+		map_arr.append((date_arr.copy(),count))
+		date_arr.clear()
+	print(map_arr)
+
+	
+
 
 def PbsAnalysis(filename):
 		print('nothing')
@@ -316,23 +316,9 @@ def getPath(filename,file_type):
 			return filename 
 		else: 
 			raise Exception('AJHHHHH No Directory')
-
-	
-
+	else:
+		raise Exception('Must be either a file or directory. Please check input')
 
 #calPercAvg(getPath('\\analysisData\\08pbs','file'))
-#Compare(getPath('\\historicalData\\HistoricalPrices2011.csv','file'),getPath('\\historicalData\\HistoricalPrices2008.csv','files'))
-
-#arr = [21,33,3,5,6,73]
-#tup = tuple(arr)
-#print(type ((arr)))
-#print('tuple:{0}  Type:{1}'.format(tup, type(tup)))
-#jenkins = (tup,5)
-#print(jenkins)
-#arr.clear()
-#arr.append(jenkins)
-#print(arr[0][0])
-a = True
-b = False 
-if (a and b) == False: 
-	print('HELLO')
+#Compare(getPath('\\historicalData\\HistoricalPrices2011.csv','file'),getPath('\\historicalData\\HistoricalPrices2008.csv','file'))
+CompPattern(getPath('\\analysisData\\11vs08ComparativeData','file'))
