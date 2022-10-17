@@ -46,11 +46,11 @@ def Pbs(dic):
 		try:
 			dic[x]['DailyPercentageChange']['prevClose-open'] = percentageChange(prev_close,dic[x]['Open'])
 		except NameError:
-			print("Not defined yet.")
+			print("Not defined yet.Defining now....")
 		finally:
 			prev_close = dic[x]['Close']
-
-	with open('pbs_'+year,'w') as outfile:
+	base = getPath('\\analysisData\\','dir')
+	with open(base+'pbs_'+year,'w') as outfile:
 			json.dump(dic,outfile,indent=4)
 			return dic
 	
@@ -135,36 +135,36 @@ def SinglePattern(file):
 	dic = Pbs(dic)
 
 	for x in dic:
-		if isNeg(dic[x]['open-close']) == 2:
+		if isNeg(dic[x]['DailyPercentageChange']['open-close']) == 2:
 			if pos_cnt == 1 and neg_cnt == 1:
 				date_arr.append(x)
 				pos_cnt = 0
 				neg_cnt +=1 
 			elif pos_cnt!=0:
-				map_arr.append((tuple(date_arr),pos_cnt))
+				map_arr.append((date_arr.copy(),pos_cnt))
 				pos_cnt = 0
 				date_arr.clear()
-				date_arr.append(x)
+				date_arr.append([x])
 				neg_cnt +=1
 			else:
 				date_arr.append(x)
 				neg_cnt +=1
-		elif isNeg(dic[x]['open-close']) == 1:
+		elif isNeg(dic[x]['DailyPercentageChange']['open-close']) == 1:
 			if pos_cnt == 1 and neg_cnt == 1:
-				date_arr.append(x)
+				date_arr.append([x])
 				neg_cnt = 0
 				pos_cnt +=1 
 			elif neg_cnt!=0:
-				map_arr.append((tuple(date_arr),neg_cnt))
+				map_arr.append((date_arr.copy(),neg_cnt))
 				neg_cnt = 0
 				date_arr.clear()
-				date_arr.append(x)
+				date_arr.append([x])
 				pos_cnt +=1
 			else:
 				date_arr.append(x)
 				pos_cnt +=1
-		elif isNeg(dic[x]['open-close']) == 0:
-			date_arr.append(x)
+		elif isNeg(dic[x]['DailyPercentageChange']['open-close']) == 0:
+			date_arr.append([x])
 			if pos_cnt == 0 and neg_cnt == 0:
 				pos_cnt,neg_cnt = 1,1
 			elif pos_cnt != 0:
@@ -174,9 +174,10 @@ def SinglePattern(file):
 
 	if len(date_arr) > 0:
 		if pos_cnt !=0:
-			map_arr.append((tuple(date_arr),pos_cnt))
+			map_arr.append((date_arr.copy(),pos_cnt))
 		elif neg_cnt != 0:
-			map_arr.append((tuple(date_arr),neg_cnt))
+			map_arr.append((date_arr.copy(),neg_cnt))
+	print(map_arr)
 
 #calPercAvg(filename)
 def Compare( file1,file2):
@@ -321,4 +322,5 @@ def getPath(filename,file_type):
 
 #calPercAvg(getPath('\\analysisData\\08pbs','file'))
 #Compare(getPath('\\historicalData\\HistoricalPrices2011.csv','file'),getPath('\\historicalData\\HistoricalPrices2008.csv','file'))
-CompPattern(getPath('\\analysisData\\11vs08ComparativeData','file'))
+#CompPattern(getPath('\\analysisData\\11vs08ComparativeData','file'))
+SinglePattern(getPath('\\historicalData\\HistoricalPrices2008.csv','file'))
