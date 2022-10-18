@@ -7,6 +7,7 @@ import re
 import csv
 import matplotlib
 
+#Def need to turn this into a class but for the moment I am going with the flow
 
 '''
 	Truth table 
@@ -183,8 +184,8 @@ def SinglePattern(file):
 	dir_path = '\\analysisData\\PatternsMap\\'
 	year = getYear(dic)
 	base = getPath(dir_path,'dir')
-	with open(base+year+'_pattern', 'w') as filehandle:
-		json.dump(map_arr, filehandle)
+	with open(base+year+'_pattern', 'w') as outfile:
+		json.dump(map_arr, outfile)
 	
 def Compare( file1,file2):
 	data_one = getCsv(file1)
@@ -256,11 +257,10 @@ def CompPattern(filename):
 		map_arr.append((date_arr.copy(),count))
 		date_arr.clear()
 	
-	dir_path = '\\analysisData\\PatternsMap\\'
-	year = getYear(dic)
+	dir_path = '\\analysisData\\ComparativePatternsMap\\'
 	base = getPath(dir_path,'dir')
-	with open(base+year+'_CompPattern', 'w') as filehandle:
-		json.dump(map_arr, filehandle)
+	with open(base+yr_arr[0]+'vs'+yr_arr[1]+'_CompPattern', 'w') as outfile:
+		json.dump(map_arr, outfile)
 
 def PbsAnalysis(filename):
 		print('nothing')
@@ -322,17 +322,17 @@ def MassComparativeCall():
 		for x in file_arr:
 			 Compare( file1,x)
 
+def MassComparativePatternCall():
+	file_arr = massCall(getPath('\\analysisData\\ComparativeData\\','dir'))
+	for filename in file_arr:
+		CompPattern(filename)
+	
+
 def MassSinglePattern():
 	file_arr = massCall(getPath('\\historicalData\\','dir'))
 	for filename in file_arr:
 		SinglePattern(filename)
 
-#calPercAvg(getPath('\\analysisData\\08pbs','file'))
-#Compare(getPath('\\historicalData\\HistoricalPrices2011.csv','file'),getPath('\\historicalData\\HistoricalPrices2008.csv','file'))
-#CompPattern(getPath('\\analysisData\\11vs08ComparativeData','file'))
-
-#Loop through and get pbs and Single Pattern for each function
-#get all files in 
 
 
 
