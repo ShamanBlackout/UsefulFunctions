@@ -213,7 +213,7 @@ def Compare( file1,file2):
 			year1+'DailyPerformance': float(data_one[y]['Close']) - float(data_one[y]['Open']),
 			year2+'DailyPerformance': float(data_two[x]['Close']) - float(data_two[x]['Open'])
 			}
-	dir_path = '\\analysisData\\'
+	dir_path = '\\analysisData\\ComparativeData\\'
 	base = getPath(dir_path,'dir')
 	with open(base+year1+'vs'+ year2+'ComparativeData','w') as outfile:
 			json.dump(comp_dic,outfile,indent=4)
@@ -315,6 +315,17 @@ def massCall(dir):
 				file_arr.append(filename.path)
 	return file_arr
 
+def MassComparativeCall():
+	file_arr = massCall(getPath('\\historicalData\\','dir'))
+	while len(file_arr) > 0:
+		file1 = file_arr.pop()
+		for x in file_arr:
+			 Compare( file1,x)
+
+def MassSinglePattern():
+	file_arr = massCall(getPath('\\historicalData\\','dir'))
+	for filename in file_arr:
+		SinglePattern(filename)
 
 #calPercAvg(getPath('\\analysisData\\08pbs','file'))
 #Compare(getPath('\\historicalData\\HistoricalPrices2011.csv','file'),getPath('\\historicalData\\HistoricalPrices2008.csv','file'))
@@ -322,7 +333,6 @@ def massCall(dir):
 
 #Loop through and get pbs and Single Pattern for each function
 #get all files in 
-#file_arr = massCall(getPath('\\historicalData\\','dir'))
-#for filename in file_arr:
-#	SinglePattern(filename)
+
+
 
