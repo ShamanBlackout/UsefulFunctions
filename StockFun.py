@@ -25,15 +25,17 @@ def percentageChange(old,new):
 	new = float(new)
 	return ((new-old)/new)*100
 
-#percentage Based System
-def Pbs(dic):
-
+def getYear(dic):
 	year = ''
 	for x in dic:
 		year = x[-2:]
 		if year != '':
-			break	
+			break
+	return year
 
+def Pbs(dic):
+
+	year = getYear(dic)
 	for x in dic:
 		#key represents percentage change: ex open-low, where open=old and low = new
 		dic[x]['DailyPercentageChange'] = {
@@ -49,7 +51,8 @@ def Pbs(dic):
 			print("Not defined yet.Defining now....")
 		finally:
 			prev_close = dic[x]['Close']
-	base = getPath('\\analysisData\\','dir')
+	dir_path ='\\analysisData\\Pbs\\'
+	base = getPath(dir_path,'dir')
 	with open(base+'pbs_'+year,'w') as outfile:
 			json.dump(dic,outfile,indent=4)
 			return dic
@@ -109,7 +112,8 @@ def calPercAvg(filename):
 
 		patt = re.compile('\d{2}')
 		patt_obj = re.search(patt,filename)
-		with open(getPath('\\analysisData\\','dir')+filename[patt_obj.start():patt_obj.end()]+'MonthlyPercAvgs','w') as outfile:
+		dir_path ='\\analysisData\\'
+		with open(getPath(dir_path,'dir')+filename[patt_obj.start():patt_obj.end()]+'MonthlyPercAvgs','w') as outfile:
 			json.dump(percentageDic,outfile,indent=4)
 
 def getCsv(filename):
@@ -125,7 +129,6 @@ def getCsv(filename):
 		return data_dic
 
 def SinglePattern(file):
-	#will need to keep 
 	date_arr = []
 	map_arr = []
 	neg_cnt = 0
@@ -177,26 +180,19 @@ def SinglePattern(file):
 			map_arr.append((date_arr.copy(),pos_cnt))
 		elif neg_cnt != 0:
 			map_arr.append((date_arr.copy(),neg_cnt))
-	print(map_arr)
-
-#calPercAvg(filename)
+	dir_path = '\\analysisData\\PatternsMap\\'
+	year = getYear(dic)
+	base = getPath(dir_path,'dir')
+	with open(base+year+'_pattern', 'w') as filehandle:
+		json.dump(map_arr, filehandle)
+	
 def Compare( file1,file2):
 	data_one = getCsv(file1)
 	data_two = getCsv(file2)
 	short_keys = [x[:5] for x in data_one.keys()]
 
-	#Saves time instead of doing splice computations in the for loop (year1,year2)
-	year1 = ''
-	year2 = ''
-
-	for x in data_one:
-		year1 = x[-2:]
-		if year1 != '':
-			break
-	for x in data_two:
-		year2 = x[-2:]
-		if year2 != '':
-			break
+	year1 = getYear(data_one)
+	year2 = getYear(data_two)
 
 	comp_dic = {}
 
@@ -217,7 +213,8 @@ def Compare( file1,file2):
 			year1+'DailyPerformance': float(data_one[y]['Close']) - float(data_one[y]['Open']),
 			year2+'DailyPerformance': float(data_two[x]['Close']) - float(data_two[x]['Open'])
 			}
-	base = getPath('\\analysisData\\','dir')
+	dir_path = '\\analysisData\\'
+	base = getPath(dir_path,'dir')
 	with open(base+year1+'vs'+ year2+'ComparativeData','w') as outfile:
 			json.dump(comp_dic,outfile,indent=4)
 
@@ -252,21 +249,21 @@ def CompPattern(filename):
 			if count > 0:
 				map_arr.append((date_arr.copy(),count))
 				map_arr.append(([x],1)) # must account for the false variable
-				#keeping an index at the moment
 				date_arr.clear()
-				#index+=1
 				count = 0
 			else:
-				map_arr.append(([x],1)) # must account for the false variable
+				map_arr.append(([x],1))
 
 	
 	if count > 1:
 		map_arr.append((date_arr.copy(),count))
 		date_arr.clear()
-	print(map_arr)
-
 	
-
+	dir_path = '\\analysisData\\PatternsMap\\'
+	year = getYear(dic)
+	base = getPath(dir_path,'dir')
+	with open(base+year+'_CompPattern', 'w') as filehandle:
+		json.dump(map_arr, filehandle)
 
 def PbsAnalysis(filename):
 		print('nothing')
@@ -277,12 +274,6 @@ def fibCubeGraph():
 
 #Might need to change functionality to something else 
 def mapSeq(tup):
-	#Could possibly just use a dictionary for this
-	#with open(filename,'r+') as fd:
-	#	map_dic =json.load(fd)
-	#	new_mapping = (test_arr,fib_num)
-	#	map_dic |= new_mapping 
-	#	json.dump(map_dic,fd,indent =4)
 	print('hold')
 
 def isFib(num):
@@ -294,10 +285,8 @@ def isFib(num):
 	else:
 		return False
 
-#need to include whether to check for file or directory
 #Remember depending on the system to account for escape characters 
 def getPath(filename,file_type):
-	#I should match up to useful functions and then append filename 
 	pattern = re.compile('UsefulFunctions')
 	road = os.getcwd()
 	search_obj = pattern.search(road)
@@ -320,7 +309,11 @@ def getPath(filename,file_type):
 	else:
 		raise Exception('Must be either a file or directory. Please check input')
 
+
+
+
 #calPercAvg(getPath('\\analysisData\\08pbs','file'))
 #Compare(getPath('\\historicalData\\HistoricalPrices2011.csv','file'),getPath('\\historicalData\\HistoricalPrices2008.csv','file'))
 #CompPattern(getPath('\\analysisData\\11vs08ComparativeData','file'))
-#SinglePattern(getPath('\\historicalData\\HistoricalPrices2008.csv','file'))
+SinglePattern(getPath('\\historicalData\\HistoricalPrices2008.csv','file'))
+
