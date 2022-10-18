@@ -1,0 +1,3543 @@
+{
+    "12/31/84": {
+        "Open": " 167.24",
+        "High": " 169.24",
+        "Low": " 166.12",
+        "Close": " 167.24",
+        "DailyPercentageChange": {
+            "open-low": -0.674211413436073,
+            "open-high": 1.1817537225242258,
+            "open-close": 0.0,
+            "low-close": 0.6696962449174866,
+            "high-close": -1.195886151638364
+        }
+    },
+    "12/28/84": {
+        "Open": " 166.26",
+        "High": " 166.26",
+        "Low": " 165.76",
+        "Close": " 166.26",
+        "DailyPercentageChange": {
+            "open-low": -0.3016409266409266,
+            "open-high": 0.0,
+            "open-close": 0.0,
+            "low-close": 0.3007337904486948,
+            "high-close": 0.0,
+            "prevClose-open": -0.5894382292794529
+        }
+    },
+    "12/27/84": {
+        "Open": " 165.75",
+        "High": " 166.50",
+        "Low": " 165.63",
+        "Close": " 165.75",
+        "DailyPercentageChange": {
+            "open-low": -0.07245064299945937,
+            "open-high": 0.45045045045045046,
+            "open-close": 0.0,
+            "low-close": 0.07239819004525161,
+            "high-close": -0.4524886877828055,
+            "prevClose-open": -0.30769230769230216
+        }
+    },
+    "12/26/84": {
+        "Open": " 166.47",
+        "High": " 166.72",
+        "Low": " 166.34",
+        "Close": " 166.47",
+        "DailyPercentageChange": {
+            "open-low": -0.07815318023325445,
+            "open-high": 0.14995201535508637,
+            "open-close": 0.0,
+            "low-close": 0.07809214873550517,
+            "high-close": -0.15017720910674595,
+            "prevClose-open": 0.43251036222742767
+        }
+    },
+    "12/24/84": {
+        "Open": " 166.76",
+        "High": " 166.89",
+        "Low": " 165.51",
+        "Close": " 166.76",
+        "DailyPercentageChange": {
+            "open-low": -0.755241375143496,
+            "open-high": 0.07789561986937232,
+            "open-close": 0.0,
+            "low-close": 0.7495802350683618,
+            "high-close": -0.07795634444710689,
+            "prevClose-open": 0.17390261453585518
+        }
+    },
+    "12/21/84": {
+        "Open": " 165.51",
+        "High": " 166.26",
+        "Low": " 164.64",
+        "Close": " 165.51",
+        "DailyPercentageChange": {
+            "open-low": -0.5284256559766792,
+            "open-high": 0.45110068567304223,
+            "open-close": 0.0,
+            "low-close": 0.525647997099876,
+            "high-close": -0.45314482508609755,
+            "prevClose-open": -0.755241375143496
+        }
+    },
+    "12/20/84": {
+        "Open": " 166.38",
+        "High": " 167.50",
+        "Low": " 166.38",
+        "Close": " 166.38",
+        "DailyPercentageChange": {
+            "open-low": 0.0,
+            "open-high": 0.6686567164179131,
+            "open-close": 0.0,
+            "low-close": 0.0,
+            "high-close": -0.6731578314701314,
+            "prevClose-open": 0.522899386945549
+        }
+    },
+    "12/19/84": {
+        "Open": " 167.16",
+        "High": " 168.91",
+        "Low": " 166.91",
+        "Close": " 167.16",
+        "DailyPercentageChange": {
+            "open-low": -0.14978131927386018,
+            "open-high": 1.0360547036883547,
+            "open-close": 0.0,
+            "low-close": 0.14955731036133046,
+            "high-close": -1.0469011725293134,
+            "prevClose-open": 0.46661880832735175
+        }
+    },
+    "12/18/84": {
+        "Open": " 168.11",
+        "High": " 168.11",
+        "Low": " 163.24",
+        "Close": " 168.11",
+        "DailyPercentageChange": {
+            "open-low": -2.9833374172996843,
+            "open-high": 0.0,
+            "open-close": 0.0,
+            "low-close": 2.8969127357087645,
+            "high-close": 0.0,
+            "prevClose-open": 0.5651061804770787
+        }
+    },
+    "12/17/84": {
+        "Open": " 163.61",
+        "High": " 163.18",
+        "Low": " 162.56",
+        "Close": " 163.61",
+        "DailyPercentageChange": {
+            "open-low": -0.6459153543307157,
+            "open-high": -0.26351268537811423,
+            "open-close": 0.0,
+            "low-close": 0.6417700629545939,
+            "high-close": 0.26282012101950175,
+            "prevClose-open": -2.7504431269482303
+        }
+    },
+    "12/14/84": {
+        "Open": " 162.69",
+        "High": " 163.19",
+        "Low": " 161.44",
+        "Close": " 162.69",
+        "DailyPercentageChange": {
+            "open-low": -0.7742814667988107,
+            "open-high": 0.30639132299773275,
+            "open-close": 0.0,
+            "low-close": 0.7683324113344397,
+            "high-close": -0.3073329645337759,
+            "prevClose-open": -0.5654926547421575
+        }
+    },
+    "12/13/84": {
+        "Open": " 161.81",
+        "High": " 162.81",
+        "Low": " 161.56",
+        "Close": " 161.81",
+        "DailyPercentageChange": {
+            "open-low": -0.1547412725922258,
+            "open-high": 0.6142128861863522,
+            "open-close": 0.0,
+            "low-close": 0.15450219393115383,
+            "high-close": -0.6180087757246153,
+            "prevClose-open": -0.5438477226376587
+        }
+    },
+    "12/12/84": {
+        "Open": " 162.63",
+        "High": " 163.13",
+        "Low": " 162.63",
+        "Close": " 162.63",
+        "DailyPercentageChange": {
+            "open-low": 0.0,
+            "open-high": 0.3065040152025992,
+            "open-close": 0.0,
+            "low-close": 0.0,
+            "high-close": -0.30744635061181824,
+            "prevClose-open": 0.5042120150033778
+        }
+    },
+    "12/11/84": {
+        "Open": " 163.07",
+        "High": " 163.07",
+        "Low": " 162.57",
+        "Close": " 163.07",
+        "DailyPercentageChange": {
+            "open-low": -0.3075598203850649,
+            "open-high": 0.0,
+            "open-close": 0.0,
+            "low-close": 0.30661679033543876,
+            "high-close": 0.0,
+            "prevClose-open": 0.26982277549518474
+        }
+    },
+    "12/10/84": {
+        "Open": " 162.83",
+        "High": " 163.21",
+        "Low": " 161.58",
+        "Close": " 162.83",
+        "DailyPercentageChange": {
+            "open-low": -0.7736105953707141,
+            "open-high": 0.23282887077997394,
+            "open-close": 0.0,
+            "low-close": 0.7676718049499477,
+            "high-close": -0.23337222870478133,
+            "prevClose-open": -0.1473929865503781
+        }
+    },
+    "12/07/84": {
+        "Open": " 162.26",
+        "High": " 163.26",
+        "Low": " 162.26",
+        "Close": " 162.26",
+        "DailyPercentageChange": {
+            "open-low": 0.0,
+            "open-high": 0.6125199068969742,
+            "open-close": 0.0,
+            "low-close": 0.0,
+            "high-close": -0.616294835449279,
+            "prevClose-open": -0.3512880562061023
+        }
+    },
+    "12/06/84": {
+        "Open": " 162.76",
+        "High": " 163.01",
+        "Low": " 161.76",
+        "Close": " 162.76",
+        "DailyPercentageChange": {
+            "open-low": -0.6181998021760633,
+            "open-high": 0.15336482424391143,
+            "open-close": 0.0,
+            "low-close": 0.6144015728680265,
+            "high-close": -0.15360039321700664,
+            "prevClose-open": 0.3072007864340133
+        }
+    },
+    "12/05/84": {
+        "Open": " 162.10",
+        "High": " 163.35",
+        "Low": " 161.97",
+        "Close": " 162.10",
+        "DailyPercentageChange": {
+            "open-low": -0.0802617768722575,
+            "open-high": 0.7652280379553107,
+            "open-close": 0.0,
+            "low-close": 0.08019740900678314,
+            "high-close": -0.771128932757557,
+            "prevClose-open": -0.407156076495988
+        }
+    },
+    "12/04/84": {
+        "Open": " 163.38",
+        "High": " 163.88",
+        "Low": " 162.88",
+        "Close": " 163.38",
+        "DailyPercentageChange": {
+            "open-low": -0.3069744597249509,
+            "open-high": 0.305101293629485,
+            "open-close": 0.0,
+            "low-close": 0.3060350104051904,
+            "high-close": -0.3060350104051904,
+            "prevClose-open": 0.783449626637288
+        }
+    },
+    "12/03/84": {
+        "Open": " 162.82",
+        "High": " 163.57",
+        "Low": " 162.32",
+        "Close": " 162.82",
+        "DailyPercentageChange": {
+            "open-low": -0.3080335140463282,
+            "open-high": 0.45851928837806444,
+            "open-close": 0.0,
+            "low-close": 0.3070875813782091,
+            "high-close": -0.46063137206731364,
+            "prevClose-open": -0.3439380911435955
+        }
+    },
+    "11/30/84": {
+        "Open": " 163.58",
+        "High": " 163.83",
+        "Low": " 163.08",
+        "Close": " 163.58",
+        "DailyPercentageChange": {
+            "open-low": -0.306597988717194,
+            "open-high": 0.15259720441921504,
+            "open-close": 0.0,
+            "low-close": 0.3056608387333415,
+            "high-close": -0.15283041936667074,
+            "prevClose-open": 0.46460447487469086
+        }
+    },
+    "11/29/84": {
+        "Open": " 163.91",
+        "High": " 164.91",
+        "Low": " 163.78",
+        "Close": " 163.91",
+        "DailyPercentageChange": {
+            "open-low": -0.07937477103431155,
+            "open-high": 0.6063913649869626,
+            "open-close": 0.0,
+            "low-close": 0.07931181746079889,
+            "high-close": -0.6100909035446282,
+            "prevClose-open": 0.20132999816971758
+        }
+    },
+    "11/28/84": {
+        "Open": " 165.02",
+        "High": " 166.90",
+        "Low": " 165.02",
+        "Close": " 165.02",
+        "DailyPercentageChange": {
+            "open-low": 0.0,
+            "open-high": 1.1264230077890924,
+            "open-close": 0.0,
+            "low-close": 0.0,
+            "high-close": -1.1392558477760244,
+            "prevClose-open": 0.6726457399103221
+        }
+    },
+    "11/27/84": {
+        "Open": " 166.29",
+        "High": " 166.79",
+        "Low": " 165.17",
+        "Close": " 166.29",
+        "DailyPercentageChange": {
+            "open-low": -0.678089241387664,
+            "open-high": 0.2997781641585227,
+            "open-close": 0.0,
+            "low-close": 0.6735221600817876,
+            "high-close": -0.3006795357507968,
+            "prevClose-open": 0.7637260208070129
+        }
+    },
+    "11/26/84": {
+        "Open": " 165.55",
+        "High": " 166.80",
+        "Low": " 165.43",
+        "Close": " 165.55",
+        "DailyPercentageChange": {
+            "open-low": -0.0725382336940123,
+            "open-high": 0.7494004796163068,
+            "open-close": 0.0,
+            "low-close": 0.07248565388100546,
+            "high-close": -0.7550588945937783,
+            "prevClose-open": -0.446994865599505
+        }
+    },
+    "11/23/84": {
+        "Open": " 166.92",
+        "High": " 166.92",
+        "Low": " 164.55",
+        "Close": " 166.92",
+        "DailyPercentageChange": {
+            "open-low": -1.4402917046490282,
+            "open-high": 0.0,
+            "open-close": 0.0,
+            "low-close": 1.4198418404025739,
+            "high-close": 0.0,
+            "prevClose-open": 0.8207524562664607
+        }
+    },
+    "11/21/84": {
+        "Open": " 164.52",
+        "High": " 164.65",
+        "Low": " 163.40",
+        "Close": " 164.52",
+        "DailyPercentageChange": {
+            "open-low": -0.6854345165238706,
+            "open-high": 0.07895535985423349,
+            "open-close": 0.0,
+            "low-close": 0.6807682956479483,
+            "high-close": -0.07901774860199091,
+            "prevClose-open": -1.4587892049598694
+        }
+    },
+    "11/20/84": {
+        "Open": " 164.18",
+        "High": " 164.43",
+        "Low": " 163.18",
+        "Close": " 164.18",
+        "DailyPercentageChange": {
+            "open-low": -0.6128201985537443,
+            "open-high": 0.1520403819254394,
+            "open-close": 0.0,
+            "low-close": 0.6090875867949811,
+            "high-close": -0.15227189669874527,
+            "prevClose-open": -0.20708977951029564
+        }
+    },
+    "11/19/84": {
+        "Open": " 163.10",
+        "High": " 164.22",
+        "Low": " 163.10",
+        "Close": " 163.10",
+        "DailyPercentageChange": {
+            "open-low": 0.0,
+            "open-high": 0.6820119352088689,
+            "open-close": 0.0,
+            "low-close": 0.0,
+            "high-close": -0.6866952789699599,
+            "prevClose-open": -0.6621704475781807
+        }
+    },
+    "11/16/84": {
+        "Open": " 164.10",
+        "High": " 166.22",
+        "Low": " 164.10",
+        "Close": " 164.10",
+        "DailyPercentageChange": {
+            "open-low": 0.0,
+            "open-high": 1.2754181205631119,
+            "open-close": 0.0,
+            "low-close": 0.0,
+            "high-close": -1.2918951858622818,
+            "prevClose-open": 0.6093845216331505
+        }
+    },
+    "11/15/84": {
+        "Open": " 165.89",
+        "High": " 166.39",
+        "Low": " 165.64",
+        "Close": " 165.89",
+        "DailyPercentageChange": {
+            "open-low": -0.15092972711905336,
+            "open-high": 0.3004988280545706,
+            "open-close": 0.0,
+            "low-close": 0.15070227259027066,
+            "high-close": -0.30140454518054133,
+            "prevClose-open": 1.079028271746333
+        }
+    },
+    "11/14/84": {
+        "Open": " 165.99",
+        "High": " 166.37",
+        "Low": " 165.49",
+        "Close": " 165.99",
+        "DailyPercentageChange": {
+            "open-low": -0.30213305939935947,
+            "open-high": 0.22840656368335366,
+            "open-close": 0.0,
+            "low-close": 0.3012229652388698,
+            "high-close": -0.22892945358153832,
+            "prevClose-open": 0.060244593047787655
+        }
+    },
+    "11/13/84": {
+        "Open": " 165.97",
+        "High": " 167.34",
+        "Low": " 165.84",
+        "Close": " 165.97",
+        "DailyPercentageChange": {
+            "open-low": -0.07838880849010821,
+            "open-high": 0.818692482371223,
+            "open-close": 0.0,
+            "low-close": 0.07832740856781072,
+            "high-close": -0.8254503825992677,
+            "prevClose-open": -0.012050370548900544
+        }
+    },
+    "11/12/84": {
+        "Open": " 167.36",
+        "High": " 167.61",
+        "Low": " 166.74",
+        "Close": " 167.36",
+        "DailyPercentageChange": {
+            "open-low": -0.3718363919875282,
+            "open-high": 0.14915577829485113,
+            "open-close": 0.0,
+            "low-close": 0.370458891013387,
+            "high-close": -0.14937858508604207,
+            "prevClose-open": 0.8305449330784026
+        }
+    },
+    "11/09/84": {
+        "Open": " 167.60",
+        "High": " 169.35",
+        "Low": " 167.47",
+        "Close": " 167.60",
+        "DailyPercentageChange": {
+            "open-low": -0.0776258434346423,
+            "open-high": 1.0333628579864187,
+            "open-close": 0.0,
+            "low-close": 0.07756563245823117,
+            "high-close": -1.0441527446300716,
+            "prevClose-open": 0.1431980906921126
+        }
+    },
+    "11/08/84": {
+        "Open": " 168.68",
+        "High": " 169.18",
+        "Low": " 168.31",
+        "Close": " 168.68",
+        "DailyPercentageChange": {
+            "open-low": -0.2198324520230554,
+            "open-high": 0.29554320841707055,
+            "open-close": 0.0,
+            "low-close": 0.21935024899217723,
+            "high-close": -0.29641925539483044,
+            "prevClose-open": 0.6402655916528411
+        }
+    },
+    "11/07/84": {
+        "Open": " 169.17",
+        "High": " 170.30",
+        "Low": " 168.55",
+        "Close": " 169.17",
+        "DailyPercentageChange": {
+            "open-low": -0.36784336991989086,
+            "open-high": 0.6635349383441127,
+            "open-close": 0.0,
+            "low-close": 0.36649524147306034,
+            "high-close": -0.667967133652553,
+            "prevClose-open": 0.2896494650351603
+        }
+    },
+    "11/06/84": {
+        "Open": " 170.41",
+        "High": " 170.41",
+        "Low": " 168.66",
+        "Close": " 170.41",
+        "DailyPercentageChange": {
+            "open-low": -1.0375904185936204,
+            "open-high": 0.0,
+            "open-close": 0.0,
+            "low-close": 1.0269350390235314,
+            "high-close": 0.0,
+            "prevClose-open": 0.7276568276509648
+        }
+    },
+    "11/05/84": {
+        "Open": " 168.58",
+        "High": " 168.58",
+        "Low": " 167.33",
+        "Close": " 168.58",
+        "DailyPercentageChange": {
+            "open-low": -0.7470268332038487,
+            "open-high": 0.0,
+            "open-close": 0.0,
+            "low-close": 0.7414877209633408,
+            "high-close": 0.0,
+            "prevClose-open": -1.0855380234903214
+        }
+    },
+    "11/02/84": {
+        "Open": " 167.42",
+        "High": " 167.95",
+        "Low": " 167.24",
+        "Close": " 167.42",
+        "DailyPercentageChange": {
+            "open-low": -0.10762975364743985,
+            "open-high": 0.31557011015183156,
+            "open-close": 0.0,
+            "low-close": 0.10751403655475952,
+            "high-close": -0.3165691076334973,
+            "prevClose-open": -0.6928682355752152
+        }
+    },
+    "11/01/84": {
+        "Open": " 167.49",
+        "High": " 167.83",
+        "Low": " 166.09",
+        "Close": " 167.49",
+        "DailyPercentageChange": {
+            "open-low": -0.8429164910590677,
+            "open-high": 0.20258595006852373,
+            "open-close": 0.0,
+            "low-close": 0.8358707982566157,
+            "high-close": -0.20299719386232215,
+            "prevClose-open": 0.04179353991284351
+        }
+    },
+    "10/31/84": {
+        "Open": " 166.09",
+        "High": " 166.95",
+        "Low": " 165.99",
+        "Close": " 166.09",
+        "DailyPercentageChange": {
+            "open-low": -0.06024459304777054,
+            "open-high": 0.5151242887091855,
+            "open-close": 0.0,
+            "low-close": 0.06020832078992975,
+            "high-close": -0.5177915587934163,
+            "prevClose-open": -0.8429164910590677
+        }
+    },
+    "10/30/84": {
+        "Open": " 166.84",
+        "High": " 167.33",
+        "Low": " 164.78",
+        "Close": " 166.84",
+        "DailyPercentageChange": {
+            "open-low": -1.2501517174414385,
+            "open-high": 0.2928345186159141,
+            "open-close": 0.0,
+            "low-close": 1.2347158954687139,
+            "high-close": -0.293694557660039,
+            "prevClose-open": 0.44953248621433706
+        }
+    },
+    "10/29/84": {
+        "Open": " 164.78",
+        "High": " 165.29",
+        "Low": " 164.67",
+        "Close": " 164.78",
+        "DailyPercentageChange": {
+            "open-low": -0.0668002672010771,
+            "open-high": 0.30854861153124263,
+            "open-close": 0.0,
+            "low-close": 0.06675567423231803,
+            "high-close": -0.3095035805316124,
+            "prevClose-open": -1.2501517174414385
+        }
+    },
+    "10/26/84": {
+        "Open": " 165.29",
+        "High": " 166.31",
+        "Low": " 164.93",
+        "Close": " 165.29",
+        "DailyPercentageChange": {
+            "open-low": -0.21827441945066706,
+            "open-high": 0.6133124887258795,
+            "open-close": 0.0,
+            "low-close": 0.2177990199044015,
+            "high-close": -0.6170972230625025,
+            "prevClose-open": 0.30854861153124263
+        }
+    },
+    "10/25/84": {
+        "Open": " 166.31",
+        "High": " 167.62",
+        "Low": " 166.17",
+        "Close": " 166.31",
+        "DailyPercentageChange": {
+            "open-low": -0.0842510681831948,
+            "open-high": 0.7815296503997149,
+            "open-close": 0.0,
+            "low-close": 0.08418014551140326,
+            "high-close": -0.7876856472851917,
+            "prevClose-open": 0.6133124887258795
+        }
+    },
+    "10/24/84": {
+        "Open": " 167.20",
+        "High": " 167.54",
+        "Low": " 166.82",
+        "Close": " 167.20",
+        "DailyPercentageChange": {
+            "open-low": -0.22779043280181963,
+            "open-high": 0.2029366121523239,
+            "open-close": 0.0,
+            "low-close": 0.22727272727272457,
+            "high-close": -0.20334928229665278,
+            "prevClose-open": 0.5322966507176953
+        }
+    },
+    "10/23/84": {
+        "Open": " 167.09",
+        "High": " 168.27",
+        "Low": " 166.83",
+        "Close": " 167.09",
+        "DailyPercentageChange": {
+            "open-low": -0.15584726967571233,
+            "open-high": 0.701253937124863,
+            "open-close": 0.0,
+            "low-close": 0.15560476389968933,
+            "high-close": -0.7062062361601572,
+            "prevClose-open": -0.0658327847267851
+        }
+    },
+    "10/22/84": {
+        "Open": " 167.36",
+        "High": " 168.36",
+        "Low": " 167.26",
+        "Close": " 167.36",
+        "DailyPercentageChange": {
+            "open-low": -0.05978715771853566,
+            "open-high": 0.5939653124257543,
+            "open-close": 0.0,
+            "low-close": 0.05975143403443041,
+            "high-close": -0.5975143403441683,
+            "prevClose-open": 0.16132887189293152
+        }
+    },
+    "10/19/84": {
+        "Open": " 167.96",
+        "High": " 169.62",
+        "Low": " 167.31",
+        "Close": " 167.96",
+        "DailyPercentageChange": {
+            "open-low": -0.38850038850039187,
+            "open-high": 0.9786581771017547,
+            "open-close": 0.0,
+            "low-close": 0.38699690402477116,
+            "high-close": -0.9883305548940202,
+            "prevClose-open": 0.35722791140747456
+        }
+    },
+    "10/18/84": {
+        "Open": " 168.10",
+        "High": " 168.10",
+        "Low": " 163.80",
+        "Close": " 168.10",
+        "DailyPercentageChange": {
+            "open-low": -2.6251526251526145,
+            "open-high": 0.0,
+            "open-close": 0.0,
+            "low-close": 2.558001189767985,
+            "high-close": 0.0,
+            "prevClose-open": 0.08328375966685685
+        }
+    },
+    "10/17/84": {
+        "Open": " 164.14",
+        "High": " 165.04",
+        "Low": " 163.71",
+        "Close": " 164.14",
+        "DailyPercentageChange": {
+            "open-low": -0.2626595809663297,
+            "open-high": 0.5453223460979192,
+            "open-close": 0.0,
+            "low-close": 0.26197148775434287,
+            "high-close": -0.548312416230051,
+            "prevClose-open": -2.4125746314122143
+        }
+    },
+    "10/16/84": {
+        "Open": " 164.78",
+        "High": " 165.78",
+        "Low": " 164.66",
+        "Close": " 164.78",
+        "DailyPercentageChange": {
+            "open-low": -0.07287744443095139,
+            "open-high": 0.6032090722644469,
+            "open-close": 0.0,
+            "low-close": 0.07282437188979521,
+            "high-close": -0.6068697657482705,
+            "prevClose-open": 0.38839665007890206
+        }
+    },
+    "10/15/84": {
+        "Open": " 165.77",
+        "High": " 166.15",
+        "Low": " 164.09",
+        "Close": " 165.77",
+        "DailyPercentageChange": {
+            "open-low": -1.023828386860873,
+            "open-high": 0.22870899789346702,
+            "open-close": 0.0,
+            "low-close": 1.0134523737708914,
+            "high-close": -0.2292332750196027,
+            "prevClose-open": 0.5972130059721356
+        }
+    },
+    "10/12/84": {
+        "Open": " 164.18",
+        "High": " 164.47",
+        "Low": " 162.78",
+        "Close": " 164.18",
+        "DailyPercentageChange": {
+            "open-low": -0.8600565179997577,
+            "open-high": 0.17632394965646747,
+            "open-close": 0.0,
+            "low-close": 0.8527226215129771,
+            "high-close": -0.17663540017053966,
+            "prevClose-open": -0.9684492630040221
+        }
+    },
+    "10/11/84": {
+        "Open": " 162.78",
+        "High": " 162.87",
+        "Low": " 162.00",
+        "Close": " 162.78",
+        "DailyPercentageChange": {
+            "open-low": -0.48148148148148223,
+            "open-high": 0.05525879535826328,
+            "open-close": 0.0,
+            "low-close": 0.47917434574272094,
+            "high-close": -0.05528934758570059,
+            "prevClose-open": -0.8600565179997577
+        }
+    },
+    "10/10/84": {
+        "Open": " 162.11",
+        "High": " 162.12",
+        "Low": " 160.02",
+        "Close": " 162.11",
+        "DailyPercentageChange": {
+            "open-low": -1.3060867391576074,
+            "open-high": 0.00616827041696947,
+            "open-close": 0.0,
+            "low-close": 1.2892480414533363,
+            "high-close": -0.0061686509160390505,
+            "prevClose-open": -0.41329961137498455
+        }
+    },
+    "10/09/84": {
+        "Open": " 161.67",
+        "High": " 162.84",
+        "Low": " 161.62",
+        "Close": " 161.67",
+        "DailyPercentageChange": {
+            "open-low": -0.030936765251814716,
+            "open-high": 0.7184966838614688,
+            "open-close": 0.0,
+            "low-close": 0.03092719737736312,
+            "high-close": -0.7236964186305537,
+            "prevClose-open": -0.27215933692090444
+        }
+    },
+    "10/08/84": {
+        "Open": " 162.13",
+        "High": " 162.68",
+        "Low": " 161.80",
+        "Close": " 162.13",
+        "DailyPercentageChange": {
+            "open-low": -0.2039555006180371,
+            "open-high": 0.3380870420457409,
+            "open-close": 0.0,
+            "low-close": 0.2035403688398101,
+            "high-close": -0.3392339480663735,
+            "prevClose-open": 0.2837229383827842
+        }
+    },
+    "10/05/84": {
+        "Open": " 162.68",
+        "High": " 163.32",
+        "Low": " 162.51",
+        "Close": " 162.68",
+        "DailyPercentageChange": {
+            "open-low": -0.10460894714172417,
+            "open-high": 0.3918687239774592,
+            "open-close": 0.0,
+            "low-close": 0.10449963117778209,
+            "high-close": -0.3934103761986638,
+            "prevClose-open": 0.3380870420457409
+        }
+    },
+    "10/04/84": {
+        "Open": " 162.92",
+        "High": " 163.16",
+        "Low": " 162.44",
+        "Close": " 162.92",
+        "DailyPercentageChange": {
+            "open-low": -0.2954937207584276,
+            "open-high": 0.14709487619515144,
+            "open-close": 0.0,
+            "low-close": 0.29462312791553513,
+            "high-close": -0.14731156395777628,
+            "prevClose-open": 0.14731156395775882
+        }
+    },
+    "10/03/84": {
+        "Open": " 162.44",
+        "High": " 163.59",
+        "Low": " 162.20",
+        "Close": " 162.44",
+        "DailyPercentageChange": {
+            "open-low": -0.14796547472257035,
+            "open-high": 0.7029769545815794,
+            "open-close": 0.0,
+            "low-close": 0.14774686037922255,
+            "high-close": -0.7079537059837514,
+            "prevClose-open": -0.2954937207584276
+        }
+    },
+    "10/02/84": {
+        "Open": " 163.59",
+        "High": " 165.24",
+        "Low": " 163.55",
+        "Close": " 163.59",
+        "DailyPercentageChange": {
+            "open-low": -0.02445735249158792,
+            "open-high": 0.9985475671750215,
+            "open-close": 0.0,
+            "low-close": 0.02445137233326734,
+            "high-close": -1.0086191087474818,
+            "prevClose-open": 0.7029769545815794
+        }
+    },
+    "10/01/84": {
+        "Open": " 164.62",
+        "High": " 166.10",
+        "Low": " 164.48",
+        "Close": " 164.62",
+        "DailyPercentageChange": {
+            "open-low": -0.08511673151751872,
+            "open-high": 0.8910295003010174,
+            "open-close": 0.0,
+            "low-close": 0.08504434455109633,
+            "high-close": -0.8990402138257744,
+            "prevClose-open": 0.6256833920544291
+        }
+    },
+    "09/28/84": {
+        "Open": " 166.10",
+        "High": " 166.96",
+        "Low": " 165.77",
+        "Close": " 166.10",
+        "DailyPercentageChange": {
+            "open-low": -0.1990710019907004,
+            "open-high": 0.5150934355534341,
+            "open-close": 0.0,
+            "low-close": 0.19867549668873213,
+            "high-close": -0.5177603853100624,
+            "prevClose-open": 0.8910295003010174
+        }
+    },
+    "09/27/84": {
+        "Open": " 166.96",
+        "High": " 167.18",
+        "Low": " 166.28",
+        "Close": " 166.96",
+        "DailyPercentageChange": {
+            "open-low": -0.40894876112581596,
+            "open-high": 0.13159468835985097,
+            "open-close": 0.0,
+            "low-close": 0.40728318160038735,
+            "high-close": -0.1317680881648292,
+            "prevClose-open": 0.5150934355534341
+        }
+    },
+    "09/26/84": {
+        "Open": " 166.28",
+        "High": " 167.20",
+        "Low": " 165.61",
+        "Close": " 166.28",
+        "DailyPercentageChange": {
+            "open-low": -0.40456494173056423,
+            "open-high": 0.5502392344497533,
+            "open-close": 0.0,
+            "low-close": 0.40293480875630716,
+            "high-close": -0.5532836179937379,
+            "prevClose-open": -0.40894876112581596
+        }
+    },
+    "09/25/84": {
+        "Open": " 165.62",
+        "High": " 165.97",
+        "Low": " 164.45",
+        "Close": " 165.62",
+        "DailyPercentageChange": {
+            "open-low": -0.7114624505928951,
+            "open-high": 0.21088148460564818,
+            "open-close": 0.0,
+            "low-close": 0.7064364207221446,
+            "high-close": -0.21132713440405404,
+            "prevClose-open": -0.39850259630479207
+        }
+    },
+    "09/24/84": {
+        "Open": " 165.28",
+        "High": " 166.12",
+        "Low": " 164.98",
+        "Close": " 165.28",
+        "DailyPercentageChange": {
+            "open-low": -0.18184022305734718,
+            "open-high": 0.5056585600770548,
+            "open-close": 0.0,
+            "low-close": 0.18151016456922275,
+            "high-close": -0.5082284607938065,
+            "prevClose-open": -0.2057115198451134
+        }
+    },
+    "09/21/84": {
+        "Open": " 165.67",
+        "High": " 168.67",
+        "Low": " 165.66",
+        "Close": " 165.67",
+        "DailyPercentageChange": {
+            "open-low": -0.006036460219721662,
+            "open-high": 1.7786209758700422,
+            "open-close": 0.0,
+            "low-close": 0.006036095853196659,
+            "high-close": -1.8108287559606449,
+            "prevClose-open": 0.2354077382748756
+        }
+    },
+    "09/20/84": {
+        "Open": " 167.47",
+        "High": " 167.47",
+        "Low": " 166.70",
+        "Close": " 167.47",
+        "DailyPercentageChange": {
+            "open-low": -0.4619076184763109,
+            "open-high": 0.0,
+            "open-close": 0.0,
+            "low-close": 0.4597838418821343,
+            "high-close": 0.0,
+            "prevClose-open": 1.0748193706335532
+        }
+    },
+    "09/19/84": {
+        "Open": " 166.94",
+        "High": " 166.94",
+        "Low": " 166.89",
+        "Close": " 166.94",
+        "DailyPercentageChange": {
+            "open-low": -0.02995985379592029,
+            "open-high": 0.0,
+            "open-close": 0.0,
+            "low-close": 0.029950880555895155,
+            "high-close": 0.0,
+            "prevClose-open": -0.3174793338924171
+        }
+    },
+    "09/18/84": {
+        "Open": " 167.65",
+        "High": " 168.87",
+        "Low": " 167.64",
+        "Close": " 167.65",
+        "DailyPercentageChange": {
+            "open-low": -0.005965163445489936,
+            "open-high": 0.7224492212944862,
+            "open-close": 0.0,
+            "low-close": 0.005964807634965301,
+            "high-close": -0.7277065314643596,
+            "prevClose-open": 0.4235013420817226
+        }
+    },
+    "09/17/84": {
+        "Open": " 168.87",
+        "High": " 169.37",
+        "Low": " 167.99",
+        "Close": " 168.87",
+        "DailyPercentageChange": {
+            "open-low": -0.5238407048038547,
+            "open-high": 0.29521166676507055,
+            "open-close": 0.0,
+            "low-close": 0.5211109137206108,
+            "high-close": -0.29608574643216673,
+            "prevClose-open": 0.7224492212944862
+        }
+    },
+    "09/14/84": {
+        "Open": " 168.78",
+        "High": " 169.65",
+        "Low": " 167.94",
+        "Close": " 168.78",
+        "DailyPercentageChange": {
+            "open-low": -0.5001786352268688,
+            "open-high": 0.5128205128205156,
+            "open-close": 0.0,
+            "low-close": 0.4976892996800589,
+            "high-close": -0.5154639175257759,
+            "prevClose-open": -0.053323853537150974
+        }
+    },
+    "09/13/84": {
+        "Open": " 167.94",
+        "High": " 167.94",
+        "Low": " 164.68",
+        "Close": " 167.94",
+        "DailyPercentageChange": {
+            "open-low": -1.9795967937818744,
+            "open-high": 0.0,
+            "open-close": 0.0,
+            "low-close": 1.9411694652852154,
+            "high-close": 0.0,
+            "prevClose-open": -0.5001786352268688
+        }
+    },
+    "09/12/84": {
+        "Open": " 164.68",
+        "High": " 164.81",
+        "Low": " 164.14",
+        "Close": " 164.68",
+        "DailyPercentageChange": {
+            "open-low": -0.328987449738041,
+            "open-high": 0.07887870881620986,
+            "open-close": 0.0,
+            "low-close": 0.3279086713626551,
+            "high-close": -0.07894097643915196,
+            "prevClose-open": -1.9795967937818744
+        }
+    },
+    "09/11/84": {
+        "Open": " 164.45",
+        "High": " 166.17",
+        "Low": " 164.26",
+        "Close": " 164.45",
+        "DailyPercentageChange": {
+            "open-low": -0.11567027882624968,
+            "open-high": 1.0350845519648548,
+            "open-close": 0.0,
+            "low-close": 0.11553663727576634,
+            "high-close": -1.0459106111280017,
+            "prevClose-open": -0.13986013986015094
+        }
+    },
+    "09/10/84": {
+        "Open": " 164.26",
+        "High": " 165.05",
+        "Low": " 164.26",
+        "Close": " 164.26",
+        "DailyPercentageChange": {
+            "open-low": 0.0,
+            "open-high": 0.47864283550440495,
+            "open-close": 0.0,
+            "low-close": 0.0,
+            "high-close": -0.48094484354074063,
+            "prevClose-open": -0.11567027882624968
+        }
+    },
+    "09/07/84": {
+        "Open": " 164.37",
+        "High": " 166.31",
+        "Low": " 164.22",
+        "Close": " 164.37",
+        "DailyPercentageChange": {
+            "open-low": -0.09134088417976233,
+            "open-high": 1.1664963020864636,
+            "open-close": 0.0,
+            "low-close": 0.09125752874612501,
+            "high-close": -1.1802640384498373,
+            "prevClose-open": 0.0669221877471641
+        }
+    },
+    "09/06/84": {
+        "Open": " 165.65",
+        "High": " 165.95",
+        "Low": " 164.29",
+        "Close": " 165.65",
+        "DailyPercentageChange": {
+            "open-low": -0.8278044920567372,
+            "open-high": 0.18077734257305392,
+            "open-close": 0.0,
+            "low-close": 0.821008149713259,
+            "high-close": -0.18110473890732445,
+            "prevClose-open": 0.7727135526712956
+        }
+    },
+    "09/05/84": {
+        "Open": " 164.29",
+        "High": " 164.88",
+        "Low": " 163.84",
+        "Close": " 164.29",
+        "DailyPercentageChange": {
+            "open-low": -0.27465820312499306,
+            "open-high": 0.3578360019408075,
+            "open-close": 0.0,
+            "low-close": 0.273905898106999,
+            "high-close": -0.3591210664069654,
+            "prevClose-open": -0.8278044920567372
+        }
+    },
+    "09/04/84": {
+        "Open": " 164.88",
+        "High": " 166.68",
+        "Low": " 164.73",
+        "Close": " 164.88",
+        "DailyPercentageChange": {
+            "open-low": -0.0910580950646547,
+            "open-high": 1.0799136069114539,
+            "open-close": 0.0,
+            "low-close": 0.09097525473071669,
+            "high-close": -1.091703056768566,
+            "prevClose-open": 0.3578360019408075
+        }
+    },
+    "08/31/84": {
+        "Open": " 166.68",
+        "High": " 166.68",
+        "Low": " 165.78",
+        "Close": " 166.68",
+        "DailyPercentageChange": {
+            "open-low": -0.5428881650380056,
+            "open-high": 0.0,
+            "open-close": 0.0,
+            "low-close": 0.5399568034557269,
+            "high-close": 0.0,
+            "prevClose-open": 1.0799136069114539
+        }
+    },
+    "08/30/84": {
+        "Open": " 166.60",
+        "High": " 167.19",
+        "Low": " 166.55",
+        "Close": " 166.60",
+        "DailyPercentageChange": {
+            "open-low": -0.030021014710286967,
+            "open-high": 0.3528919193731703,
+            "open-close": 0.0,
+            "low-close": 0.030012004801910533,
+            "high-close": -0.3541416566626671,
+            "prevClose-open": -0.04801920768308074
+        }
+    },
+    "08/29/84": {
+        "Open": " 167.10",
+        "High": " 168.21",
+        "Low": " 167.03",
+        "Close": " 167.10",
+        "DailyPercentageChange": {
+            "open-low": -0.04190863916661269,
+            "open-high": 0.6598894239343759,
+            "open-close": 0.0,
+            "low-close": 0.04189108318371824,
+            "high-close": -0.6642728904847479,
+            "prevClose-open": 0.2992220227408737
+        }
+    },
+    "08/28/84": {
+        "Open": " 167.40",
+        "High": " 167.43",
+        "Low": " 166.21",
+        "Close": " 167.40",
+        "DailyPercentageChange": {
+            "open-low": -0.7159617351543215,
+            "open-high": 0.017917935853790323,
+            "open-close": 0.0,
+            "low-close": 0.7108721624850644,
+            "high-close": -0.017921146953405697,
+            "prevClose-open": 0.17921146953405698
+        }
+    },
+    "08/27/84": {
+        "Open": " 166.44",
+        "High": " 167.51",
+        "Low": " 165.81",
+        "Close": " 166.44",
+        "DailyPercentageChange": {
+            "open-low": -0.37995295820517183,
+            "open-high": 0.6387678347561299,
+            "open-close": 0.0,
+            "low-close": 0.3785147801009346,
+            "high-close": -0.642874309060318,
+            "prevClose-open": -0.5767844268204807
+        }
+    },
+    "08/24/84": {
+        "Open": " 167.51",
+        "High": " 167.52",
+        "Low": " 167.12",
+        "Close": " 167.51",
+        "DailyPercentageChange": {
+            "open-low": -0.23336524652943177,
+            "open-high": 0.005969436485207334,
+            "open-close": 0.0,
+            "low-close": 0.23282192107933042,
+            "high-close": -0.005969792848199706,
+            "prevClose-open": 0.6387678347561299
+        }
+    },
+    "08/23/84": {
+        "Open": " 167.12",
+        "High": " 167.78",
+        "Low": " 166.61",
+        "Close": " 167.12",
+        "DailyPercentageChange": {
+            "open-low": -0.3061040753856256,
+            "open-high": 0.3933722732149223,
+            "open-close": 0.0,
+            "low-close": 0.3051699377692621,
+            "high-close": -0.39492580181905007,
+            "prevClose-open": -0.23336524652943177
+        }
+    },
+    "08/22/84": {
+        "Open": " 167.06",
+        "High": " 168.80",
+        "Low": " 166.92",
+        "Close": " 167.06",
+        "DailyPercentageChange": {
+            "open-low": -0.0838725137790647,
+            "open-high": 1.0308056872037967,
+            "open-close": 0.0,
+            "low-close": 0.08380222674489093,
+            "high-close": -1.0415419609721113,
+            "prevClose-open": -0.03591524003352225
+        }
+    },
+    "08/21/84": {
+        "Open": " 167.83",
+        "High": " 168.22",
+        "Low": " 164.93",
+        "Close": " 167.83",
+        "DailyPercentageChange": {
+            "open-low": -1.7583217122415604,
+            "open-high": 0.2318392581143659,
+            "open-close": 0.0,
+            "low-close": 1.7279389858785708,
+            "high-close": -0.23237800154917854,
+            "prevClose-open": 0.45879759280224647
+        }
+    },
+    "08/20/84": {
+        "Open": " 164.94",
+        "High": " 164.94",
+        "Low": " 163.76",
+        "Close": " 164.94",
+        "DailyPercentageChange": {
+            "open-low": -0.7205666829506637,
+            "open-high": 0.0,
+            "open-close": 0.0,
+            "low-close": 0.7154116648478276,
+            "high-close": 0.0,
+            "prevClose-open": -1.7521522978052717
+        }
+    },
+    "08/17/84": {
+        "Open": " 164.14",
+        "High": " 164.61",
+        "Low": " 163.78",
+        "Close": " 164.14",
+        "DailyPercentageChange": {
+            "open-low": -0.2198070582488614,
+            "open-high": 0.2855233582407067,
+            "open-close": 0.0,
+            "low-close": 0.21932496649201003,
+            "high-close": -0.28634092847570813,
+            "prevClose-open": -0.4873888144267159
+        }
+    },
+    "08/16/84": {
+        "Open": " 163.77",
+        "High": " 164.42",
+        "Low": " 162.75",
+        "Close": " 163.77",
+        "DailyPercentageChange": {
+            "open-low": -0.6267281105990846,
+            "open-high": 0.3953290353971398,
+            "open-close": 0.0,
+            "low-close": 0.622824693167253,
+            "high-close": -0.39689808878303545,
+            "prevClose-open": -0.22592660438418274
+        }
+    },
+    "08/15/84": {
+        "Open": " 162.80",
+        "High": " 164.42",
+        "Low": " 162.75",
+        "Close": " 162.80",
+        "DailyPercentageChange": {
+            "open-low": -0.03072196620584416,
+            "open-high": 0.9852815959128916,
+            "open-close": 0.0,
+            "low-close": 0.030712530712537694,
+            "high-close": -0.9950859950859804,
+            "prevClose-open": -0.595823095823095
+        }
+    },
+    "08/14/84": {
+        "Open": " 164.42",
+        "High": " 166.09",
+        "Low": " 164.28",
+        "Close": " 164.42",
+        "DailyPercentageChange": {
+            "open-low": -0.08522035549061746,
+            "open-high": 1.0054789571918936,
+            "open-close": 0.0,
+            "low-close": 0.08514779223937864,
+            "high-close": -1.0156915217126967,
+            "prevClose-open": 0.9852815959128916
+        }
+    },
+    "08/13/84": {
+        "Open": " 165.43",
+        "High": " 165.49",
+        "Low": " 163.98",
+        "Close": " 165.43",
+        "DailyPercentageChange": {
+            "open-low": -0.8842541773387104,
+            "open-high": 0.03625596712792451,
+            "open-close": 0.0,
+            "low-close": 0.876503657135959,
+            "high-close": -0.03626911684700615,
+            "prevClose-open": 0.6105301335912587
+        }
+    },
+    "08/10/84": {
+        "Open": " 165.42",
+        "High": " 168.59",
+        "Low": " 165.24",
+        "Close": " 165.42",
+        "DailyPercentageChange": {
+            "open-low": -0.10893246187362526,
+            "open-high": 1.8803013227356402,
+            "open-close": 0.0,
+            "low-close": 0.10881392818279435,
+            "high-close": -1.9163341796638957,
+            "prevClose-open": -0.006045218232389873
+        }
+    },
+    "08/09/84": {
+        "Open": " 165.54",
+        "High": " 165.88",
+        "Low": " 161.47",
+        "Close": " 165.54",
+        "DailyPercentageChange": {
+            "open-low": -2.5205920604446606,
+            "open-high": 0.20496744634675876,
+            "open-close": 0.0,
+            "low-close": 2.4586202730457853,
+            "high-close": -0.205388425758127,
+            "prevClose-open": 0.07249003262051743
+        }
+    },
+    "08/08/84": {
+        "Open": " 161.75",
+        "High": " 163.87",
+        "Low": " 161.75",
+        "Close": " 161.75",
+        "DailyPercentageChange": {
+            "open-low": 0.0,
+            "open-high": 1.2937084274119757,
+            "open-close": 0.0,
+            "low-close": 0.0,
+            "high-close": -1.310664605873264,
+            "prevClose-open": -2.3431221020092687
+        }
+    },
+    "08/07/84": {
+        "Open": " 162.71",
+        "High": " 163.58",
+        "Low": " 160.81",
+        "Close": " 162.71",
+        "DailyPercentageChange": {
+            "open-low": -1.1815185622784687,
+            "open-high": 0.5318498593960169,
+            "open-close": 0.0,
+            "low-close": 1.1677217134779703,
+            "high-close": -0.5346936266978086,
+            "prevClose-open": 0.5900067604941355
+        }
+    },
+    "08/06/84": {
+        "Open": " 162.60",
+        "High": " 165.27",
+        "Low": " 162.09",
+        "Close": " 162.60",
+        "DailyPercentageChange": {
+            "open-low": -0.3146400148065833,
+            "open-high": 1.615538210201498,
+            "open-close": 0.0,
+            "low-close": 0.31365313653135973,
+            "high-close": -1.6420664206642164,
+            "prevClose-open": -0.06765067650677346
+        }
+    },
+    "08/03/84": {
+        "Open": " 162.35",
+        "High": " 162.56",
+        "Low": " 157.99",
+        "Close": " 162.35",
+        "DailyPercentageChange": {
+            "open-low": -2.7596683334388157,
+            "open-high": 0.1291830708661466,
+            "open-close": 0.0,
+            "low-close": 2.6855558977517617,
+            "high-close": -0.12935016938713148,
+            "prevClose-open": -0.1539882968894364
+        }
+    },
+    "08/02/84": {
+        "Open": " 157.99",
+        "High": " 157.99",
+        "Low": " 154.08",
+        "Close": " 157.99",
+        "DailyPercentageChange": {
+            "open-low": -2.5376427829698835,
+            "open-high": 0.0,
+            "open-close": 0.0,
+            "low-close": 2.47484017975821,
+            "high-close": 0.0,
+            "prevClose-open": -2.7596683334388157
+        }
+    },
+    "08/01/84": {
+        "Open": " 154.08",
+        "High": " 154.08",
+        "Low": " 150.66",
+        "Close": " 154.08",
+        "DailyPercentageChange": {
+            "open-low": -2.2700119474313127,
+            "open-high": 0.0,
+            "open-close": 0.0,
+            "low-close": 2.2196261682243095,
+            "high-close": 0.0,
+            "prevClose-open": -2.5376427829698835
+        }
+    },
+    "07/31/84": {
+        "Open": " 150.66",
+        "High": " 151.77",
+        "Low": " 149.65",
+        "Close": " 150.66",
+        "DailyPercentageChange": {
+            "open-low": -0.674908118944197,
+            "open-high": 0.7313698359359646,
+            "open-close": 0.0,
+            "low-close": 0.6703836452940336,
+            "high-close": -0.7367582636399931,
+            "prevClose-open": -2.2700119474313127
+        }
+    },
+    "07/30/84": {
+        "Open": " 150.19",
+        "High": " 151.19",
+        "Low": " 150.14",
+        "Close": " 150.19",
+        "DailyPercentageChange": {
+            "open-low": -0.033302251232190876,
+            "open-high": 0.6614194060453733,
+            "open-close": 0.0,
+            "low-close": 0.03329116452494265,
+            "high-close": -0.6658232904987017,
+            "prevClose-open": -0.312936946534389
+        }
+    },
+    "07/27/84": {
+        "Open": " 151.19",
+        "High": " 151.38",
+        "Low": " 149.99",
+        "Close": " 151.19",
+        "DailyPercentageChange": {
+            "open-low": -0.8000533368891184,
+            "open-high": 0.12551195666534398,
+            "open-close": 0.0,
+            "low-close": 0.7937032872544405,
+            "high-close": -0.12566968714861945,
+            "prevClose-open": 0.6614194060453733
+        }
+    },
+    "07/26/84": {
+        "Open": " 150.08",
+        "High": " 150.16",
+        "Low": " 148.83",
+        "Close": " 150.08",
+        "DailyPercentageChange": {
+            "open-low": -0.8398844319021702,
+            "open-high": 0.05327650506125738,
+            "open-close": 0.0,
+            "low-close": 0.8328891257995735,
+            "high-close": -0.0533049040511621,
+            "prevClose-open": -0.7396055437100114
+        }
+    },
+    "07/25/84": {
+        "Open": " 148.83",
+        "High": " 149.30",
+        "Low": " 147.26",
+        "Close": " 148.83",
+        "DailyPercentageChange": {
+            "open-low": -1.0661415184028398,
+            "open-high": 0.3148024112525109,
+            "open-close": 0.0,
+            "low-close": 1.0548948464691403,
+            "high-close": -0.3157965463952152,
+            "prevClose-open": -0.8398844319021702
+        }
+    },
+    "07/24/84": {
+        "Open": " 147.82",
+        "High": " 149.28",
+        "Low": " 147.78",
+        "Close": " 147.82",
+        "DailyPercentageChange": {
+            "open-low": -0.027067262146428506,
+            "open-high": 0.9780278670953966,
+            "open-close": 0.0,
+            "low-close": 0.027059937762137765,
+            "high-close": -0.9876877283182304,
+            "prevClose-open": -0.6832634284941276
+        }
+    },
+    "07/23/84": {
+        "Open": " 148.95",
+        "High": " 149.55",
+        "Low": " 147.85",
+        "Close": " 148.95",
+        "DailyPercentageChange": {
+            "open-low": -0.7439972945552887,
+            "open-high": 0.40120361083251266,
+            "open-close": 0.0,
+            "low-close": 0.7385028533064749,
+            "high-close": -0.40281973816718547,
+            "prevClose-open": 0.7586438402148341
+        }
+    },
+    "07/20/84": {
+        "Open": " 149.55",
+        "High": " 158.58",
+        "Low": " 149.07",
+        "Close": " 149.55",
+        "DailyPercentageChange": {
+            "open-low": -0.3219963775407649,
+            "open-high": 5.694286795308362,
+            "open-close": 0.0,
+            "low-close": 0.32096288866601014,
+            "high-close": -6.038114343029088,
+            "prevClose-open": 0.40120361083251266
+        }
+    },
+    "07/19/84": {
+        "Open": " 150.37",
+        "High": " 151.40",
+        "Low": " 150.27",
+        "Close": " 150.37",
+        "DailyPercentageChange": {
+            "open-low": -0.06654688227856145,
+            "open-high": 0.6803170409511236,
+            "open-close": 0.0,
+            "low-close": 0.06650262685375695,
+            "high-close": -0.6849770565937362,
+            "prevClose-open": 0.5453215402008333
+        }
+    },
+    "07/18/84": {
+        "Open": " 151.40",
+        "High": " 152.38",
+        "Low": " 151.11",
+        "Close": " 151.40",
+        "DailyPercentageChange": {
+            "open-low": -0.19191317583216996,
+            "open-high": 0.6431290195563656,
+            "open-close": 0.0,
+            "low-close": 0.19154557463671865,
+            "high-close": -0.6472919418758188,
+            "prevClose-open": 0.6803170409511236
+        }
+    },
+    "07/17/84": {
+        "Open": " 152.38",
+        "High": " 152.60",
+        "Low": " 151.26",
+        "Close": " 152.38",
+        "DailyPercentageChange": {
+            "open-low": -0.7404469126008228,
+            "open-high": 0.1441677588466572,
+            "open-close": 0.0,
+            "low-close": 0.7350045937787141,
+            "high-close": -0.14437590234938893,
+            "prevClose-open": 0.6431290195563656
+        }
+    },
+    "07/16/84": {
+        "Open": " 151.60",
+        "High": " 151.30",
+        "Low": " 150.14",
+        "Close": " 151.60",
+        "DailyPercentageChange": {
+            "open-low": -0.9724257359797576,
+            "open-high": -0.1982815598149259,
+            "open-close": 0.0,
+            "low-close": 0.9630606860158365,
+            "high-close": 0.19788918205803624,
+            "prevClose-open": -0.5145118733509243
+        }
+    },
+    "07/13/84": {
+        "Open": " 150.88",
+        "High": " 151.16",
+        "Low": " 150.03",
+        "Close": " 150.88",
+        "DailyPercentageChange": {
+            "open-low": -0.5665533559954637,
+            "open-high": 0.18523418893887347,
+            "open-close": 0.0,
+            "low-close": 0.5633616118769845,
+            "high-close": -0.18557794273594985,
+            "prevClose-open": -0.47720042417815406
+        }
+    },
+    "07/12/84": {
+        "Open": " 150.03",
+        "High": " 151.06",
+        "Low": " 149.63",
+        "Close": " 150.03",
+        "DailyPercentageChange": {
+            "open-low": -0.26732607097507566,
+            "open-high": 0.6818482722097188,
+            "open-close": 0.0,
+            "low-close": 0.26661334399787084,
+            "high-close": -0.6865293607945085,
+            "prevClose-open": -0.5665533559954637
+        }
+    },
+    "07/11/84": {
+        "Open": " 150.56",
+        "High": " 152.50",
+        "Low": " 151.46",
+        "Close": " 150.56",
+        "DailyPercentageChange": {
+            "open-low": 0.5942162947312859,
+            "open-high": 1.2721311475409822,
+            "open-close": 0.0,
+            "low-close": -0.5977683315621717,
+            "high-close": -1.288522848034005,
+            "prevClose-open": 0.3520191285866108
+        }
+    },
+    "07/10/84": {
+        "Open": " 152.89",
+        "High": " 153.53",
+        "Low": " 152.57",
+        "Close": " 152.89",
+        "DailyPercentageChange": {
+            "open-low": -0.20973979157107767,
+            "open-high": 0.41685664039602344,
+            "open-close": 0.0,
+            "low-close": 0.20930080449996286,
+            "high-close": -0.41860160899994425,
+            "prevClose-open": 1.5239714827653765
+        }
+    },
+    "07/09/84": {
+        "Open": " 153.36",
+        "High": " 153.53",
+        "Low": " 151.44",
+        "Close": " 153.36",
+        "DailyPercentageChange": {
+            "open-low": -1.267828843106191,
+            "open-high": 0.11072754510518303,
+            "open-close": 0.0,
+            "low-close": 1.2519561815336566,
+            "high-close": -0.11085028690661677,
+            "prevClose-open": 0.3064684402712749
+        }
+    },
+    "07/06/84": {
+        "Open": " 152.24",
+        "High": " 152.76",
+        "Low": " 151.63",
+        "Close": " 152.24",
+        "DailyPercentageChange": {
+            "open-low": -0.40229506034426804,
+            "open-high": 0.34040324692326646,
+            "open-close": 0.0,
+            "low-close": 0.40068313189701366,
+            "high-close": -0.3415659485023527,
+            "prevClose-open": -0.7356805044666346
+        }
+    },
+    "07/05/84": {
+        "Open": " 152.76",
+        "High": " 153.87",
+        "Low": " 152.71",
+        "Close": " 152.76",
+        "DailyPercentageChange": {
+            "open-low": -0.032741798179544854,
+            "open-high": 0.72138818483136,
+            "open-close": 0.0,
+            "low-close": 0.03273108143491945,
+            "high-close": -0.7266300078554685,
+            "prevClose-open": 0.34040324692326646
+        }
+    },
+    "07/03/84": {
+        "Open": " 153.70",
+        "High": " 153.86",
+        "Low": " 153.10",
+        "Close": " 153.70",
+        "DailyPercentageChange": {
+            "open-low": -0.39190071848464686,
+            "open-high": 0.10399064084234044,
+            "open-close": 0.0,
+            "low-close": 0.39037085230969054,
+            "high-close": -0.10409889394926808,
+            "prevClose-open": 0.6115810019518528
+        }
+    },
+    "07/02/84": {
+        "Open": " 153.20",
+        "High": " 153.22",
+        "Low": " 152.44",
+        "Close": " 153.20",
+        "DailyPercentageChange": {
+            "open-low": -0.49855680923641493,
+            "open-high": 0.013053126223737261,
+            "open-close": 0.0,
+            "low-close": 0.4960835509138322,
+            "high-close": -0.013054830287212948,
+            "prevClose-open": -0.3263707571801567
+        }
+    },
+    "06/29/84": {
+        "Open": " 153.18",
+        "High": " 153.95",
+        "Low": " 153.21",
+        "Close": " 153.18",
+        "DailyPercentageChange": {
+            "open-low": 0.01958096729978535,
+            "open-high": 0.5001623903864774,
+            "open-close": 0.0,
+            "low-close": -0.019584802193498587,
+            "high-close": -0.5026765896330995,
+            "prevClose-open": -0.013056534795653356
+        }
+    },
+    "06/28/84": {
+        "Open": " 152.84",
+        "High": " 153.07",
+        "Low": " 151.62",
+        "Close": " 152.84",
+        "DailyPercentageChange": {
+            "open-low": -0.8046431869146543,
+            "open-high": 0.150258051871686,
+            "open-close": 0.0,
+            "low-close": 0.7982203611619988,
+            "high-close": -0.15048416644856696,
+            "prevClose-open": -0.22245485475006765
+        }
+    },
+    "06/27/84": {
+        "Open": " 151.64",
+        "High": " 152.88",
+        "Low": " 151.30",
+        "Close": " 151.64",
+        "DailyPercentageChange": {
+            "open-low": -0.22471910112357896,
+            "open-high": 0.8110936682365313,
+            "open-close": 0.0,
+            "low-close": 0.22421524663675482,
+            "high-close": -0.8177261936164661,
+            "prevClose-open": -0.7913479293062629
+        }
+    },
+    "06/26/84": {
+        "Open": " 152.71",
+        "High": " 153.97",
+        "Low": " 152.47",
+        "Close": " 152.71",
+        "DailyPercentageChange": {
+            "open-low": -0.15740801469142068,
+            "open-high": 0.8183412353055731,
+            "open-close": 0.0,
+            "low-close": 0.15716063126187485,
+            "high-close": -0.8250933141248057,
+            "prevClose-open": 0.700674481042513
+        }
+    },
+    "06/25/84": {
+        "Open": " 153.97",
+        "High": " 154.50",
+        "Low": " 154.04",
+        "Close": " 153.97",
+        "DailyPercentageChange": {
+            "open-low": 0.045442742144893,
+            "open-high": 0.3430420711974117,
+            "open-close": 0.0,
+            "low-close": -0.04546340196141663,
+            "high-close": -0.34422290056504584,
+            "prevClose-open": 0.8183412353055731
+        }
+    },
+    "06/22/84": {
+        "Open": " 154.47",
+        "High": " 154.92",
+        "Low": " 153.89",
+        "Close": " 154.47",
+        "DailyPercentageChange": {
+            "open-low": -0.3768925856131084,
+            "open-high": 0.290472501936476,
+            "open-close": 0.0,
+            "low-close": 0.37547743898492425,
+            "high-close": -0.2913187026607035,
+            "prevClose-open": 0.3236874474007898
+        }
+    },
+    "06/21/84": {
+        "Open": " 154.51",
+        "High": " 155.64",
+        "Low": " 154.05",
+        "Close": " 154.51",
+        "DailyPercentageChange": {
+            "open-low": -0.2986043492372473,
+            "open-high": 0.726034438447697,
+            "open-close": 0.0,
+            "low-close": 0.2977153582292276,
+            "high-close": -0.7313442495631322,
+            "prevClose-open": 0.025888292019928833
+        }
+    },
+    "06/20/84": {
+        "Open": " 154.84",
+        "High": " 154.84",
+        "Low": " 150.96",
+        "Close": " 154.84",
+        "DailyPercentageChange": {
+            "open-low": -2.570217276099626,
+            "open-high": 0.0,
+            "open-close": 0.0,
+            "low-close": 2.5058124515629006,
+            "high-close": 0.0,
+            "prevClose-open": 0.21312322397314165
+        }
+    },
+    "06/19/84": {
+        "Open": " 152.61",
+        "High": " 153.00",
+        "Low": " 151.73",
+        "Close": " 152.61",
+        "DailyPercentageChange": {
+            "open-low": -0.5799775917748791,
+            "open-high": 0.2549019607843048,
+            "open-close": 0.0,
+            "low-close": 0.5766332481488918,
+            "high-close": -0.25555337133869754,
+            "prevClose-open": -1.4612410720136226
+        }
+    },
+    "06/18/84": {
+        "Open": " 151.73",
+        "High": " 151.92",
+        "Low": " 148.53",
+        "Close": " 151.73",
+        "DailyPercentageChange": {
+            "open-low": -2.1544469130815247,
+            "open-high": 0.12506582411795533,
+            "open-close": 0.0,
+            "low-close": 2.109009424635859,
+            "high-close": -0.12522243458775306,
+            "prevClose-open": -0.5799775917748791
+        }
+    },
+    "06/15/84": {
+        "Open": " 149.03",
+        "High": " 150.56",
+        "Low": " 149.42",
+        "Close": " 149.03",
+        "DailyPercentageChange": {
+            "open-low": 0.2610092357114084,
+            "open-high": 1.016206163655686,
+            "open-close": 0.0,
+            "low-close": -0.2616922767227983,
+            "high-close": -1.026638931758707,
+            "prevClose-open": -1.8117157619271214
+        }
+    },
+    "06/14/84": {
+        "Open": " 150.39",
+        "High": " 151.89",
+        "Low": " 150.70",
+        "Close": " 150.39",
+        "DailyPercentageChange": {
+            "open-low": 0.20570670205706854,
+            "open-high": 0.9875567845151096,
+            "open-close": 0.0,
+            "low-close": -0.20613072677704786,
+            "high-close": -0.9974067424695792,
+            "prevClose-open": 0.9043154465057419
+        }
+    },
+    "06/13/84": {
+        "Open": " 152.13",
+        "High": " 152.85",
+        "Low": " 151.86",
+        "Close": " 152.13",
+        "DailyPercentageChange": {
+            "open-low": -0.17779533781112986,
+            "open-high": 0.4710500490677127,
+            "open-close": 0.0,
+            "low-close": 0.1774797870242436,
+            "high-close": -0.4732794320646808,
+            "prevClose-open": 1.143758627489653
+        }
+    },
+    "06/12/84": {
+        "Open": " 152.19",
+        "High": " 153.07",
+        "Low": " 151.61",
+        "Close": " 152.19",
+        "DailyPercentageChange": {
+            "open-low": -0.3825605171162747,
+            "open-high": 0.5749003723786473,
+            "open-close": 0.0,
+            "low-close": 0.3811025691569644,
+            "high-close": -0.5782245876864416,
+            "prevClose-open": 0.03942440370589544
+        }
+    },
+    "06/11/84": {
+        "Open": " 153.06",
+        "High": " 155.17",
+        "Low": " 153.00",
+        "Close": " 153.06",
+        "DailyPercentageChange": {
+            "open-low": -0.03921568627451129,
+            "open-high": 1.3597989302055715,
+            "open-close": 0.0,
+            "low-close": 0.039200313602510306,
+            "high-close": -1.3785443616882171,
+            "prevClose-open": 0.5684045472363808
+        }
+    },
+    "06/08/84": {
+        "Open": " 155.17",
+        "High": " 155.20",
+        "Low": " 154.64",
+        "Close": " 155.17",
+        "DailyPercentageChange": {
+            "open-low": -0.3427315054319718,
+            "open-high": 0.019329896907217228,
+            "open-close": 0.0,
+            "low-close": 0.3415608687246253,
+            "high-close": -0.019333634078753072,
+            "prevClose-open": 1.3597989302055715
+        }
+    },
+    "06/07/84": {
+        "Open": " 154.92",
+        "High": " 155.11",
+        "Low": " 154.36",
+        "Close": " 154.92",
+        "DailyPercentageChange": {
+            "open-low": -0.36278828712099886,
+            "open-high": 0.12249371413837026,
+            "open-close": 0.0,
+            "low-close": 0.36147689129871796,
+            "high-close": -0.12264394526208763,
+            "prevClose-open": -0.1613736121869352
+        }
+    },
+    "06/06/84": {
+        "Open": " 155.01",
+        "High": " 155.03",
+        "Low": " 153.38",
+        "Close": " 155.01",
+        "DailyPercentageChange": {
+            "open-low": -1.0627200417264282,
+            "open-high": 0.012900728891188953,
+            "open-close": 0.0,
+            "low-close": 1.0515450616089255,
+            "high-close": -0.012902393393981183,
+            "prevClose-open": 0.05806077027288783
+        }
+    },
+    "06/05/84": {
+        "Open": " 153.65",
+        "High": " 154.34",
+        "Low": " 153.28",
+        "Close": " 153.65",
+        "DailyPercentageChange": {
+            "open-low": -0.24138830897703847,
+            "open-high": 0.4470649216016572,
+            "open-close": 0.0,
+            "low-close": 0.24080702896192943,
+            "high-close": -0.4490725675235911,
+            "prevClose-open": -0.8851285388870713
+        }
+    },
+    "06/04/84": {
+        "Open": " 154.34",
+        "High": " 155.10",
+        "Low": " 153.24",
+        "Close": " 154.34",
+        "DailyPercentageChange": {
+            "open-low": -0.7178282432785136,
+            "open-high": 0.4900064474532501,
+            "open-close": 0.0,
+            "low-close": 0.712712193857713,
+            "high-close": -0.4924193339380529,
+            "prevClose-open": 0.4470649216016572
+        }
+    },
+    "06/01/84": {
+        "Open": " 153.24",
+        "High": " 153.24",
+        "Low": " 150.55",
+        "Close": " 153.24",
+        "DailyPercentageChange": {
+            "open-low": -1.7867818000664215,
+            "open-high": 0.0,
+            "open-close": 0.0,
+            "low-close": 1.7554163403811,
+            "high-close": 0.0,
+            "prevClose-open": -0.7178282432785136
+        }
+    },
+    "05/31/84": {
+        "Open": " 150.55",
+        "High": " 150.69",
+        "Low": " 149.76",
+        "Close": " 150.55",
+        "DailyPercentageChange": {
+            "open-low": -0.5275106837606975,
+            "open-high": 0.09290596589022919,
+            "open-close": 0.0,
+            "low-close": 0.5247426104284426,
+            "high-close": -0.09299236134173786,
+            "prevClose-open": -1.7867818000664215
+        }
+    },
+    "05/30/84": {
+        "Open": " 150.35",
+        "High": " 151.43",
+        "Low": " 148.68",
+        "Close": " 150.35",
+        "DailyPercentageChange": {
+            "open-low": -1.123217648641369,
+            "open-high": 0.7132008188602076,
+            "open-close": 0.0,
+            "low-close": 1.1107416029264965,
+            "high-close": -0.7183239108746342,
+            "prevClose-open": -0.1330229464582754
+        }
+    },
+    "05/29/84": {
+        "Open": " 150.29",
+        "High": " 151.86",
+        "Low": " 149.95",
+        "Close": " 150.29",
+        "DailyPercentageChange": {
+            "open-low": -0.22674224741580756,
+            "open-high": 1.0338469643092463,
+            "open-close": 0.0,
+            "low-close": 0.22622929003925973,
+            "high-close": -1.0446470157695267,
+            "prevClose-open": -0.03992281588928224
+        }
+    },
+    "05/25/84": {
+        "Open": " 151.62",
+        "High": " 152.02",
+        "Low": " 150.85",
+        "Close": " 151.62",
+        "DailyPercentageChange": {
+            "open-low": -0.5104408352668282,
+            "open-high": 0.26312327325352297,
+            "open-close": 0.0,
+            "low-close": 0.5078485687904039,
+            "high-close": -0.2638174383326775,
+            "prevClose-open": 0.8771929824561486
+        }
+    },
+    "05/24/84": {
+        "Open": " 151.23",
+        "High": " 153.15",
+        "Low": " 150.80",
+        "Close": " 151.23",
+        "DailyPercentageChange": {
+            "open-low": -0.2851458885941501,
+            "open-high": 1.2536728697355637,
+            "open-close": 0.0,
+            "low-close": 0.2843351186933667,
+            "high-close": -1.2695893671890603,
+            "prevClose-open": -0.25788534021028553
+        }
+    },
+    "05/23/84": {
+        "Open": " 153.15",
+        "High": " 154.02",
+        "Low": " 153.10",
+        "Close": " 153.15",
+        "DailyPercentageChange": {
+            "open-low": -0.03265839320706164,
+            "open-high": 0.5648617062719156,
+            "open-close": 0.0,
+            "low-close": 0.032647730982704126,
+            "high-close": -0.5680705190989256,
+            "prevClose-open": 1.2536728697355637
+        }
+    },
+    "05/22/84": {
+        "Open": " 153.88",
+        "High": " 154.73",
+        "Low": " 152.99",
+        "Close": " 153.88",
+        "DailyPercentageChange": {
+            "open-low": -0.5817373684554457,
+            "open-high": 0.5493440186130643,
+            "open-close": 0.0,
+            "low-close": 0.5783727579932327,
+            "high-close": -0.5523784767351145,
+            "prevClose-open": 0.474395632960742
+        }
+    },
+    "05/21/84": {
+        "Open": " 154.73",
+        "High": " 156.11",
+        "Low": " 154.63",
+        "Close": " 154.73",
+        "DailyPercentageChange": {
+            "open-low": -0.0646705037832208,
+            "open-high": 0.8839920568829823,
+            "open-close": 0.0,
+            "low-close": 0.06462870807212197,
+            "high-close": -0.8918761713953492,
+            "prevClose-open": 0.5493440186130643
+        }
+    },
+    "05/18/84": {
+        "Open": " 155.78",
+        "High": " 156.77",
+        "Low": " 155.24",
+        "Close": " 155.78",
+        "DailyPercentageChange": {
+            "open-low": -0.3478484926565267,
+            "open-high": 0.6314983734132864,
+            "open-close": 0.0,
+            "low-close": 0.34664270124534086,
+            "high-close": -0.6355116189498068,
+            "prevClose-open": 0.6740274746437357
+        }
+    },
+    "05/17/84": {
+        "Open": " 156.57",
+        "High": " 157.99",
+        "Low": " 156.15",
+        "Close": " 156.57",
+        "DailyPercentageChange": {
+            "open-low": -0.2689721421709814,
+            "open-high": 0.8987910627254989,
+            "open-close": 0.0,
+            "low-close": 0.26825062272465194,
+            "high-close": -0.906942581592908,
+            "prevClose-open": 0.5045666475059029
+        }
+    },
+    "05/16/84": {
+        "Open": " 157.99",
+        "High": " 158.41",
+        "Low": " 157.83",
+        "Close": " 157.99",
+        "DailyPercentageChange": {
+            "open-low": -0.10137489704111803,
+            "open-high": 0.2651347768448883,
+            "open-close": 0.0,
+            "low-close": 0.10127223241977125,
+            "high-close": -0.2658396101018973,
+            "prevClose-open": 0.8987910627254989
+        }
+    },
+    "05/15/84": {
+        "Open": " 158.00",
+        "High": " 158.27",
+        "Low": " 157.29",
+        "Close": " 158.00",
+        "DailyPercentageChange": {
+            "open-low": -0.4513955114756234,
+            "open-high": 0.17059455361092452,
+            "open-close": 0.0,
+            "low-close": 0.4493670886076,
+            "high-close": -0.17088607594937358,
+            "prevClose-open": 0.006329113924044876
+        }
+    },
+    "05/14/84": {
+        "Open": " 157.50",
+        "High": " 158.49",
+        "Low": " 157.20",
+        "Close": " 157.50",
+        "DailyPercentageChange": {
+            "open-low": -0.19083969465649578,
+            "open-high": 0.6246450880181772,
+            "open-close": 0.0,
+            "low-close": 0.1904761904761977,
+            "high-close": -0.6285714285714343,
+            "prevClose-open": -0.31746031746031744
+        }
+    },
+    "05/11/84": {
+        "Open": " 158.49",
+        "High": " 160.00",
+        "Low": " 157.42",
+        "Close": " 158.49",
+        "DailyPercentageChange": {
+            "open-low": -0.6797103290560422,
+            "open-high": 0.9437499999999942,
+            "open-close": 0.0,
+            "low-close": 0.6751214587671283,
+            "high-close": -0.9527414978862963,
+            "prevClose-open": 0.6246450880181772
+        }
+    },
+    "05/10/84": {
+        "Open": " 160.00",
+        "High": " 160.45",
+        "Low": " 159.61",
+        "Close": " 160.00",
+        "DailyPercentageChange": {
+            "open-low": -0.24434559238142115,
+            "open-high": 0.28046120286692966,
+            "open-close": 0.0,
+            "low-close": 0.24374999999999145,
+            "high-close": -0.2812499999999929,
+            "prevClose-open": 0.9437499999999942
+        }
+    },
+    "05/09/84": {
+        "Open": " 160.11",
+        "High": " 161.31",
+        "Low": " 159.39",
+        "Close": " 160.11",
+        "DailyPercentageChange": {
+            "open-low": -0.45172219085264276,
+            "open-high": 0.7439092430723381,
+            "open-close": 0.0,
+            "low-close": 0.4496908375492019,
+            "high-close": -0.7494847292486344,
+            "prevClose-open": 0.06870276684780066
+        }
+    },
+    "05/08/84": {
+        "Open": " 160.52",
+        "High": " 160.52",
+        "Low": " 159.14",
+        "Close": " 160.52",
+        "DailyPercentageChange": {
+            "open-low": -0.8671609903230012,
+            "open-high": 0.0,
+            "open-close": 0.0,
+            "low-close": 0.8597059556441713,
+            "high-close": 0.0,
+            "prevClose-open": 0.25541988537253707
+        }
+    },
+    "05/07/84": {
+        "Open": " 159.47",
+        "High": " 159.48",
+        "Low": " 158.63",
+        "Close": " 159.47",
+        "DailyPercentageChange": {
+            "open-low": -0.5295341360398432,
+            "open-high": 0.006270378730869643,
+            "open-close": 0.0,
+            "low-close": 0.526744842290088,
+            "high-close": -0.00627077193201913,
+            "prevClose-open": -0.6584310528626145
+        }
+    },
+    "05/04/84": {
+        "Open": " 159.11",
+        "High": " 161.20",
+        "Low": " 158.33",
+        "Close": " 159.11",
+        "DailyPercentageChange": {
+            "open-low": -0.4926419503568503,
+            "open-high": 1.2965260545905553,
+            "open-close": 0.0,
+            "low-close": 0.4902268870592678,
+            "high-close": -1.3135566589152001,
+            "prevClose-open": -0.226258563258114
+        }
+    },
+    "05/03/84": {
+        "Open": " 161.20",
+        "High": " 161.90",
+        "Low": " 160.95",
+        "Close": " 161.20",
+        "DailyPercentageChange": {
+            "open-low": -0.1553277415346381,
+            "open-high": 0.43236565781347563,
+            "open-close": 0.0,
+            "low-close": 0.15508684863523575,
+            "high-close": -0.43424317617867064,
+            "prevClose-open": 1.2965260545905553
+        }
+    },
+    "05/02/84": {
+        "Open": " 161.90",
+        "High": " 162.11",
+        "Low": " 161.41",
+        "Close": " 161.90",
+        "DailyPercentageChange": {
+            "open-low": -0.30357474753733293,
+            "open-high": 0.12954166923694277,
+            "open-close": 0.0,
+            "low-close": 0.30265596046943116,
+            "high-close": -0.12970969734404444,
+            "prevClose-open": 0.43236565781347563
+        }
+    },
+    "05/01/84": {
+        "Open": " 161.68",
+        "High": " 161.69",
+        "Low": " 160.05",
+        "Close": " 161.68",
+        "DailyPercentageChange": {
+            "open-low": -1.0184317400812217,
+            "open-high": 0.006184674376888432,
+            "open-close": 0.0,
+            "low-close": 1.008164275111328,
+            "high-close": -0.0061850569025178785,
+            "prevClose-open": -0.13607125185551636
+        }
+    },
+    "04/30/84": {
+        "Open": " 160.05",
+        "High": " 160.43",
+        "Low": " 159.30",
+        "Close": " 160.05",
+        "DailyPercentageChange": {
+            "open-low": -0.4708097928436911,
+            "open-high": 0.23686342953312686,
+            "open-close": 0.0,
+            "low-close": 0.4686035613870665,
+            "high-close": -0.23742580443611086,
+            "prevClose-open": -1.0184317400812217
+        }
+    },
+    "04/27/84": {
+        "Open": " 159.89",
+        "High": " 160.69",
+        "Low": " 159.77",
+        "Close": " 159.89",
+        "DailyPercentageChange": {
+            "open-low": -0.07510796770355893,
+            "open-high": 0.49785300889912965,
+            "open-close": 0.0,
+            "low-close": 0.07505159797359193,
+            "high-close": -0.5003439864907195,
+            "prevClose-open": -0.10006879729815812
+        }
+    },
+    "04/26/84": {
+        "Open": " 160.30",
+        "High": " 160.50",
+        "Low": " 158.65",
+        "Close": " 160.30",
+        "DailyPercentageChange": {
+            "open-low": -1.0400252127324334,
+            "open-high": 0.12461059190030443,
+            "open-close": 0.0,
+            "low-close": 1.0293200249532162,
+            "high-close": -0.12476606363068536,
+            "prevClose-open": 0.2557704304429351
+        }
+    },
+    "04/25/84": {
+        "Open": " 158.65",
+        "High": " 158.77",
+        "Low": " 157.80",
+        "Close": " 158.65",
+        "DailyPercentageChange": {
+            "open-low": -0.5386565272496795,
+            "open-high": 0.07558102916168327,
+            "open-close": 0.0,
+            "low-close": 0.5357705641348846,
+            "high-close": -0.07563819728963413,
+            "prevClose-open": -1.0400252127324334
+        }
+    },
+    "04/24/84": {
+        "Open": " 158.07",
+        "High": " 158.38",
+        "Low": " 156.63",
+        "Close": " 158.07",
+        "DailyPercentageChange": {
+            "open-low": -0.9193641064930076,
+            "open-high": 0.19573178431620297,
+            "open-close": 0.0,
+            "low-close": 0.910988802429302,
+            "high-close": -0.19611564496742093,
+            "prevClose-open": -0.36692604542292184
+        }
+    },
+    "04/23/84": {
+        "Open": " 156.80",
+        "High": " 158.05",
+        "Low": " 156.79",
+        "Close": " 156.80",
+        "DailyPercentageChange": {
+            "open-low": -0.006377957777931837,
+            "open-high": 0.7908889591901296,
+            "open-close": 0.0,
+            "low-close": 0.006377551020420489,
+            "high-close": -0.7971938775510204,
+            "prevClose-open": -0.8099489795918251
+        }
+    },
+    "04/19/84": {
+        "Open": " 158.02",
+        "High": " 159.02",
+        "Low": " 157.10",
+        "Close": " 158.02",
+        "DailyPercentageChange": {
+            "open-low": -0.5856142584341285,
+            "open-high": 0.6288517167651868,
+            "open-close": 0.0,
+            "low-close": 0.5822047842045411,
+            "high-close": -0.6328312871788381,
+            "prevClose-open": 0.7720541703581817
+        }
+    },
+    "04/18/84": {
+        "Open": " 157.90",
+        "High": " 158.97",
+        "Low": " 157.64",
+        "Close": " 157.90",
+        "DailyPercentageChange": {
+            "open-low": -0.1649327581832145,
+            "open-high": 0.673082971629863,
+            "open-close": 0.0,
+            "low-close": 0.16466117796074686,
+            "high-close": -0.6776440785307113,
+            "prevClose-open": -0.07599746675111117
+        }
+    },
+    "04/17/84": {
+        "Open": " 158.97",
+        "High": " 169.59",
+        "Low": " 158.32",
+        "Close": " 158.97",
+        "DailyPercentageChange": {
+            "open-low": -0.4105608893380531,
+            "open-high": 6.262161684061562,
+            "open-close": 0.0,
+            "low-close": 0.408882179027493,
+            "high-close": -6.680505755802985,
+            "prevClose-open": 0.673082971629863
+        }
+    },
+    "04/16/84": {
+        "Open": " 158.32",
+        "High": " 158.35",
+        "Low": " 156.49",
+        "Close": " 158.32",
+        "DailyPercentageChange": {
+            "open-low": -1.1694037957696877,
+            "open-high": 0.0189453741711406,
+            "open-close": 0.0,
+            "low-close": 1.1558868115209602,
+            "high-close": -0.01894896412329531,
+            "prevClose-open": -0.4105608893380531
+        }
+    },
+    "04/13/84": {
+        "Open": " 157.31",
+        "High": " 158.87",
+        "Low": " 157.13",
+        "Close": " 157.31",
+        "DailyPercentageChange": {
+            "open-low": -0.11455482721313996,
+            "open-high": 0.9819349153395872,
+            "open-close": 0.0,
+            "low-close": 0.11442374928485591,
+            "high-close": -0.9916724938020485,
+            "prevClose-open": -0.6420443709872169
+        }
+    },
+    "04/12/84": {
+        "Open": " 157.73",
+        "High": " 157.74",
+        "Low": " 154.17",
+        "Close": " 157.73",
+        "DailyPercentageChange": {
+            "open-low": -2.3091392618537996,
+            "open-high": 0.006339546088512315,
+            "open-close": 0.0,
+            "low-close": 2.2570214924237635,
+            "high-close": -0.006339948012438552,
+            "prevClose-open": 0.26627781652189664
+        }
+    },
+    "04/11/84": {
+        "Open": " 155.00",
+        "High": " 156.31",
+        "Low": " 154.90",
+        "Close": " 155.00",
+        "DailyPercentageChange": {
+            "open-low": -0.06455777921239142,
+            "open-high": 0.8380781779796573,
+            "open-close": 0.0,
+            "low-close": 0.0645161290322544,
+            "high-close": -0.8451612903225821,
+            "prevClose-open": -1.7612903225806387
+        }
+    },
+    "04/10/84": {
+        "Open": " 155.87",
+        "High": " 156.57",
+        "Low": " 155.45",
+        "Close": " 155.87",
+        "DailyPercentageChange": {
+            "open-low": -0.2701833386941241,
+            "open-high": 0.44708437120775923,
+            "open-close": 0.0,
+            "low-close": 0.26945531532688516,
+            "high-close": -0.44909219221145097,
+            "prevClose-open": 0.5581574388913868
+        }
+    },
+    "04/09/84": {
+        "Open": " 155.45",
+        "High": " 155.86",
+        "Low": " 154.71",
+        "Close": " 155.45",
+        "DailyPercentageChange": {
+            "open-low": -0.4783142653997677,
+            "open-high": 0.26305658924677594,
+            "open-close": 0.0,
+            "low-close": 0.4760373110324739,
+            "high-close": -0.2637504020585558,
+            "prevClose-open": -0.2701833386941241
+        }
+    },
+    "04/06/84": {
+        "Open": " 155.48",
+        "High": " 155.48",
+        "Low": " 154.12",
+        "Close": " 155.48",
+        "DailyPercentageChange": {
+            "open-low": -0.8824292758889081,
+            "open-high": 0.0,
+            "open-close": 0.0,
+            "low-close": 0.8747105737072198,
+            "high-close": 0.0,
+            "prevClose-open": 0.019295086184719024
+        }
+    },
+    "04/05/84": {
+        "Open": " 155.04",
+        "High": " 158.10",
+        "Low": " 154.96",
+        "Close": " 155.04",
+        "DailyPercentageChange": {
+            "open-low": -0.05162622612286014,
+            "open-high": 1.9354838709677433,
+            "open-close": 0.0,
+            "low-close": 0.051599587203292115,
+            "high-close": -1.9736842105263175,
+            "prevClose-open": -0.2837977296181616
+        }
+    },
+    "04/04/84": {
+        "Open": " 157.54",
+        "High": " 158.11",
+        "Low": " 157.29",
+        "Close": " 157.54",
+        "DailyPercentageChange": {
+            "open-low": -0.1589420815054994,
+            "open-high": 0.36050850673583046,
+            "open-close": 0.0,
+            "low-close": 0.15868985654436968,
+            "high-close": -0.3618128729211766,
+            "prevClose-open": 1.586898565443697
+        }
+    },
+    "04/03/84": {
+        "Open": " 157.66",
+        "High": " 158.27",
+        "Low": " 157.17",
+        "Close": " 157.66",
+        "DailyPercentageChange": {
+            "open-low": -0.3117643316154541,
+            "open-high": 0.38541732482467533,
+            "open-close": 0.0,
+            "low-close": 0.3107953824686091,
+            "high-close": -0.3869085373588822,
+            "prevClose-open": 0.07611315489027308
+        }
+    },
+    "04/02/84": {
+        "Open": " 157.98",
+        "High": " 159.87",
+        "Low": " 157.63",
+        "Close": " 157.98",
+        "DailyPercentageChange": {
+            "open-low": -0.22203895197614307,
+            "open-high": 1.18221054606869,
+            "open-close": 0.0,
+            "low-close": 0.2215470312697774,
+            "high-close": -1.1963539688568268,
+            "prevClose-open": 0.2025572857323669
+        }
+    },
+    "03/30/84": {
+        "Open": " 159.18",
+        "High": " 159.52",
+        "Low": " 158.92",
+        "Close": " 159.18",
+        "DailyPercentageChange": {
+            "open-low": -0.16360432922226237,
+            "open-high": 0.2131394182547664,
+            "open-close": 0.0,
+            "low-close": 0.16333710265109896,
+            "high-close": -0.21359467269757723,
+            "prevClose-open": 0.7538635506973345
+        }
+    },
+    "03/29/84": {
+        "Open": " 159.52",
+        "High": " 160.46",
+        "Low": " 159.52",
+        "Close": " 159.52",
+        "DailyPercentageChange": {
+            "open-low": 0.0,
+            "open-high": 0.5858157796335521,
+            "open-close": 0.0,
+            "low-close": 0.0,
+            "high-close": -0.5892678034102292,
+            "prevClose-open": 0.2131394182547664
+        }
+    },
+    "03/28/84": {
+        "Open": " 159.88",
+        "High": " 159.90",
+        "Low": " 157.30",
+        "Close": " 159.88",
+        "DailyPercentageChange": {
+            "open-low": -1.6401780038143572,
+            "open-high": 0.012507817385872566,
+            "open-close": 0.0,
+            "low-close": 1.613710282712024,
+            "high-close": -0.012509382036533795,
+            "prevClose-open": 0.22516887665748386
+        }
+    },
+    "03/27/84": {
+        "Open": " 157.30",
+        "High": " 157.30",
+        "Low": " 156.61",
+        "Close": " 157.30",
+        "DailyPercentageChange": {
+            "open-low": -0.4405848924078908,
+            "open-high": 0.0,
+            "open-close": 0.0,
+            "low-close": 0.4386522568340735,
+            "high-close": 0.0,
+            "prevClose-open": -1.6401780038143572
+        }
+    },
+    "03/26/84": {
+        "Open": " 156.67",
+        "High": " 157.18",
+        "Low": " 156.31",
+        "Close": " 156.67",
+        "DailyPercentageChange": {
+            "open-low": -0.23031156036081196,
+            "open-high": 0.32446876192901086,
+            "open-close": 0.0,
+            "low-close": 0.22978234505647874,
+            "high-close": -0.3255249888300372,
+            "prevClose-open": -0.4021191038488695
+        }
+    },
+    "03/23/84": {
+        "Open": " 156.86",
+        "High": " 156.90",
+        "Low": " 156.05",
+        "Close": " 156.86",
+        "DailyPercentageChange": {
+            "open-low": -0.5190644024351184,
+            "open-high": 0.025493945188012776,
+            "open-close": 0.0,
+            "low-close": 0.516384036720644,
+            "high-close": -0.025500446257804437,
+            "prevClose-open": 0.12112711972461183
+        }
+    },
+    "03/22/84": {
+        "Open": " 156.69",
+        "High": " 158.67",
+        "Low": " 156.61",
+        "Close": " 156.69",
+        "DailyPercentageChange": {
+            "open-low": -0.051082306366122265,
+            "open-high": 1.2478729438457112,
+            "open-close": 0.0,
+            "low-close": 0.051056225668507295,
+            "high-close": -1.2636415852958005,
+            "prevClose-open": -0.10849447954560974
+        }
+    },
+    "03/21/84": {
+        "Open": " 158.66",
+        "High": " 159.26",
+        "Low": " 158.59",
+        "Close": " 158.66",
+        "DailyPercentageChange": {
+            "open-low": -0.04413897471466875,
+            "open-high": 0.37674243375611854,
+            "open-close": 0.0,
+            "low-close": 0.04411950081935786,
+            "high-close": -0.3781671498802435,
+            "prevClose-open": 1.2416488087734772
+        }
+    },
+    "03/20/84": {
+        "Open": " 158.86",
+        "High": " 159.17",
+        "Low": " 157.78",
+        "Close": " 158.86",
+        "DailyPercentageChange": {
+            "open-low": -0.684497401445058,
+            "open-high": 0.19476031915560335,
+            "open-close": 0.0,
+            "low-close": 0.6798438876998694,
+            "high-close": -0.19514037517309193,
+            "prevClose-open": 0.1258970162407258
+        }
+    },
+    "03/19/84": {
+        "Open": " 157.78",
+        "High": " 159.27",
+        "Low": " 157.28",
+        "Close": " 157.78",
+        "DailyPercentageChange": {
+            "open-low": -0.3179043743641913,
+            "open-high": 0.9355183022540396,
+            "open-close": 0.0,
+            "low-close": 0.3168969451134491,
+            "high-close": -0.9443528964380841,
+            "prevClose-open": -0.684497401445058
+        }
+    },
+    "03/16/84": {
+        "Open": " 159.27",
+        "High": " 160.45",
+        "Low": " 157.41",
+        "Close": " 159.27",
+        "DailyPercentageChange": {
+            "open-low": -1.181627596721945,
+            "open-high": 0.735431598628843,
+            "open-close": 0.0,
+            "low-close": 1.1678282162365878,
+            "high-close": -0.7408802662145905,
+            "prevClose-open": 0.9355183022540396
+        }
+    },
+    "03/15/84": {
+        "Open": " 157.41",
+        "High": " 158.05",
+        "Low": " 156.73",
+        "Close": " 157.41",
+        "DailyPercentageChange": {
+            "open-low": -0.43386716008422566,
+            "open-high": 0.4049351471053557,
+            "open-close": 0.0,
+            "low-close": 0.4319928848230779,
+            "high-close": -0.40658153865701974,
+            "prevClose-open": -1.181627596721945
+        }
+    },
+    "03/14/84": {
+        "Open": " 156.77",
+        "High": " 157.17",
+        "Low": " 156.22",
+        "Close": " 156.77",
+        "DailyPercentageChange": {
+            "open-low": -0.35206759697862716,
+            "open-high": 0.25450149519626986,
+            "open-close": 0.0,
+            "low-close": 0.350832429674052,
+            "high-close": -0.25515085794474535,
+            "prevClose-open": -0.40824137271160704
+        }
+    },
+    "03/13/84": {
+        "Open": " 156.78",
+        "High": " 157.93",
+        "Low": " 156.34",
+        "Close": " 156.78",
+        "DailyPercentageChange": {
+            "open-low": -0.2814378917743365,
+            "open-high": 0.7281707085417626,
+            "open-close": 0.0,
+            "low-close": 0.2806480418420702,
+            "high-close": -0.7335119275417818,
+            "prevClose-open": 0.006378364587314009
+        }
+    },
+    "03/12/84": {
+        "Open": " 156.34",
+        "High": " 156.35",
+        "Low": " 154.35",
+        "Close": " 156.34",
+        "DailyPercentageChange": {
+            "open-low": -1.289277615808234,
+            "open-high": 0.006395906619757535,
+            "open-close": 0.0,
+            "low-close": 1.2728668287066707,
+            "high-close": -0.006396315722138227,
+            "prevClose-open": -0.2814378917743365
+        }
+    },
+    "03/09/84": {
+        "Open": " 154.35",
+        "High": " 155.19",
+        "Low": " 153.17",
+        "Close": " 154.35",
+        "DailyPercentageChange": {
+            "open-low": -0.7703858457922614,
+            "open-high": 0.5412719891745624,
+            "open-close": 0.0,
+            "low-close": 0.7644962747003609,
+            "high-close": -0.5442176870748322,
+            "prevClose-open": -1.289277615808234
+        }
+    },
+    "03/08/84": {
+        "Open": " 155.19",
+        "High": " 155.80",
+        "Low": " 154.35",
+        "Close": " 155.19",
+        "DailyPercentageChange": {
+            "open-low": -0.5442176870748322,
+            "open-high": 0.3915275994865299,
+            "open-close": 0.0,
+            "low-close": 0.5412719891745624,
+            "high-close": -0.39306656356724895,
+            "prevClose-open": 0.5412719891745624
+        }
+    },
+    "03/07/84": {
+        "Open": " 154.57",
+        "High": " 156.25",
+        "Low": " 153.81",
+        "Close": " 154.57",
+        "DailyPercentageChange": {
+            "open-low": -0.49411611728755667,
+            "open-high": 1.0752000000000044,
+            "open-close": 0.0,
+            "low-close": 0.491686614478871,
+            "high-close": -1.0868862004269955,
+            "prevClose-open": -0.4011127644432973
+        }
+    },
+    "03/06/84": {
+        "Open": " 156.25",
+        "High": " 158.37",
+        "Low": " 156.21",
+        "Close": " 156.25",
+        "DailyPercentageChange": {
+            "open-low": -0.02560655527814611,
+            "open-high": 1.3386373681884223,
+            "open-close": 0.0,
+            "low-close": 0.025599999999994908,
+            "high-close": -1.356800000000003,
+            "prevClose-open": 1.0752000000000044
+        }
+    },
+    "03/05/84": {
+        "Open": " 157.89",
+        "High": " 159.24",
+        "Low": " 157.59",
+        "Close": " 157.89",
+        "DailyPercentageChange": {
+            "open-low": -0.19036740909955133,
+            "open-high": 0.8477769404672335,
+            "open-close": 0.0,
+            "low-close": 0.19000570017099436,
+            "high-close": -0.8550256507695376,
+            "prevClose-open": 1.0386978276014862
+        }
+    },
+    "03/02/84": {
+        "Open": " 159.24",
+        "High": " 159.90",
+        "Low": " 158.19",
+        "Close": " 159.24",
+        "DailyPercentageChange": {
+            "open-low": -0.6637587710980539,
+            "open-high": 0.4127579737335813,
+            "open-close": 0.0,
+            "low-close": 0.6593820648078443,
+            "high-close": -0.4144687264506384,
+            "prevClose-open": 0.8477769404672335
+        }
+    },
+    "03/01/84": {
+        "Open": " 158.19",
+        "High": " 158.19",
+        "Low": " 156.77",
+        "Close": " 158.19",
+        "DailyPercentageChange": {
+            "open-low": -0.9057855457038895,
+            "open-high": 0.0,
+            "open-close": 0.0,
+            "low-close": 0.897654719008779,
+            "high-close": 0.0,
+            "prevClose-open": -0.6637587710980539
+        }
+    },
+    "02/29/84": {
+        "Open": " 157.06",
+        "High": " 158.27",
+        "Low": " 156.41",
+        "Close": " 157.06",
+        "DailyPercentageChange": {
+            "open-low": -0.41557445176139995,
+            "open-high": 0.7645163328489339,
+            "open-close": 0.0,
+            "low-close": 0.41385457786833424,
+            "high-close": -0.7704062141856666,
+            "prevClose-open": -0.7194702661403257
+        }
+    },
+    "02/28/84": {
+        "Open": " 156.82",
+        "High": " 159.30",
+        "Low": " 156.59",
+        "Close": " 156.82",
+        "DailyPercentageChange": {
+            "open-low": -0.1468803882751068,
+            "open-high": 1.5568110483364834,
+            "open-close": 0.0,
+            "low-close": 0.14666496620328387,
+            "high-close": -1.581430939931143,
+            "prevClose-open": -0.15304170386430885
+        }
+    },
+    "02/27/84": {
+        "Open": " 159.30",
+        "High": " 159.58",
+        "Low": " 157.08",
+        "Close": " 159.30",
+        "DailyPercentageChange": {
+            "open-low": -1.4132925897631772,
+            "open-high": 0.17546058403308754,
+            "open-close": 0.0,
+            "low-close": 1.393596986817325,
+            "high-close": -0.17576898932831206,
+            "prevClose-open": 1.5568110483364834
+        }
+    },
+    "02/24/84": {
+        "Open": " 157.51",
+        "High": " 157.51",
+        "Low": " 154.29",
+        "Close": " 157.51",
+        "DailyPercentageChange": {
+            "open-low": -2.086979065396331,
+            "open-high": 0.0,
+            "open-close": 0.0,
+            "low-close": 2.0443146466890987,
+            "high-close": 0.0,
+            "prevClose-open": -1.1364357818551334
+        }
+    },
+    "02/23/84": {
+        "Open": " 154.29",
+        "High": " 154.45",
+        "Low": " 152.13",
+        "Close": " 154.29",
+        "DailyPercentageChange": {
+            "open-low": -1.4198382961940423,
+            "open-high": 0.10359339592100783,
+            "open-close": 0.0,
+            "low-close": 1.399961112191326,
+            "high-close": -0.10370082312528134,
+            "prevClose-open": -2.086979065396331
+        }
+    },
+    "02/22/84": {
+        "Open": " 154.31",
+        "High": " 155.10",
+        "Low": " 153.94",
+        "Close": " 154.31",
+        "DailyPercentageChange": {
+            "open-low": -0.24035338443549728,
+            "open-high": 0.5093488072211425,
+            "open-close": 0.0,
+            "low-close": 0.2397770721275384,
+            "high-close": -0.5119564512993274,
+            "prevClose-open": 0.012960922817711249
+        }
+    },
+    "02/21/84": {
+        "Open": " 154.64",
+        "High": " 155.74",
+        "Low": " 154.47",
+        "Close": " 154.64",
+        "DailyPercentageChange": {
+            "open-low": -0.11005373211626043,
+            "open-high": 0.7063053807628243,
+            "open-close": 0.0,
+            "low-close": 0.10993274702534113,
+            "high-close": -0.7113295395758037,
+            "prevClose-open": 0.21339886187272641
+        }
+    },
+    "02/17/84": {
+        "Open": " 155.74",
+        "High": " 156.80",
+        "Low": " 155.51",
+        "Close": " 155.74",
+        "DailyPercentageChange": {
+            "open-low": -0.14790045656229064,
+            "open-high": 0.6760204081632667,
+            "open-close": 0.0,
+            "low-close": 0.14768203415950829,
+            "high-close": -0.6806215487350726,
+            "prevClose-open": 0.7063053807628243
+        }
+    },
+    "02/16/84": {
+        "Open": " 156.13",
+        "High": " 156.44",
+        "Low": " 155.44",
+        "Close": " 156.13",
+        "DailyPercentageChange": {
+            "open-low": -0.44390118373648857,
+            "open-high": 0.19815903860905285,
+            "open-close": 0.0,
+            "low-close": 0.44193940946646876,
+            "high-close": -0.19855248831102432,
+            "prevClose-open": 0.2497918401332136
+        }
+    },
+    "02/15/84": {
+        "Open": " 156.25",
+        "High": " 157.48",
+        "Low": " 156.10",
+        "Close": " 156.25",
+        "DailyPercentageChange": {
+            "open-low": -0.09609224855861992,
+            "open-high": 0.7810515621031178,
+            "open-close": 0.0,
+            "low-close": 0.09600000000000364,
+            "high-close": -0.7871999999999935,
+            "prevClose-open": 0.07680000000000291
+        }
+    },
+    "02/14/84": {
+        "Open": " 156.61",
+        "High": " 156.61",
+        "Low": " 154.95",
+        "Close": " 156.61",
+        "DailyPercentageChange": {
+            "open-low": -1.0713133268796549,
+            "open-high": 0.0,
+            "open-close": 0.0,
+            "low-close": 1.0599578570972636,
+            "high-close": 0.0,
+            "prevClose-open": 0.22987037864760462
+        }
+    },
+    "02/13/84": {
+        "Open": " 154.95",
+        "High": " 156.32",
+        "Low": " 154.13",
+        "Close": " 154.95",
+        "DailyPercentageChange": {
+            "open-low": -0.5320184260040182,
+            "open-high": 0.8764073694984676,
+            "open-close": 0.0,
+            "low-close": 0.5292029686995762,
+            "high-close": -0.8841561794127168,
+            "prevClose-open": -1.0713133268796549
+        }
+    },
+    "02/10/84": {
+        "Open": " 156.30",
+        "High": " 156.52",
+        "Low": " 155.42",
+        "Close": " 156.30",
+        "DailyPercentageChange": {
+            "open-low": -0.5662076952773285,
+            "open-high": 0.14055711730130263,
+            "open-close": 0.0,
+            "low-close": 0.5630198336532461,
+            "high-close": -0.14075495841330699,
+            "prevClose-open": 0.8637236084453119
+        }
+    },
+    "02/09/84": {
+        "Open": " 155.42",
+        "High": " 156.17",
+        "Low": " 154.30",
+        "Close": " 155.42",
+        "DailyPercentageChange": {
+            "open-low": -0.7258587167854673,
+            "open-high": 0.4802458858935776,
+            "open-close": 0.0,
+            "low-close": 0.7206279758074741,
+            "high-close": -0.482563376656801,
+            "prevClose-open": -0.5662076952773285
+        }
+    },
+    "02/08/84": {
+        "Open": " 155.85",
+        "High": " 158.65",
+        "Low": " 155.07",
+        "Close": " 155.85",
+        "DailyPercentageChange": {
+            "open-low": -0.5029986457728776,
+            "open-high": 1.764891270091403,
+            "open-close": 0.0,
+            "low-close": 0.5004812319538025,
+            "high-close": -1.796599294193142,
+            "prevClose-open": 0.2759063201796643
+        }
+    },
+    "02/07/84": {
+        "Open": " 158.74",
+        "High": " 158.81",
+        "Low": " 157.01",
+        "Close": " 158.74",
+        "DailyPercentageChange": {
+            "open-low": -1.1018406470925537,
+            "open-high": 0.044077828852083105,
+            "open-close": 0.0,
+            "low-close": 1.0898324303893272,
+            "high-close": -0.04409726596950559,
+            "prevClose-open": 1.820587123598346
+        }
+    },
+    "02/06/84": {
+        "Open": " 158.08",
+        "High": " 160.91",
+        "Low": " 158.02",
+        "Close": " 158.08",
+        "DailyPercentageChange": {
+            "open-low": -0.037969877230731724,
+            "open-high": 1.7587471257224436,
+            "open-close": 0.0,
+            "low-close": 0.03795546558704597,
+            "high-close": -1.7902327935222568,
+            "prevClose-open": -0.41751012145748767
+        }
+    },
+    "02/03/84": {
+        "Open": " 160.91",
+        "High": " 163.98",
+        "Low": " 160.82",
+        "Close": " 160.91",
+        "DailyPercentageChange": {
+            "open-low": -0.05596318865812922,
+            "open-high": 1.872179534089519,
+            "open-close": 0.0,
+            "low-close": 0.05593188739046884,
+            "high-close": -1.9078988254303608,
+            "prevClose-open": 1.7587471257224436
+        }
+    },
+    "02/02/84": {
+        "Open": " 163.36",
+        "High": " 163.36",
+        "Low": " 162.24",
+        "Close": " 163.36",
+        "DailyPercentageChange": {
+            "open-low": -0.6903353057199239,
+            "open-high": 0.0,
+            "open-close": 0.0,
+            "low-close": 0.6856023506366334,
+            "high-close": 0.0,
+            "prevClose-open": 1.49975514201764
+        }
+    },
+    "02/01/84": {
+        "Open": " 162.74",
+        "High": " 164.00",
+        "Low": " 162.27",
+        "Close": " 162.74",
+        "DailyPercentageChange": {
+            "open-low": -0.28964072225303433,
+            "open-high": 0.7682926829268237,
+            "open-close": 0.0,
+            "low-close": 0.2888042276023097,
+            "high-close": -0.7742411208061883,
+            "prevClose-open": -0.38097578960305056
+        }
+    },
+    "01/31/84": {
+        "Open": " 163.41",
+        "High": " 163.60",
+        "Low": " 162.03",
+        "Close": " 163.41",
+        "DailyPercentageChange": {
+            "open-low": -0.8516941307165312,
+            "open-high": 0.11613691931540203,
+            "open-close": 0.0,
+            "low-close": 0.8445015604920112,
+            "high-close": -0.11627195398078315,
+            "prevClose-open": 0.41001162719539047
+        }
+    },
+    "01/30/84": {
+        "Open": " 162.87",
+        "High": " 164.67",
+        "Low": " 162.40",
+        "Close": " 162.87",
+        "DailyPercentageChange": {
+            "open-low": -0.2894088669950732,
+            "open-high": 1.0930952814720247,
+            "open-close": 0.0,
+            "low-close": 0.28857370909314106,
+            "high-close": -1.1051759071652134,
+            "prevClose-open": -0.33155277214956225
+        }
+    },
+    "01/27/84": {
+        "Open": " 163.94",
+        "High": " 164.33",
+        "Low": " 163.07",
+        "Close": " 163.94",
+        "DailyPercentageChange": {
+            "open-low": -0.5335132151836662,
+            "open-high": 0.23732732915475854,
+            "open-close": 0.0,
+            "low-close": 0.5306819568134711,
+            "high-close": -0.23789191167501206,
+            "prevClose-open": 0.6526778089544913
+        }
+    },
+    "01/26/84": {
+        "Open": " 164.24",
+        "High": " 165.55",
+        "Low": " 164.12",
+        "Close": " 164.24",
+        "DailyPercentageChange": {
+            "open-low": -0.07311723129417776,
+            "open-high": 0.7913017215342809,
+            "open-close": 0.0,
+            "low-close": 0.07306380905991508,
+            "high-close": -0.7976132489040442,
+            "prevClose-open": 0.18265952264978771
+        }
+    },
+    "01/25/84": {
+        "Open": " 164.84",
+        "High": " 167.12",
+        "Low": " 164.74",
+        "Close": " 164.84",
+        "DailyPercentageChange": {
+            "open-low": -0.060701711788268976,
+            "open-high": 1.3642891335567264,
+            "open-close": 0.0,
+            "low-close": 0.060664887163306425,
+            "high-close": -1.3831594273234658,
+            "prevClose-open": 0.3639893229798558
+        }
+    },
+    "01/24/84": {
+        "Open": " 165.94",
+        "High": " 166.35",
+        "Low": " 164.84",
+        "Close": " 165.94",
+        "DailyPercentageChange": {
+            "open-low": -0.6673137587964052,
+            "open-high": 0.24646828975052396,
+            "open-close": 0.0,
+            "low-close": 0.6628902012775667,
+            "high-close": -0.24707725683981957,
+            "prevClose-open": 0.6628902012775667
+        }
+    },
+    "01/23/84": {
+        "Open": " 164.87",
+        "High": " 166.21",
+        "Low": " 164.83",
+        "Close": " 164.87",
+        "DailyPercentageChange": {
+            "open-low": -0.024267427046042612,
+            "open-high": 0.8062090126947857,
+            "open-close": 0.0,
+            "low-close": 0.024261539394669764,
+            "high-close": -0.8127615697216009,
+            "prevClose-open": -0.6489961788075412
+        }
+    },
+    "01/20/84": {
+        "Open": " 166.21",
+        "High": " 167.06",
+        "Low": " 165.87",
+        "Close": " 166.21",
+        "DailyPercentageChange": {
+            "open-low": -0.20497980346054342,
+            "open-high": 0.5087992338082092,
+            "open-close": 0.0,
+            "low-close": 0.20456049575837998,
+            "high-close": -0.5114012393959415,
+            "prevClose-open": 0.8062090126947857
+        }
+    },
+    "01/19/84": {
+        "Open": " 167.04",
+        "High": " 167.65",
+        "Low": " 166.67",
+        "Close": " 167.04",
+        "DailyPercentageChange": {
+            "open-low": -0.22199556008880095,
+            "open-high": 0.36385326573218824,
+            "open-close": 0.0,
+            "low-close": 0.22150383141762725,
+            "high-close": -0.36518199233717297,
+            "prevClose-open": 0.49688697318006714
+        }
+    },
+    "01/18/84": {
+        "Open": " 167.55",
+        "High": " 168.34",
+        "Low": " 167.02",
+        "Close": " 167.55",
+        "DailyPercentageChange": {
+            "open-low": -0.3173272661956658,
+            "open-high": 0.4692883450160342,
+            "open-close": 0.0,
+            "low-close": 0.31632348552670914,
+            "high-close": -0.4715010444643343,
+            "prevClose-open": 0.30438675022382533
+        }
+    },
+    "01/17/84": {
+        "Open": " 167.83",
+        "High": " 167.84",
+        "Low": " 167.01",
+        "Close": " 167.83",
+        "DailyPercentageChange": {
+            "open-low": -0.49098856355908127,
+            "open-high": 0.005958055290747679,
+            "open-close": 0.0,
+            "low-close": 0.4885896442829181,
+            "high-close": -0.005958410296127572,
+            "prevClose-open": 0.16683548829172443
+        }
+    },
+    "01/16/84": {
+        "Open": " 167.18",
+        "High": " 167.55",
+        "Low": " 166.77",
+        "Close": " 167.18",
+        "DailyPercentageChange": {
+            "open-low": -0.2458475745038056,
+            "open-high": 0.2208296031035539,
+            "open-close": 0.0,
+            "low-close": 0.24524464648881242,
+            "high-close": -0.2213183395142987,
+            "prevClose-open": -0.38880248833592873
+        }
+    },
+    "01/13/84": {
+        "Open": " 167.02",
+        "High": " 168.52",
+        "Low": " 166.82",
+        "Close": " 167.02",
+        "DailyPercentageChange": {
+            "open-low": -0.11988970147465355,
+            "open-high": 0.8901020650367908,
+            "open-close": 0.0,
+            "low-close": 0.11974613818705367,
+            "high-close": -0.898096036402826,
+            "prevClose-open": -0.09579691054963273
+        }
+    },
+    "01/12/84": {
+        "Open": " 167.75",
+        "High": " 167.91",
+        "Low": " 167.68",
+        "Close": " 167.75",
+        "DailyPercentageChange": {
+            "open-low": -0.0417461832061028,
+            "open-high": 0.09528914299326818,
+            "open-close": 0.0,
+            "low-close": 0.04172876304023439,
+            "high-close": -0.09538002980625727,
+            "prevClose-open": 0.43517138599105204
+        }
+    },
+    "01/11/84": {
+        "Open": " 167.79",
+        "High": " 167.58",
+        "Low": " 167.33",
+        "Close": " 167.79",
+        "DailyPercentageChange": {
+            "open-low": -0.27490587461900406,
+            "open-high": -0.12531328320800783,
+            "open-close": 0.0,
+            "low-close": 0.27415221407710805,
+            "high-close": 0.125156445556934,
+            "prevClose-open": 0.0238393229632231
+        }
+    },
+    "01/10/84": {
+        "Open": " 167.95",
+        "High": " 169.52",
+        "Low": " 168.64",
+        "Close": " 167.95",
+        "DailyPercentageChange": {
+            "open-low": 0.40915559772295884,
+            "open-high": 0.9261444077395123,
+            "open-close": 0.0,
+            "low-close": -0.4108365584995521,
+            "high-close": -0.9348020244120403,
+            "prevClose-open": 0.09526644834772051
+        }
+    },
+    "01/09/84": {
+        "Open": " 168.90",
+        "High": " 169.46",
+        "Low": " 168.48",
+        "Close": " 168.90",
+        "DailyPercentageChange": {
+            "open-low": -0.24928774928775874,
+            "open-high": 0.3304614658326462,
+            "open-close": 0.0,
+            "low-close": 0.24866785079929893,
+            "high-close": -0.33155713439905404,
+            "prevClose-open": 0.5624629958555459
+        }
+    },
+    "01/06/84": {
+        "Open": " 169.28",
+        "High": " 169.31",
+        "Low": " 168.49",
+        "Close": " 169.28",
+        "DailyPercentageChange": {
+            "open-low": -0.46887055611608525,
+            "open-high": 0.017718977024393796,
+            "open-close": 0.0,
+            "low-close": 0.4666824196597306,
+            "high-close": -0.017722117202269103,
+            "prevClose-open": 0.2244801512287308
+        }
+    },
+    "01/05/84": {
+        "Open": " 168.81",
+        "High": " 169.10",
+        "Low": " 166.78",
+        "Close": " 168.81",
+        "DailyPercentageChange": {
+            "open-low": -1.2171723228204827,
+            "open-high": 0.17149615612063399,
+            "open-close": 0.0,
+            "low-close": 1.2025353948225823,
+            "high-close": -0.1717907706889355,
+            "prevClose-open": -0.27841952490966104
+        }
+    },
+    "01/04/84": {
+        "Open": " 166.78",
+        "High": " 166.78",
+        "Low": " 164.04",
+        "Close": " 166.78",
+        "DailyPercentageChange": {
+            "open-low": -1.670324311143629,
+            "open-high": 0.0,
+            "open-close": 0.0,
+            "low-close": 1.6428828396690305,
+            "high-close": 0.0,
+            "prevClose-open": -1.2171723228204827
+        }
+    },
+    "01/03/84": {
+        "Open": " 164.04",
+        "High": " 164.93",
+        "Low": " 163.98",
+        "Close": " 164.04",
+        "DailyPercentageChange": {
+            "open-low": -0.03658982802780966,
+            "open-high": 0.5396228703086248,
+            "open-close": 0.0,
+            "low-close": 0.03657644476956979,
+            "high-close": -0.5425505974152736,
+            "prevClose-open": -1.670324311143629
+        }
+    }
+}

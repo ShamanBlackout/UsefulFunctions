@@ -240,7 +240,6 @@ def CompPattern(filename):
 	date_arr = []
 	index = 0 
 	
-
 	for x in comp_dic:
 		if FibTruthTable[isNeg(comp_dic[x][yr_arr[0]+'DailyPerformance'])][isNeg(comp_dic[x][yr_arr[1]+'DailyPerformance'])]: 
 			date_arr.append(x)
@@ -253,8 +252,6 @@ def CompPattern(filename):
 				count = 0
 			else:
 				map_arr.append(([x],1))
-
-	
 	if count > 1:
 		map_arr.append((date_arr.copy(),count))
 		date_arr.clear()
@@ -309,11 +306,23 @@ def getPath(filename,file_type):
 	else:
 		raise Exception('Must be either a file or directory. Please check input')
 
-
+#Initially just a way to get all files in a given folder to perform analysis on. Might change later on , but atm no further thoughts
+def massCall(dir):
+	file_arr = []
+	with os.scandir(dir) as it:
+		for filename in it:
+			if filename.is_file():
+				file_arr.append(filename.path)
+	return file_arr
 
 
 #calPercAvg(getPath('\\analysisData\\08pbs','file'))
 #Compare(getPath('\\historicalData\\HistoricalPrices2011.csv','file'),getPath('\\historicalData\\HistoricalPrices2008.csv','file'))
 #CompPattern(getPath('\\analysisData\\11vs08ComparativeData','file'))
-SinglePattern(getPath('\\historicalData\\HistoricalPrices2008.csv','file'))
+
+#Loop through and get pbs and Single Pattern for each function
+#get all files in 
+#file_arr = massCall(getPath('\\historicalData\\','dir'))
+#for filename in file_arr:
+#	SinglePattern(filename)
 
