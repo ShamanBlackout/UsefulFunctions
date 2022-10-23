@@ -2,10 +2,11 @@ import json
 import datetime
 import time
 import math
+import numpy as np
 import os
 import re
 import csv
-import matplotlib
+import matplotlib.pyplot as plt
 
 #Def need to turn this into a class but for the moment I am going with the flow
 
@@ -141,34 +142,34 @@ def SinglePattern(file):
 	for x in dic:
 		if isNeg(dic[x]['DailyPercentageChange']['open-close']) == 2:
 			if pos_cnt == 1 and neg_cnt == 1:
-				date_arr.append(x)
+				date_arr.append(x[:5])
 				pos_cnt = 0
 				neg_cnt +=1 
 			elif pos_cnt!=0:
 				map_arr.append((date_arr.copy(),pos_cnt))
 				pos_cnt = 0
 				date_arr.clear()
-				date_arr.append([x])
+				date_arr.append(x[:5])
 				neg_cnt +=1
 			else:
-				date_arr.append(x)
+				date_arr.append(x[:5])
 				neg_cnt +=1
 		elif isNeg(dic[x]['DailyPercentageChange']['open-close']) == 1:
 			if pos_cnt == 1 and neg_cnt == 1:
-				date_arr.append([x])
+				date_arr.append(x[:5])
 				neg_cnt = 0
 				pos_cnt +=1 
 			elif neg_cnt!=0:
 				map_arr.append((date_arr.copy(),neg_cnt))
 				neg_cnt = 0
 				date_arr.clear()
-				date_arr.append([x])
+				date_arr.append(x[:5])
 				pos_cnt +=1
 			else:
-				date_arr.append(x)
+				date_arr.append(x[:5])
 				pos_cnt +=1
 		elif isNeg(dic[x]['DailyPercentageChange']['open-close']) == 0:
-			date_arr.append([x])
+			date_arr.append(x[:5])
 			if pos_cnt == 0 and neg_cnt == 0:
 				pos_cnt,neg_cnt = 1,1
 			elif pos_cnt != 0:
@@ -270,9 +271,16 @@ def fibCubeGraph():
 
 
 #Might need to change functionality to something else 
-def mapSeq(tup):
-	print('hold')
+#used for pattern maps
+#fileteype ex: Comaparative,Single
+def mapSeq(filename,patt_type):
+	#will have to convert all incoming arrays to numpy arrays
+	with open(filename,'r') as infile:
+		patt_arr = json.load(infile)
+		nppatt_arr = np.asarray(patt_arr)
 
+	print('hold')
+#not sure where to use yet so will keep for later
 def isFib(num):
 	perf_sq_pos = 5*pow(num,2)+4
 	perf_sq_neg = 5*pow(num,2)-4
@@ -306,6 +314,26 @@ def getPath(filename,file_type):
 	else:
 		raise Exception('Must be either a file or directory. Please check input')
 
+#using a dirty way to put the data in
+def ConvToNpArr(filename,old_folder,new_folder):
+	with open(filename,'r') as infile:
+		py_arr = json.load(infile)
+		tmp = []
+		for i in range(len(py_arr)):
+			for j in range(len(py_arr[i][0])):
+				py_arr[i][0][j] = int(py_arr[i][0][j].replace('/',''))
+				tmp.append([py_arr[i][0][j],py_arr[i][1]])
+
+		np_arr = np.asarray(tmp)
+		print(np_arr)
+		print(type(np_arr))
+		filename = filename.replace(old_folder,new_folder)
+		print(filename)
+		with open(filename+'.npy','wb') as outfile:
+			np.save(outfile,np_arr)
+
+
+
 #Initially just a way to get all files in a given folder to perform analysis on. Might change later on , but atm no further thoughts
 def massCall(dir):
 	file_arr = []
@@ -333,6 +361,38 @@ def MassSinglePattern():
 	for filename in file_arr:
 		SinglePattern(filename)
 
+def MassConvToNpArr(old_folder,new_folder):
+	file_arr = massCall(getPath('\\analysisData\\'+old_folder+'\\','dir'))
+	for filename in file_arr:
+		ConvToNpArr(filename,old_folder,new_folder)
+
+
+#MassConvToNpArr('ComparativePatternsMap','NumpyComparativePatternsMap')
+#MassSinglePattern()
+
+#Testing Matplotlib below
+
+
+#t = np.linspace(0, 2 * np.pi, 1024)
+#data2d = np.sin(t)[:, np.newaxis] * np.cos(t)[np.newaxis, :]
+
+#fig, ax = plt.subplots()
+#im = ax.imshow(data2d)
+#ax.set_title('Pan on the colorbar to shift the color mapping\n'
+#             'Zoom on the colorbar to scale the color mapping')
+
+#fig.colorbar(im, ax=ax, label='Interactive colorbar')
+
+#plt.show()
+
+#test_str = '012/03'
+#print(int(test_str.replace('/','')))
+#MassConvToNpArr()
+
+#y = [0,1,2,3,4,5,6]
+
+#for i in range(len(y)):
+#	print(y[i])
 
 
 
