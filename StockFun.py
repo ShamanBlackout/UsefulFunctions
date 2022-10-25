@@ -332,6 +332,39 @@ def ConvToNpArr(filename,old_folder,new_folder):
 		with open(filename+'.npy','wb') as outfile:
 			np.save(outfile,np_arr)
 
+#Might have to change this depending on what conversion equation im looking for
+#Will have to do bit shifting. Using Microsofts formula
+def YuvToRgb(yuv):
+	#Below is not microsoft formula
+	R = yuv[0] + 1.140*yuv[2]
+	G = yuv[0] - 0.395*yuv[1] - 0.581*yuv[2]
+	B = yuv[0] + 2.032*yuv[1]
+
+	return np.array([R,G,B])
+
+
+#Not sure what kind of matrix to place this in. Will save for tomorrow so I can have something to do
+def ConvPbsToRgb(filename):
+	with open(filename,'r') as pbsfile:
+		pbs_dic = json.load(filename)
+		for x in pbs_dic:
+			#Might swap U and V values to see what colors I get and what difference it makes
+			Y_1 = math.ceil((pbs_dic['DailyPercentageChange']['open-high']/100)*256)
+			U_1 = math.ceil((pbs_dic['DailyPercentageChange']['open-low']/100)*128)
+			V_1 = math.ceil((pbs_dic['DailyPercentageChange']['open-close']/100)*128)
+			#V_1= math.ceil((pbs_dic['DailyPercentageChange']['open-low']/100)*128)
+			#U_1  = math.ceil((pbs_dic['DailyPercentageChange']['open-close']/100)*128)
+			rgb_1 = YuvToRgb(np.array([Y_1,U_1,V_1]))
+
+			Y_2 = math.ceil((pbs_dic['DailyPercentageChange']['low-close']/100)*256)
+			U_2 = math.ceil((pbs_dic['DailyPercentageChange']['high-close']/100)*128)
+			V_2 = math.ceil((pbs_dic['DailyPercentageChange']['open-close']/100)*128)
+			#V_2 = math.ceil((pbs_dic['DailyPercentageChange']['high-close']/100)*128)
+			#U_2 = math.ceil((pbs_dic['DailyPercentageChange']['open-close']/100)*128)
+			rgb_2 = YuvToRgb(np.array([Y_2,U_2,V_2])) 
+
+
+
 
 
 #Initially just a way to get all files in a given folder to perform analysis on. Might change later on , but atm no further thoughts
@@ -342,6 +375,8 @@ def massCall(dir):
 			if filename.is_file():
 				file_arr.append(filename.path)
 	return file_arr
+
+
 
 def MassComparativeCall():
 	file_arr = massCall(getPath('\\historicalData\\','dir'))
@@ -394,5 +429,4 @@ def MassConvToNpArr(old_folder,new_folder):
 #for i in range(len(y)):
 #	print(y[i])
 
-
-
+#getPath('\\analysisData\\','dir')
