@@ -336,34 +336,54 @@ def ConvToNpArr(filename,old_folder,new_folder):
 #Will have to do bit shifting. Using Microsofts formula
 def YuvToRgb(yuv):
 	#Below is not microsoft formula
-	R = yuv[0] + 1.140*yuv[2]
-	G = yuv[0] - 0.395*yuv[1] - 0.581*yuv[2]
-	B = yuv[0] + 2.032*yuv[1]
+
+	R = math.ceil(yuv[0] + 1.140*yuv[2])
+	G = math.ceil(yuv[0] - 0.395*yuv[1] - 0.581*yuv[2])
+	B = math.ceil(yuv[0] + 2.032*yuv[1])
+
+	R = R if R > 0 else 0
+	G = G if G > 0 else 0 
+	B = B if B > 0 else 0
+
 
 	return np.array([R,G,B])
 
+def PadRgbMatrix(rgb):
+	#want 29 X 69 
+	reshape_size = 2001 # must be a mutiple of 3 for rgb colors
+	resh_tup = (29,69)
+	pad_size = int((reshape_size - rgb.size)/3) #should be a multiple of 3
+	front = np.zeros(pad_size*2)
+	back = np.zeros(pad_size)
+	rgb = np.concatenate((front,rgb.flatten('C'),back))
+	rgbmatrix = np.matrix(rgb)
+	rgbmatrix = np.reshape(rgbmatrix,resh_tup)
+	plt.matshow(rgbmatrix)
+	plt.show()
 
 #Not sure what kind of matrix to place this in. Will save for tomorrow so I can have something to do
 def ConvPbsToRgb(filename):
 	with open(filename,'r') as pbsfile:
-		pbs_dic = json.load(filename)
+		pbs_dic = json.load(pbsfile)
+		rgbmatrix = []
 		for x in pbs_dic:
 			#Might swap U and V values to see what colors I get and what difference it makes
-			Y_1 = math.ceil((pbs_dic['DailyPercentageChange']['open-high']/100)*256)
-			U_1 = math.ceil((pbs_dic['DailyPercentageChange']['open-low']/100)*128)
-			V_1 = math.ceil((pbs_dic['DailyPercentageChange']['open-close']/100)*128)
-			#V_1= math.ceil((pbs_dic['DailyPercentageChange']['open-low']/100)*128)
-			#U_1  = math.ceil((pbs_dic['DailyPercentageChange']['open-close']/100)*128)
-			rgb_1 = YuvToRgb(np.array([Y_1,U_1,V_1]))
+			Y_1 = math.ceil((pbs_dic[x]['DailyPercentageChange']['open-high']/100)*256)
+			U_1 = math.ceil((pbs_dic[x]['DailyPercentageChange']['open-close']/100)*128)
+			V_1 = math.ceil((pbs_dic[x]['DailyPercentageChange']['open-low']/100)*128)
+			#V_1= math.ceil((pbs_dic[x]['DailyPercentageChange']['open-low']/100)*128)
+			#U_1  = math.ceil((pbs_dic[x]['DailyPercentageChange']['open-close']/100)*128)
+			#rgb_1.append(np.concatenate YuvToRgb(np.array([Y_1,U_1,V_1])))
 
-			Y_2 = math.ceil((pbs_dic['DailyPercentageChange']['low-close']/100)*256)
-			U_2 = math.ceil((pbs_dic['DailyPercentageChange']['high-close']/100)*128)
-			V_2 = math.ceil((pbs_dic['DailyPercentageChange']['open-close']/100)*128)
-			#V_2 = math.ceil((pbs_dic['DailyPercentageChange']['high-close']/100)*128)
-			#U_2 = math.ceil((pbs_dic['DailyPercentageChange']['open-close']/100)*128)
-			rgb_2 = YuvToRgb(np.array([Y_2,U_2,V_2])) 
+			Y_2 = math.ceil((pbs_dic[x]['DailyPercentageChange']['low-close']/100)*256)
+			U_2 = math.ceil((pbs_dic[x]['DailyPercentageChange']['open-close']/100)*128)
+			V_2 = math.ceil((pbs_dic[x]['DailyPercentageChange']['high-close']/100)*128)
+			#V_2 = math.ceil((pbs_dic[x]['DailyPercentageChange']['high-close']/100)*128)
+			#U_2 = math.ceil((pbs_dic[x]['DailyPercentageChange']['open-close']/100)*128)
+			#.append(YuvToRgb(np.array([Y_2,U_2,V_2]))) 
+			rgbmatrix.append(np.concatenate((YuvToRgb(np.array([Y_1,U_1,V_1])),YuvToRgb(np.array([Y_2,U_2,V_2])))))
 
-
+		PadRgbMatrix(np.array(rgbmatrix))
 
 
 
@@ -430,3 +450,4 @@ def MassConvToNpArr(old_folder,new_folder):
 #	print(y[i])
 
 #getPath('\\analysisData\\','dir')
+ConvPbsToRgb(getPath('\\analysisData\\Pbs\\pbs_17','file'))
