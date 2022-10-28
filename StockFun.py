@@ -22,12 +22,12 @@ import matplotlib.pyplot as plt
 '''
 FibTruthTable = [[True,True,True],[True,True,False],[True,False,True]]
 
-def percentageChange(old,new):
+def PercentageChange(old,new):
 	old = float(old)
 	new = float(new)
 	return ((new-old)/new)*100
 
-def getYear(dic):
+def GetYear(dic):
 	year = ''
 	for x in dic:
 		year = x[-2:]
@@ -37,24 +37,24 @@ def getYear(dic):
 
 def Pbs(dic):
 
-	year = getYear(dic)
+	year = GetYear(dic)
 	for x in dic:
 		#key represents percentage change: ex open-low, where open=old and low = new
 		dic[x]['DailyPercentageChange'] = {
-			'open-low':percentageChange(dic[x]['Open'],dic[x]['Low']),
-			'open-high': percentageChange(dic[x]['Open'],dic[x]['High']),
-			'open-close':percentageChange( dic[x]['Open'],dic[x]['Close']),
-			'low-close':percentageChange(dic[x]['Low'],dic[x]['Close']),
-			'high-close':percentageChange(dic[x]['High'],dic[x]['Close'])
+			'open-low':PercentageChange(dic[x]['Open'],dic[x]['Low']),
+			'open-high': PercentageChange(dic[x]['Open'],dic[x]['High']),
+			'open-close':PercentageChange( dic[x]['Open'],dic[x]['Close']),
+			'low-close':PercentageChange(dic[x]['Low'],dic[x]['Close']),
+			'high-close':PercentageChange(dic[x]['High'],dic[x]['Close'])
 	}
 		try:
-			dic[x]['DailyPercentageChange']['prevClose-open'] = percentageChange(prev_close,dic[x]['Open'])
+			dic[x]['DailyPercentageChange']['prevClose-open'] = PercentageChange(prev_close,dic[x]['Open'])
 		except NameError:
 			print("Not defined yet.Defining now....")
 		finally:
 			prev_close = dic[x]['Close']
 	dir_path ='\\analysisData\\Pbs\\'
-	base = getPath(dir_path,'dir')
+	base = GetPath(dir_path,'dir')
 	with open(base+'pbs_'+year,'w') as outfile:
 			json.dump(dic,outfile,indent=4)
 			return dic
@@ -115,10 +115,10 @@ def calPercAvg(filename):
 		patt = re.compile('\d{2}')
 		patt_obj = re.search(patt,filename)
 		dir_path ='\\analysisData\\'
-		with open(getPath(dir_path,'dir')+filename[patt_obj.start():patt_obj.end()]+'MonthlyPercAvgs','w') as outfile:
+		with open(GetPath(dir_path,'dir')+filename[patt_obj.start():patt_obj.end()]+'MonthlyPercAvgs','w') as outfile:
 			json.dump(percentageDic,outfile,indent=4)
 
-def getCsv(filename):
+def GetCsv(filename):
 	with open(filename,'r') as fd_1:
 		data_dic = {}
 		reader = csv.DictReader(fd_1)
@@ -136,11 +136,11 @@ def SinglePattern(file):
 	neg_cnt = 0
 	pos_cnt = 0
 
-	dic = getCsv(file)
+	dic = GetCsv(file)
 	dic = Pbs(dic)
 
 	for x in dic:
-		if isNeg(dic[x]['DailyPercentageChange']['open-close']) == 2:
+		if IsNeg(dic[x]['DailyPercentageChange']['open-close']) == 2:
 			if pos_cnt == 1 and neg_cnt == 1:
 				date_arr.append(x[:5])
 				pos_cnt = 0
@@ -154,7 +154,7 @@ def SinglePattern(file):
 			else:
 				date_arr.append(x[:5])
 				neg_cnt +=1
-		elif isNeg(dic[x]['DailyPercentageChange']['open-close']) == 1:
+		elif IsNeg(dic[x]['DailyPercentageChange']['open-close']) == 1:
 			if pos_cnt == 1 and neg_cnt == 1:
 				date_arr.append(x[:5])
 				neg_cnt = 0
@@ -168,7 +168,7 @@ def SinglePattern(file):
 			else:
 				date_arr.append(x[:5])
 				pos_cnt +=1
-		elif isNeg(dic[x]['DailyPercentageChange']['open-close']) == 0:
+		elif IsNeg(dic[x]['DailyPercentageChange']['open-close']) == 0:
 			date_arr.append(x[:5])
 			if pos_cnt == 0 and neg_cnt == 0:
 				pos_cnt,neg_cnt = 1,1
@@ -183,18 +183,18 @@ def SinglePattern(file):
 		elif neg_cnt != 0:
 			map_arr.append((date_arr.copy(),neg_cnt))
 	dir_path = '\\analysisData\\PatternsMap\\'
-	year = getYear(dic)
-	base = getPath(dir_path,'dir')
+	year = GetYear(dic)
+	base = GetPath(dir_path,'dir')
 	with open(base+year+'_pattern', 'w') as outfile:
 		json.dump(map_arr, outfile)
 	
 def Compare( file1,file2):
-	data_one = getCsv(file1)
-	data_two = getCsv(file2)
+	data_one = GetCsv(file1)
+	data_two = GetCsv(file2)
 	short_keys = [x[:5] for x in data_one.keys()]
 
-	year1 = getYear(data_one)
-	year2 = getYear(data_two)
+	year1 = GetYear(data_one)
+	year2 = GetYear(data_two)
 
 	comp_dic = {}
 
@@ -216,11 +216,11 @@ def Compare( file1,file2):
 			year2+'DailyPerformance': float(data_two[x]['Close']) - float(data_two[x]['Open'])
 			}
 	dir_path = '\\analysisData\\ComparativeData\\'
-	base = getPath(dir_path,'dir')
+	base = GetPath(dir_path,'dir')
 	with open(base+year1+'vs'+ year2+'ComparativeData','w') as outfile:
 			json.dump(comp_dic,outfile,indent=4)
 
-def isNeg(num):
+def IsNeg(num):
 	if num < 0: return 2
 	elif num > 0: return 1
 	else: return 0
@@ -243,7 +243,7 @@ def CompPattern(filename):
 	index = 0 
 	
 	for x in comp_dic:
-		if FibTruthTable[isNeg(comp_dic[x][yr_arr[0]+'DailyPerformance'])][isNeg(comp_dic[x][yr_arr[1]+'DailyPerformance'])]: 
+		if FibTruthTable[IsNeg(comp_dic[x][yr_arr[0]+'DailyPerformance'])][IsNeg(comp_dic[x][yr_arr[1]+'DailyPerformance'])]: 
 			date_arr.append(x)
 			count+=1
 		else:
@@ -259,7 +259,7 @@ def CompPattern(filename):
 		date_arr.clear()
 	
 	dir_path = '\\analysisData\\ComparativePatternsMap\\'
-	base = getPath(dir_path,'dir')
+	base = GetPath(dir_path,'dir')
 	with open(base+yr_arr[0]+'vs'+yr_arr[1]+'_CompPattern', 'w') as outfile:
 		json.dump(map_arr, outfile)
 
@@ -281,7 +281,7 @@ def mapSeq(filename,patt_type):
 
 	print('hold')
 #not sure where to use yet so will keep for later
-def isFib(num):
+def IsFib(num):
 	perf_sq_pos = 5*pow(num,2)+4
 	perf_sq_neg = 5*pow(num,2)-4
 
@@ -291,7 +291,7 @@ def isFib(num):
 		return False
 
 #Remember depending on the system to account for escape characters 
-def getPath(filename,file_type):
+def GetPath(filename,file_type):
 	pattern = re.compile('UsefulFunctions')
 	road = os.getcwd()
 	search_obj = pattern.search(road)
@@ -348,7 +348,7 @@ def YuvToRgb(yuv):
 
 	return np.array([R,G,B])
 
-def PadRgbMatrix(rgb):
+def PadRgbMatrix(rgb,filepath):
 	#want 29 X 69 
 	reshape_size = 2001 # must be a mutiple of 3 for rgb colors
 	resh_tup = (29,69)
@@ -359,7 +359,8 @@ def PadRgbMatrix(rgb):
 	rgbmatrix = np.matrix(rgb)
 	rgbmatrix = np.reshape(rgbmatrix,resh_tup)
 	plt.matshow(rgbmatrix)
-	plt.show()
+	plt.savefig(filepath+'.png')
+	plt.close()
 
 #Not sure what kind of matrix to place this in. Will save for tomorrow so I can have something to do
 def ConvPbsToRgb(filename):
@@ -383,12 +384,13 @@ def ConvPbsToRgb(filename):
 			#.append(YuvToRgb(np.array([Y_2,U_2,V_2]))) 
 			rgbmatrix.append(np.concatenate((YuvToRgb(np.array([Y_1,U_1,V_1])),YuvToRgb(np.array([Y_2,U_2,V_2])))))
 
-		PadRgbMatrix(np.array(rgbmatrix))
+		yr = re.findall('\d{2}', filename.split('\\')[-1]).pop()
+		PadRgbMatrix(np.array(rgbmatrix),GetPath('\\analysisData\\CnnImages\\RgbMatrixImages\\','dir')+'ColorMatrix_'+yr)
 
 
 
 #Initially just a way to get all files in a given folder to perform analysis on. Might change later on , but atm no further thoughts
-def massCall(dir):
+def MassCall(dir):
 	file_arr = []
 	with os.scandir(dir) as it:
 		for filename in it:
@@ -399,25 +401,30 @@ def massCall(dir):
 
 
 def MassComparativeCall():
-	file_arr = massCall(getPath('\\historicalData\\','dir'))
+	file_arr = MassCall(GetPath('\\historicalData\\','dir'))
 	while len(file_arr) > 0:
 		file1 = file_arr.pop()
 		for x in file_arr:
 			 Compare( file1,x)
 
+def MassRgbCall():
+	file_arr = MassCall(GetPath('\\analysisData\\Pbs\\','dir'))
+	for filename in file_arr:
+		ConvPbsToRgb(filename)
+
 def MassComparativePatternCall():
-	file_arr = massCall(getPath('\\analysisData\\ComparativeData\\','dir'))
+	file_arr = MassCall(GetPath('\\analysisData\\ComparativeData\\','dir'))
 	for filename in file_arr:
 		CompPattern(filename)
 	
 
 def MassSinglePattern():
-	file_arr = massCall(getPath('\\historicalData\\','dir'))
+	file_arr = MassCall(GetPath('\\historicalData\\','dir'))
 	for filename in file_arr:
 		SinglePattern(filename)
 
 def MassConvToNpArr(old_folder,new_folder):
-	file_arr = massCall(getPath('\\analysisData\\'+old_folder+'\\','dir'))
+	file_arr = MassCall(GetPath('\\analysisData\\'+old_folder+'\\','dir'))
 	for filename in file_arr:
 		ConvToNpArr(filename,old_folder,new_folder)
 
@@ -449,5 +456,5 @@ def MassConvToNpArr(old_folder,new_folder):
 #for i in range(len(y)):
 #	print(y[i])
 
-#getPath('\\analysisData\\','dir')
-ConvPbsToRgb(getPath('\\analysisData\\Pbs\\pbs_17','file'))
+#GetPath('\\analysisData\\','dir')
+MassRgbCall()
