@@ -227,7 +227,25 @@ class StockFun:
 			if year != '':
 				break
 		return year
+	
+	def InteractiveColorMap(self,filename):
 
+		#Check out matplotlib Annotation to annonate when hovering over a point
+		with open(filename,'r') as infile:
+			dic = json.load(infile)
+			colorMap = {}
+			for x in dic:
+				
+				Y_1 = math.ceil((dic[x]['DailyPercentageChange']['open-high']/100)*256)
+				U_1 = math.ceil((dic[x]['DailyPercentageChange']['open-close']/100)*128)
+				V_1 = math.ceil((dic[x]['DailyPercentageChange']['open-low']/100)*128)
+
+				Y_2 = math.ceil((dic[x]['DailyPercentageChange']['low-close']/100)*256)
+				U_2 = math.ceil((dic[x]['DailyPercentageChange']['open-close']/100)*128)
+				V_2 = math.ceil((dic[x]['DailyPercentageChange']['high-close']/100)*128)
+
+				colorMap[x] = np.concatenate((self.YuvToRgb(np.array([Y_1,U_1,V_1])),self.YuvToRgb(np.array([Y_2,U_2,V_2]))))
+		#Need to figure out how to do an interactive map, or to map colors to date
 	#not sure where to use yet so will keep for later
 	def IsFib(self,num):
 		perf_sq_pos = 5*pow(num,2)+4
@@ -412,3 +430,10 @@ class StockFun:
 		B = B if B > 0 else 0
 
 		return np.array([R,G,B])
+
+# Next thing is to map colors from file to specific date and show in matplotlib so I can see what color correlates with which color --> or
+# Idea that comes to mind is an interactive Image Map in MatplotLib
+
+colorTest = StockFun()
+
+colorTest.InteractiveColorMap(colorTest.GetPath('\\analysisData\\Pbs\\pbs_08','file'))
