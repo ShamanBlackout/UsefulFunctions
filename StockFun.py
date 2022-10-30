@@ -247,23 +247,30 @@ class StockFun:
 
 				#colorMap[x] = np.concatenate((self.YuvToRgb(np.array([Y_1,U_1,V_1])),self.YuvToRgb(np.array([Y_2,U_2,V_2]))))
 				tmp.append(np.concatenate((self.YuvToRgb(np.array([Y_1,U_1,V_1])),self.YuvToRgb(np.array([Y_2,U_2,V_2])))))
+
 			reshape_size = 2001 # must be a mutiple of 3 for rgb colors
 			tmp = np.array(tmp)
 			resh_tup = (29,69)
 			pad_size = int((reshape_size - tmp.size)/3) #should be a multiple of 3
 			front = np.zeros(pad_size*2)
 			back = np.zeros(pad_size)
+
+			matrstart = math.floor(front.size /resh_tup[1])
+			matcstart = front.size %resh_tup[1] #not starting from a zero index when entered into the matrix
+			matrend = math.floor((front.size + tmp.flatten('C').size)/69)
+			matcend = (front.size + tmp.flatten('C').size)%69
+
 			tmp = np.concatenate((front,tmp.flatten('C'),back))
 			rgbmatrix = np.matrix(tmp)
 			rgbmatrix = np.reshape(rgbmatrix,resh_tup)
-			matstart = front.size+1
-			matend = front.size + tmp.flatten('C').size
-			print('Start{0}\nEnd{1}'.format(matstart,matend))
-			start_row =323%29
-			start_column = 323%69
-			end_row = 29 - 323%29
-			end_column = 69 - 323%69
-			print(rgbmatrix[start_row,start_column])
+
+			
+			print(rgbmatrix[matrstart,])
+			print(rgbmatrix[matrstart,matcstart])
+		
+			print(rgbmatrix[matrend,])
+			print(rgbmatrix[matrend,matcend])
+
 		
 			
 			#fig, ax = plt.subplots()
@@ -475,7 +482,7 @@ class StockFun:
 # Idea that comes to mind is an interactive Image Map in MatplotLib
 
 colorTest = StockFun()
-colorTest.InteractiveColorMap(colorTest.GetPath('\\analysisData\\Pbs\\pbs_08','file'))
+colorTest.InteractiveColorMap(colorTest.GetPath('\\analysisData\\Pbs\\pbs_12','file'))
 #colorTest.MassRgbCall()
 #colorTest.GetPath('\\analysisData\\Pbs\\pbs_08','file')
 
