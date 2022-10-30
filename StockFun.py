@@ -234,6 +234,7 @@ class StockFun:
 		with open(filename,'r') as infile:
 			dic = json.load(infile)
 			colorMap = {}
+			tmp = []
 			for x in dic:
 				
 				Y_1 = math.ceil((dic[x]['DailyPercentageChange']['open-high']/100)*256)
@@ -244,9 +245,46 @@ class StockFun:
 				U_2 = math.ceil((dic[x]['DailyPercentageChange']['open-close']/100)*128)
 				V_2 = math.ceil((dic[x]['DailyPercentageChange']['high-close']/100)*128)
 
-				colorMap[x] = np.concatenate((self.YuvToRgb(np.array([Y_1,U_1,V_1])),self.YuvToRgb(np.array([Y_2,U_2,V_2]))))
-		#Need to figure out how to do an interactive map, or to map colors to date
-	#not sure where to use yet so will keep for later
+				#colorMap[x] = np.concatenate((self.YuvToRgb(np.array([Y_1,U_1,V_1])),self.YuvToRgb(np.array([Y_2,U_2,V_2]))))
+				tmp.append(np.concatenate((self.YuvToRgb(np.array([Y_1,U_1,V_1])),self.YuvToRgb(np.array([Y_2,U_2,V_2])))))
+			reshape_size = 2001 # must be a mutiple of 3 for rgb colors
+			tmp = np.array(tmp)
+			resh_tup = (29,69)
+			pad_size = int((reshape_size - tmp.size)/3) #should be a multiple of 3
+			front = np.zeros(pad_size*2)
+			back = np.zeros(pad_size)
+			tmp = np.concatenate((front,tmp.flatten('C'),back))
+			rgbmatrix = np.matrix(tmp)
+			rgbmatrix = np.reshape(rgbmatrix,resh_tup)
+			matstart = front.size+1
+			matend = front.size + tmp.flatten('C').size
+			print('Start{0}\nEnd{1}'.format(matstart,matend))
+			start_row =323%29
+			start_column = 323%69
+			end_row = 29 - 323%29
+			end_column = 69 - 323%69
+			print(rgbmatrix[start_row,start_column])
+		
+			
+			#fig, ax = plt.subplots()
+			#im = ax.imshow(rgbmatrix)
+
+			#for i in range(resh_tup[0]):
+			#	for j in range(resh_tup[1]):
+			#		text = ax.text(j, i, rgbmatrix[i, j],
+   #                    ha="center", va="center", color="w")
+			#ax.set_title("Harvest of local farmers (in tons/year)")
+			#fig.tight_layout()
+			#plt.show()
+
+
+			#fig, ax = plt.subplots()
+			#im = ax.imshow(rgbmatrix)
+			#labels = colorMap.keys()
+			#yr = re.findall('\d{2}', filename.split('\\')[-1]).pop()
+			#fig.colorbar(im, ax=ax, label='Interactive colorbar')
+			#plt.savefig(self.GetPath('\\analysisData\\CnnImages\\InteractiveMaps\\','dir')+'InteractiveMap_'+yr)
+			#plt.close()
 	def IsFib(self,num):
 		perf_sq_pos = 5*pow(num,2)+4
 		perf_sq_neg = 5*pow(num,2)-4
@@ -400,7 +438,9 @@ class StockFun:
 	def MassRgbCall(self):
 		file_arr = self.MassCall(self.GetPath('\\analysisData\\Pbs\\','dir'))
 		for filename in file_arr:
-			self.ConvPbsToRgb(filename)
+			self.InteractiveColorMap(filename)
+			break
+			#self.ConvPbsToRgb(filename)
 
 	def MassComparativePatternCall(self):
 		file_arr = self.MassCall(self.GetPath('\\analysisData\\ComparativeData\\','dir'))
@@ -435,5 +475,13 @@ class StockFun:
 # Idea that comes to mind is an interactive Image Map in MatplotLib
 
 colorTest = StockFun()
-
 colorTest.InteractiveColorMap(colorTest.GetPath('\\analysisData\\Pbs\\pbs_08','file'))
+#colorTest.MassRgbCall()
+#colorTest.GetPath('\\analysisData\\Pbs\\pbs_08','file')
+
+#print(323%69)
+#start_row =323%29
+#start_column = 323%69
+#end_row = 29 - 323%29
+#end_column = 69 - 323%69
+#print(2323%69)
