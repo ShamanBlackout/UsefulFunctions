@@ -233,7 +233,7 @@ class StockFun:
 		#Check out matplotlib Annotation to annonate when hovering over a point
 		with open(filename,'r') as infile:
 			dic = json.load(infile)
-			colorMap = {}
+			colorMap = []
 			tmp = []
 			for x in dic:
 				
@@ -245,8 +245,10 @@ class StockFun:
 				U_2 = math.ceil((dic[x]['DailyPercentageChange']['open-close']/100)*128)
 				V_2 = math.ceil((dic[x]['DailyPercentageChange']['high-close']/100)*128)
 
-				#colorMap[x] = np.concatenate((self.YuvToRgb(np.array([Y_1,U_1,V_1])),self.YuvToRgb(np.array([Y_2,U_2,V_2]))))
+				colorMap.append(int(x.replace('/','')))
 				tmp.append(np.concatenate((self.YuvToRgb(np.array([Y_1,U_1,V_1])),self.YuvToRgb(np.array([Y_2,U_2,V_2])))))
+
+
 
 			reshape_size = 2001 # must be a mutiple of 3 for rgb colors
 			tmp = np.array(tmp)
@@ -257,41 +259,49 @@ class StockFun:
 
 			matrstart = math.floor(front.size /resh_tup[1])
 			matcstart = front.size %resh_tup[1] #not starting from a zero index when entered into the matrix
-			matrend = math.floor((front.size + tmp.flatten('C').size)/69)
-			matcend = (front.size + tmp.flatten('C').size)%69
+			matrend = math.floor((front.size + tmp.flatten('C').size)/resh_tup[1])
+			matcend = (front.size + tmp.flatten('C').size)%resh_tup[1]
 
 			tmp = np.concatenate((front,tmp.flatten('C'),back))
 			rgbmatrix = np.matrix(tmp)
 			rgbmatrix = np.reshape(rgbmatrix,resh_tup)
-
-			
-			print(rgbmatrix[matrstart,])
-			print(rgbmatrix[matrstart,matcstart])
-		
-			print(rgbmatrix[matrend,])
-			print(rgbmatrix[matrend,matcend])
+				
+			fig, ax = plt.subplots(figsize=[25,25], dpi = 80)
+			im = ax.imshow(rgbmatrix)
 
 		
-			
-			#fig, ax = plt.subplots()
-			#im = ax.imshow(rgbmatrix)
 
-			#for i in range(resh_tup[0]):
-			#	for j in range(resh_tup[1]):
+			for i in range(matrstart,matrend+1):
+				if (i == matrstart):
+					for j in range(matcstart,resh_tup[1]):
+						text = ax.text(j, i,rgbmatrix[i,j] ,
+		                   ha="center", va="center", color="w")
+				elif i == matrend:
+					for j in range(0,matcend):
+						text = ax.text(j, i, rgbmatrix[i,j],
+		                   ha="center", va="center", color="w")
+				else:
+					for j in range(0,resh_tup[1]):
+						text = ax.text(j, i,rgbmatrix[i,j],
+		                   ha="center", va="center", color="w")
+
+
+
+			
+			
+
+			#for i in range(matrstart,matrend):
+			#	for j in range(matcstart,matcend):
 			#		text = ax.text(j, i, rgbmatrix[i, j],
    #                    ha="center", va="center", color="w")
 			#ax.set_title("Harvest of local farmers (in tons/year)")
-			#fig.tight_layout()
-			#plt.show()
-
-
 			#fig, ax = plt.subplots()
 			#im = ax.imshow(rgbmatrix)
 			#labels = colorMap.keys()
-			#yr = re.findall('\d{2}', filename.split('\\')[-1]).pop()
+			yr = re.findall('\d{2}', filename.split('\\')[-1]).pop()
 			#fig.colorbar(im, ax=ax, label='Interactive colorbar')
-			#plt.savefig(self.GetPath('\\analysisData\\CnnImages\\InteractiveMaps\\','dir')+'InteractiveMap_'+yr)
-			#plt.close()
+			plt.savefig(self.GetPath('\\analysisData\\CnnImages\\InteractiveMaps\\','dir')+'InteractiveMap_'+yr)
+			plt.close()
 	def IsFib(self,num):
 		perf_sq_pos = 5*pow(num,2)+4
 		perf_sq_neg = 5*pow(num,2)-4
@@ -446,7 +456,6 @@ class StockFun:
 		file_arr = self.MassCall(self.GetPath('\\analysisData\\Pbs\\','dir'))
 		for filename in file_arr:
 			self.InteractiveColorMap(filename)
-			break
 			#self.ConvPbsToRgb(filename)
 
 	def MassComparativePatternCall(self):
@@ -481,8 +490,8 @@ class StockFun:
 # Next thing is to map colors from file to specific date and show in matplotlib so I can see what color correlates with which color --> or
 # Idea that comes to mind is an interactive Image Map in MatplotLib
 
-colorTest = StockFun()
-colorTest.InteractiveColorMap(colorTest.GetPath('\\analysisData\\Pbs\\pbs_12','file'))
+#colorTest = StockFun()
+#colorTest.InteractiveColorMap(colorTest.GetPath('\\analysisData\\Pbs\\pbs_12','file'))
 #colorTest.MassRgbCall()
 #colorTest.GetPath('\\analysisData\\Pbs\\pbs_08','file')
 
