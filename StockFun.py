@@ -485,7 +485,7 @@ class StockFun:
 		G = G if G > 0 else 0 
 		B = B if B > 0 else 0
 
-		return np.array([R,G,B])
+		return np.array([R,G,B]) 
 
 # Next thing is to map colors from file to specific date and show in matplotlib so I can see what color correlates with which color --> or
 # Idea that comes to mind is an interactive Image Map in MatplotLib
