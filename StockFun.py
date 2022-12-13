@@ -473,7 +473,7 @@ class StockFun:
 		file_arr = self.MassCall(self.GetPath('\\analysisData\\'+old_folder+'\\','dir'))
 		for filename in file_arr:
 			self.ConvToNpArr(filename,old_folder,new_folder)
-
+		
 	def YuvToRgb(self,yuv):
 		#Below is not microsoft formula
 
