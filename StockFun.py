@@ -450,7 +450,7 @@ class StockFun:
 		while len(file_arr) > 0:
 			file1 = file_arr.pop()
 			for x in file_arr:
-				 self.Compare(file1,x)
+				self.Compare(file1,x)
 
 	def MassRgbCall(self):
 		file_arr = self.MassCall(self.GetPath('\\analysisData\\Pbs\\','dir'))
